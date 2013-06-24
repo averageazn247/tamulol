@@ -1,0 +1,115 @@
+<%= form_for(@team) do |f| %>
+  <% if @team.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@team.errors.count, "error") %> prohibited this team from being saved:</h2>
+
+      <ul>
+      <% @team.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="span6 offset6"> *Required 
+  <div class="field">
+    <%= f.label :name, "*Team Name" %><br />
+    <%= f.text_field :name %>
+  </div>
+    <div class="field">
+    <%= f.label :tag, "*Team Tag 5 Char Max" %><br />
+    <%= f.text_field :tag%>
+  </div>
+  <div class="field">
+    <%= f.label :teamcapt, "*Team Captain Name" %><br />
+    <%= f.text_field :teamcapt %>
+  </div>
+    <div class="field">
+    <%= f.label :player1 , "*Captain Summoner"%><br />
+    <%= f.text_field :player1 %>
+
+  </div>
+  <p>Tamu Email must be used</p>
+      <div class="field">
+    <%= f.label :email1 , "*Captain Email"%><br />
+    <%= f.text_field :email1 %>
+  </div>
+        <div class="field">
+    <%= f.label :name2 , "*Player 2 Name"%><br />
+    <%= f.text_field :name2 %>
+  </div>
+         <div class="field">
+    <%= f.label :player2 , "*Player 2 Summoner"%><br />
+    <%= f.text_field :player1 %>
+  </div> 
+          <div class="field">
+    <%= f.label :email2 , "*Player 2 Email"%><br />
+    <%= f.text_field :email2 %>
+  </div> 
+          <div class="field">
+    <%= f.label :name3 , "*Player 3 Name"%><br />
+    <%= f.text_field :name3 %>
+  </div>
+         <div class="field">
+    <%= f.label :player3 , "*Player 3 Summoner"%><br />
+    <%= f.text_field :player3 %>
+  </div> 
+          <div class="field">
+    <%= f.label :email3 , "*Player 3 Email"%><br />
+    <%= f.text_field :email3 %>
+  </div>  
+          <div class="field">
+    <%= f.label :name4 , "*Player 4 Name"%><br />
+    <%= f.text_field :name4 %>
+  </div>
+         <div class="field">
+    <%= f.label :player4 , "*Player 4 Summoner"%><br />
+    <%= f.text_field :player4 %>
+  </div> 
+          <div class="field">
+    <%= f.label :email4 , "*Player 4 Email"%><br />
+    <%= f.text_field :email4 %>
+  </div> 
+            <div class="field">
+    <%= f.label :name5 , "*Player 5 Name"%><br />
+    <%= f.text_field :name5 %>
+  </div>
+         <div class="field">
+    <%= f.label :player5 , "*Player 5 Summoner"%><br />
+    <%= f.text_field :player5 %>
+  </div> 
+          <div class="field">
+    <%= f.label :email5 , "*Player 5 Email"%><br />
+    <%= f.text_field :email5 %>
+  </div>           <div class="field">
+    <%= f.label :bio, "Team Description"%><br />
+    <%= f.text_area :bio%>
+  </div>    
+            <div class="field">
+    <%= f.label :name6 , "Sub 1 Name"%><br />
+    <%= f.text_field :name6 %>
+  </div>
+         <div class="field">
+    <%= f.label :player6 , "Sub 1 Summoner"%><br />
+    <%= f.text_field :player6 %>
+  </div> 
+          <div class="field">
+    <%= f.label :email6 , "Sub 1 Email"%><br />
+    <%= f.text_field :email6 %>
+  </div>  
+            <div class="field">
+    <%= f.label :name7, "Sub 2 Name"%><br />
+    <%= f.text_field :name7 %>
+  </div>
+         <div class="field">
+    <%= f.label :player7 , "Sub 2 Summoner"%><br />
+    <%= f.text_field :player7 %>
+  </div> 
+          <div class="field">
+    <%= f.label :email7 , "Sub 2 Email"%><br />
+    <%= f.text_field :email7 %>
+  </div>    
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  </div>
+<% end %>
