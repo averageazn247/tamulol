@@ -10,20 +10,31 @@
       </ul>
     </div>
   <% end %>
-
+ 
+<div class="span6 offset6"> *Required 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name ,"*Name"%><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email,"*Email" %><br />
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :password %><br />
+    <%= f.label :password ,"*Password"%><br />
     <%= f.text_field :password %>
   </div>
+   <div class="field">
+        <%= f.label :password_confirmation, "*Confirmation" %><br />
+      <%= f.password_field :password_confirmation %>
+      </div>
+      <div class="field">
+            <%= f.label :phone, "*Phone Number  " %><br />
+      <%= f.text_field :phone, :size => 20%>
+      </div>
+      
   <div class="actions">
     <%= f.submit %>
+  </div><%= link_to 'cancel', root_path %>
   </div>
 <% end %>

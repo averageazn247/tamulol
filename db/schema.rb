@@ -11,14 +11,61 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130624014300) do
+ActiveRecord::Schema.define(:version => 20130624220237) do
+
+  create_table "relationships", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "team_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "relationships", ["team_id", "user_id"], :name => "index_relationships_on_team_id_and_user_id", :unique => true
+  add_index "relationships", ["team_id"], :name => "index_relationships_on_team_id"
+  add_index "relationships", ["user_id"], :name => "index_relationships_on_user_id"
+
+  create_table "teams", :force => true do |t|
+    t.string   "name"
+    t.string   "teamcapt"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "player1"
+    t.string   "player2"
+    t.string   "player3"
+    t.string   "player4"
+    t.string   "player5"
+    t.string   "player6"
+    t.string   "player7"
+    t.string   "name1"
+    t.string   "name2"
+    t.string   "name3"
+    t.string   "name4"
+    t.string   "name5"
+    t.string   "name6"
+    t.string   "name7"
+    t.string   "email1"
+    t.string   "email2"
+    t.string   "email3"
+    t.string   "email4"
+    t.string   "email5"
+    t.string   "email6"
+    t.string   "email7"
+    t.text     "bio"
+    t.string   "tag"
+    t.integer  "user_id"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
     t.string   "password"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+    t.string   "password_confirmation"
+    t.boolean  "admin"
+    t.string   "password_disgest"
+    t.string   "phone"
+    t.integer  "team_id"
   end
 
 end
