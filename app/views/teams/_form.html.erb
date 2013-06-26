@@ -1,3 +1,4 @@
+<div class="span6 offset6"> 
 <%= form_for(@team) do |f| %>
   <% if @team.errors.any? %>
     <div id="error_explanation">
@@ -10,7 +11,7 @@
       </ul>
     </div>
   <% end %>
-<div class="span6 offset6"> *Required 
+*Required 
   <div class="field">
     <%= f.label :name, "*Team Name" %><br />
     <%= f.text_field :name %>

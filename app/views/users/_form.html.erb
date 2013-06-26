@@ -1,3 +1,6 @@
+<div class="span6 offset6"> 
+
+
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -11,7 +14,7 @@
     </div>
   <% end %>
  
-<div class="span6 offset6"> *Required 
+*Required 
   <div class="field">
     <%= f.label :name ,"*Name"%><br />
     <%= f.text_field :name %>
