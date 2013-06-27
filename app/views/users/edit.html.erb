@@ -1,5 +1,44 @@
-<h1>Editing user</h1>
+ <div class='pbox'>
+	  <h1>Edit Profile</h1>
 
-<%= render 'form' %>
+  
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-<%= link_to 'Show', @user %> | 
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+*Required 
+  <div class="field">
+    <%= f.label :name ,"*Name"%><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email,"*Email" %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password ,"*Password"%><br />
+    <%= f.password_field :password %>
+  </div>
+   <div class="field">
+        <%= f.label :password_confirmation, "*Confirmation" %><br />
+      <%= f.password_field :password_confirmation %>
+      </div>
+      <div class="field">
+            <%= f.label :phone, "*Phone Number  " %><br />
+      <%= f.text_field :phone, :size => 20%>
+      </div>
+      
+       <%= f.submit "Submit", class: "btn btn-large btn-primary" %>
+     <br /><%= link_to 'cancel', root_path %>
+  </div>
+  </div>
+<% end %>  

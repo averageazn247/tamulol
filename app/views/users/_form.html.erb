@@ -1,6 +1,6 @@
 <div class="span6 offset6"> 
 
-
+  <div class='pbox'>
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -40,4 +40,5 @@
     <%= f.submit %>
   </div><%= link_to 'cancel', root_path %>
   </div>
-<% end %>
+  </div>
+<% end %> 

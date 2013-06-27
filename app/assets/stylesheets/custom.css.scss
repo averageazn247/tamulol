@@ -1,6 +1,8 @@
 @import "bootstrap";
 $lightGray: #999;
-
+$black: #000000;
+$blue: #0000FF;
+$lightblue:#6495ed;
 $grayMediumLight: #eaeaea;
 
 @mixin box_sizing {
@@ -60,8 +62,8 @@ p {
 footer {
   margin-top: 95px;
   padding-top: 50px;
-  border-top: 1px solid #eaeaea;
-  color: $lightGray;
+   
+  color: #C0C0C0;
   a {
     color: #555;
     &:hover { 
@@ -74,9 +76,13 @@ footer {
   ul {
     float: right;
     list-style: none;
+    color: $black;
     li {
       float: left;
+      color: $black;
       margin-left: 10px;
+      font-weight: bold;
+      
     }
   }
 }
@@ -196,7 +202,7 @@ body {
   padding-top: 60px;
   text-align: center;
    
- background-image: url('bg2.jpg');
+ background-image: url('lolbd1.jpg');
  background-repeat: repeat;
 }
    
@@ -310,10 +316,23 @@ li {
       margin-bottom: -10px;
       margin-top: 5px;
 }
+.pbox{
+  position:relative;
+left: 500px;
+  width:250px;
+padding:10px;
+border:5px solid gray;
+margin:10px;
+background-color:#6495ed;
+}
 .ptext  {
     color: #999;
     font-weight: bold;
     font-size: 24px;
     padding: 10px;
     
+}
+.heads{
+  
+  
 }
