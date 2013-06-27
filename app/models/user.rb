@@ -1,11 +1,11 @@
 class User < ActiveRecord::Base
  
-     attr_accessible :name, :email, :password, :password_confirmation,  :phone, :password_digest
+     attr_accessible :name, :email, :password, :password_confirmation,  :phone 
   has_secure_password
-  has_one :team
+  has_many :teams
   before_save { |user| user.email = email.downcase }
-  
-    before_create { generate_token(:auth_token) }
+  before_save :create_remember_token
+     before_create { generate_token(:auth_token) }
   
   def generate_token(column)
     begin
@@ -20,6 +20,8 @@ def send_password_reset
   save!
   UserMailer.password_reset(self).deliver
 end
-
+def create_remember_token
+  self.remember_token = SecureRandom.urlsafe_base64
+end
 
 end

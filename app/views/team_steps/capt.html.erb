@@ -1,0 +1,58 @@
+
+
+<%= form_for @team , url: wizard_path do |f| %>
+  <h2>Team Capt</h2>
+  *Required
+  <div class="field">
+    <%= f.label :name , "*Team Name"%><br />
+    <%= f.text_field :name %>
+  </div>
+   <div class="field">
+    <%= f.label :teamcapt , "*Team Capt"%><br />
+    <%= f.text_field :teamcapt %>
+  </div>
+   <div class="field">
+    <%= f.label :player1 , "*Team Capt Summoner"%><br />
+    <%= f.text_field :player1 %>
+  </div>  
+     <div class="field">
+    <%= f.label :email1, "*Team Capt Email"%><br />
+    <%= f.text_field :email1 %>
+  </div>
+  <div class="field">
+    <%= f.label :bio , "Team Bio"%><br />
+    <%= f.text_area :bio, rows: 5 %>
+  </div>
+  <div class="actions">
+        <%= f.submit "Continue" %>
+  </div>
+<% end %>
+
+   t.string   "name"
+    t.string   "teamcapt"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "player1"
+    t.string   "player2"
+    t.string   "player3"
+    t.string   "player4"
+    t.string   "player5"
+    t.string   "player6"
+    t.string   "player7"
+    t.string   "name1"
+    t.string   "name2"
+    t.string   "name3"
+    t.string   "name4"
+    t.string   "name5"
+    t.string   "name6"
+    t.string   "name7"
+    t.string   "email1"
+    t.string   "email2"
+    t.string   "email3"
+    t.string   "email4"
+    t.string   "email5"
+    t.string   "email6"
+    t.string   "email7"
+    t.text     "bio"
+    t.string   "tag"
+    t.integer  "user_id"

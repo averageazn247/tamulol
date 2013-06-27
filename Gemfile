@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.8'
 gem 'bootstrap-sass' 
 gem 'bcrypt-ruby', '3.0.1'  
- 
+ gem 'wicked'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'simple_form' 

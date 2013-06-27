@@ -1,6 +1,7 @@
 class TeamsController < ApplicationController
   # GET /teams
   # GET /teams.json
+
   def index
     @teams = Team.all
 
@@ -26,10 +27,7 @@ class TeamsController < ApplicationController
   def new
     @team = Team.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @team }
-    end
+    
   end
 
   # GET /teams/1/edit
@@ -39,20 +37,15 @@ class TeamsController < ApplicationController
 
   # POST /teams
   # POST /teams.json
-  def create
-    @team = Team.new(params[:team])
-
-    respond_to do |format|
-      if @team.save
-        format.html { redirect_to @team, notice: 'Team was successfully created.' }
-        format.json { render json: @team, status: :created, location: @team }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @team.errors, status: :unprocessable_entity }
-      end
-    end
+def create
+  @team = Team.new(params[:team])
+  if @team.save
+       session[:user_id] = current_user.id
+    redirect_to team_steps_path 
+  else
+    render :new
   end
-
+end
   # PUT /teams/1
   # PUT /teams/1.json
   def update

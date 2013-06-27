@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130627014442) do
+ActiveRecord::Schema.define(:version => 20130627205823) do
 
   create_table "relationships", :force => true do |t|
     t.integer  "user_id"
@@ -63,13 +63,15 @@ ActiveRecord::Schema.define(:version => 20130627014442) do
     t.datetime "updated_at",                                :null => false
     t.string   "password_confirmation"
     t.boolean  "admin",                  :default => false
-    t.string   "password_disgest"
     t.string   "phone"
     t.integer  "team_id"
     t.string   "auth_token"
     t.string   "password_reset_token"
     t.datetime "password_reset_sent_at"
     t.string   "password_digest"
+    t.string   "remember_token"
   end
+
+  add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
 
 end

@@ -1,26 +1,26 @@
 <% provide(:title, @user.name) %>
-<h1>
-  <%= gravatar_for @user %>
+<h2>
+  <%= gravatar_for @user %><%= @user.name %>
   
 
-</h1>
+</h2>
 <p id="notice"><%= notice %></p>
 
 <p>
 	
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
 
+</p>
+ <div class="center hero-unit">
 <p>
   <b>Email:</b>
   <%= @user.email %>
 </p>
 
 <p>
-  <b>Password:</b>
-  <%= @user.password %>
+  <b>Phone:</b>
+  <%= @user.phone %>
 </p>
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> | 
+<%= link_to 'Edit', edit_user_path(@user) %>  
+</div>

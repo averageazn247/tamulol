@@ -1,6 +1,6 @@
 module SessionsHelper
-     def sign_in(user)
-    cookies.permanent[:auth_token] = user.generate_token(user)
+   def sign_in(user)
+    cookies.permanent[:remember_token] = user.remember_token
     self.current_user = user
   end
    def current_user=(user)
@@ -10,7 +10,7 @@ module SessionsHelper
     user == current_user
   end
   def current_user
-    @current_user   ||= User.find_by_remember_token(cookie[:auth_token])
+    @current_user   ||= User.find_by_remember_token(cookies[:remember_token])
   end
   def current_events=(current_user)
     @current_events = current_user.event
@@ -21,7 +21,7 @@ module SessionsHelper
   end
   def sign_out
     self.current_user = nil
-    cookies.delete(:auth_token)
+    cookies.delete(:remember_token)
   end
     def redirect_back_or(default)
     redirect_to(session[:return_to] || default)

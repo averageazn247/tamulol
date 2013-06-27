@@ -1,27 +1,26 @@
 class SessionsController < ApplicationController
-
-
-  def new
+    def new
   end
 
-
-
-def create
-  user = User.find_by_email(params[:email])
-  if user && user.authenticate(params[:password])
-    
-      cookies.permanent[:auth_token] = user.auth_token  
-    redirect_to root_url, :notice => "Logged in!"
-  else
-    flash.now.alert = "Invalid email or password"
-    render "new"
+  def create
+    user = User.find_by_email(params[:session][:email].downcase)
+    if user && user.authenticate(params[:session][:password])
+      # Sign the user in and redirect to the user's show page.
+       cookies.permanent[:auth_token] = user.auth_token
+      session[:user_id] = user.id
+       sign_in user
+      redirect_to user
+    else
+      flash.now[:error] = 'Invalid email/password combination'
+      render 'new'
+    end
   end
-end
-
 
   def destroy
+    
     cookies.delete(:auth_token)
-    redirect_to root_url, :notice => "Logged out!"
+        sign_out
+    redirect_to root_url
   end
-
+  
 end
