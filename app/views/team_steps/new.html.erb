@@ -1,0 +1,31 @@
+
+<div class="span6 offset6"> 
+<%= form_for @team , url: wizard_path do |f| %>
+  <% if @team.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@team.errors.count, "error") %> prohibited this team from being saved:</h2>
+
+      <ul>
+      <% @team.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+*Required 
+  <div class="field">
+    <%= f.label :name, "*Team Name" %><br />
+    <%= f.text_field :name %>
+  </div>
+    <div class="field">
+    <%= f.label :tag, "*Team Tag 5 Char Max" %><br />
+    <%= f.text_field :tag%>
+  </div>
+    <div class="field">
+    <%= f.label :bio , "Team Bio"%><br />
+    <%= f.text_area :bio, rows: 5 %>
+  </div>
+<%= link_to "  Next---> ",team_steps_path(:id =>  'capt', :team_id => @team.id), :class => 'btn btn-primary' %>
+  </div>
+  <% end%>
+  

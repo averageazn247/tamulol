@@ -1,7 +1,8 @@
 Tamulol::Application.routes.draw do
   get "password_resets/new"
 
-  resources :teams
+  resources :teams 
+  
 resources :sessions, only: [:new, :create, :destroy]
 resources :password_resets
   resources :users
@@ -9,7 +10,7 @@ resources :password_resets
 match '/signup',  to: 'users#new'
 match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
-match '/teamnew', to: 'teams#new' 
+match '/teamnew', to: 'team_steps#new' 
 
 
 

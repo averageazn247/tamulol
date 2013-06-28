@@ -22,7 +22,7 @@ group :development, :test do
   gem 'guard-spork', '1.2.0'
   gem 'childprocess', '0.3.6'
   gem 'spork', '0.9.2'
-
+  gem "better_errors"
 end
 group :development do
   gem 'annotate', '2.5.0'
