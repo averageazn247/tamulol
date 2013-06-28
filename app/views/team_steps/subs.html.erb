@@ -1,0 +1,38 @@
+<div class="span6 offset6"> 
+
+<%= form_for @team , url: wizard_path do |f| %>
+  <h2>Subs </h2>
+  *Required
+ 
+   <div class="field">
+    <%= f.label :name6 , "*Sub 1"%><br />
+    <%= f.text_field :name6 %>
+  </div>
+   <div class="field">
+    <%= f.label :player6 , "*Sub 1 Summoner"%><br />
+    <%= f.text_field :player6 %>
+  </div>  
+     <div class="field">
+    <%= f.label :email6, "*Sub 1 Email"%><br />
+    <%= f.text_field :email6 %>
+  </div>
+     <div class="field">
+    <%= f.label :name7 , "*Sub 2"%><br />
+    <%= f.text_field :name7 %>
+  </div>
+   <div class="field">
+    <%= f.label :player7 , "*Sub 2 Summoner"%><br />
+    <%= f.text_field :player7 %>
+  </div>  
+     <div class="field">
+    <%= f.label :email7, "*Sub 2 Email"%><br />
+    <%= f.text_field :email7 %>
+  </div>
+  
+  
+  <div class="actions">
+    <%= f.submit "Sign Up" %>
+  </div>
+<%= link_to "  Back ",team_steps_path(:id =>  'subs', :team_id => @team.id), :class => 'btn btn-primary' %> 
+<% end %>
+</div>

@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
  
-     attr_accessible :name, :email, :password, :password_confirmation,  :phone 
+     attr_accessible :name, :email, :password, :password_confirmation,  :phone , :team_id
   has_secure_password
   has_many :teams
   before_save { |user| user.email = email.downcase }

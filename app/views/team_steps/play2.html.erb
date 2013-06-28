@@ -1,0 +1,23 @@
+<div class="span6 offset6"> 
+
+<%= form_for @team , url: wizard_path do |f| %>
+  <h2>Member 2</h2>
+  *Required
+ 
+   <div class="field">
+    <%= f.label :name2 , "*Member 2"%><br />
+    <%= f.text_field :name2 %>
+  </div>
+   <div class="field">
+    <%= f.label :player2 , "*Member 2 Summoner"%><br />
+    <%= f.text_field :player2 %>
+  </div>  
+     <div class="field">
+    <%= f.label :email2, "*Member 2 Email"%><br />
+    <%= f.text_field :email2 %>
+  </div>
+<%= link_to " <--- Back ",team_steps_path(:id =>  'capt', :team_id => @team.id), :class => 'btn btn-primary' %>
+<%= link_to " Next---> ",team_steps_path(:id =>  'play3', :team_id => @team.id), :class => 'btn btn-primary' %>
+
+<% end %>
+</div>
