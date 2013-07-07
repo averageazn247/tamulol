@@ -12,6 +12,7 @@ class TeamStepsController < ApplicationController
    
   render_wizard
 end
+  
 
 def create
   @team = Team.create
