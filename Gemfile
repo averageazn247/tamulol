@@ -13,7 +13,9 @@ gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem "combined_time_select", "~> 1.0.0"
 
- 
+ gem 'sidekiq'
+gem 'sinatra', require: false
+gem 'slim'
 gem 'carrierwave'
 group :development, :test do
   gem 'sqlite3', '1.3.5'

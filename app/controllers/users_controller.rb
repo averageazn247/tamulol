@@ -83,4 +83,8 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+  def viewteam
+    @user = current_user
+    @teams=Team.all
+  end
 end

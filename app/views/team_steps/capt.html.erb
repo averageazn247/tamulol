@@ -2,11 +2,11 @@
 
 <div class="span6 offset5"> 
 <div class="center hero-unit">
-	 <%= f.hidden_field :user_id, :value => current_user.id %>
+	 
 <%= form_for @team , url: wizard_path do |f| %>
   <h2>Team Capt</h2>
   *Required
- 
+ <%= f.hidden_field :user_id, :value => current_user.id %>
    <div class="field">
     <%= f.label :teamcapt , "*Team Capt"%><br />
     <%= f.text_field :teamcapt %>

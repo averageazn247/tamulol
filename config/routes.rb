@@ -16,7 +16,8 @@ match '/teamnew', to: 'teams#new'
 match '/addplayer/:tid'=> 'player#create', :as => :create
 match '/soon', to: 'page#soon'
 match '/showteam' ,to: 'teams#show'
-
+match '/listteam', to: 'users#viewteam'
+match '/admin' , to: 'admin#main'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

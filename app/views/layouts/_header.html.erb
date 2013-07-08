@@ -70,9 +70,9 @@ $(document).ready(function() {
               	<b class="caret"></b> </a>
               	<ul class="dropdown-menu">
           <li><%= link_to "Create A Team", '/teamnew' %></li>
-          <li><%= link_to "View Your Team", '/contact' %></li>
+          <li><%= link_to "View Your Team", '/listteam' %></li>
           <li><%= link_to "Edit Your Team", '/soon' %></li>
-          <li><%= link_to "View All Teams", '/soon' %></li>
+          <li><%= link_to "View All Teams", teams_path %></li>
           
            </ul>
               <li id="fat-menu" class="dropdown">
@@ -97,6 +97,9 @@ $(document).ready(function() {
               
                 
                   <li> <%= link_to "View Messages", '/index' %></li>
+                  <% if current_user.name== 'khoa'%>
+          <li><%= link_to "Admin", '/admin' %></li> 
+          <% end %>
                 <li class="divider"></li>
                 <li>
                   <%= link_to "Sign out", signout_path, method: "delete" %>

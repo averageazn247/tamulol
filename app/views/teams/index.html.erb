@@ -1,9 +1,12 @@
-<h1>Listing teams</h1>
+<div class="span4 offset0"> 
+
+<div class='dbox'>
+<h1>Listing Teams</h1>
 
 <table>
   <tr>
     <th>Name</th>
-    <th>Teamcapt</th>
+    <th>Team Capt</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,9 +16,13 @@
   <tr>
     <td><%= team.name %></td>
     <td><%= team.teamcapt %></td>
-    <td><%= link_to 'Show', team %></td>
-    <td><%= link_to 'Edit', edit_team_path(team) %></td>
-    <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show  |', team %></td>
+    <% if current_user.name== 'khoa'|| team.user_id== current_user.id %>
+    <td><%= link_to 'Edit  |', edit_team_path(team) %></td>
+    <% end %>
+    <% if current_user.name== 'khoa'%>
+    <td><%= link_to 'Delete', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <%end%>
   </tr>
 <% end %>
 </table>
@@ -23,3 +30,5 @@
 <br />
 
 <%= link_to 'New Team', new_team_path %>
+</div>
+</div>
