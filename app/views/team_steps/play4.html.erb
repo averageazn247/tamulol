@@ -1,5 +1,5 @@
-<div class="span6 offset6"> 
-
+<div class="span6 offset5"> 
+<div class="center hero-unit">
 <%= form_for @team , url: wizard_path do |f| %>
   <h2>Member 4</h2>
   *Required
@@ -16,8 +16,12 @@
     <%= f.label :email4, "*Member 4 Email"%><br />
     <%= f.text_field :email4 %>
   </div>
-<%= link_to "  <--- Back ",team_steps_path(:id =>  'play3', :team_id => @team.id), :class => 'btn btn-primary' %>
-<%= link_to "  Next ---> ",team_steps_path(:id =>  'play5', :team_id => @team.id), :class => 'btn btn-primary' %>
+   <div class="actions">
+       <%= link_to "  <--- Back ",team_steps_path(:id =>  'play3', :team_id => @team.id), :class => 'btn btn-primary' %>
+ <%= f.submit "Continue --->", :class => 'btn btn-primary'  %>
+  </div>
 
+<%= link_to "  View  Team ",  team_path(@team), :class => 'btn btn-primary' %>
 <% end %>
+</div>
 </div>

@@ -16,17 +16,20 @@ class TeamsController < ApplicationController
   end
   def create
     @team= Team.create(params[:team])
-  
-      redirect_to team_steps_path(:id =>  'capt', :team_id => @team.id), notice: 'saved'
- 
+    session[:team_id]=@team.id
+      if @team.save
+        redirect_to team_steps_path(:first_step, :team_id => @team.id)
+      # redirect_to @team
+    end
       
   
     
   end
   def update
+    session[:team_id]=@team.id
     @team= Team.find(params[:id])
     if @team.update_attributes(params[:team])
-       redirect_to team_steps_path(:id =>  'capt', :team_id => @team.id), notice: 'saved'
+        
     else
       render action: "edit"
       

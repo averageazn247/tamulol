@@ -1,5 +1,5 @@
-<div class="span6 offset6"> 
-
+<div class="span6 offset5"> 
+<div class="center hero-unit">
 <h2>Team Sign Up</h2>
 <%= form_for @team do |f| %>
  <%= f.hidden_field :user_id, :value => current_user.id %>
@@ -15,7 +15,9 @@
     <%= f.label :bio , "Team Bio"%><br />
     <%= f.text_area :bio, rows: 5 %>
   </div>
- <%= link_to "  Next ---> ",team_steps_path(:id =>  'capt', :team_id => @team.id), :class => 'btn btn-primary' %>
-  <% end %>
+ <%= f.submit  %>
+  <% end %> 
+
+</div>
 
 </div>

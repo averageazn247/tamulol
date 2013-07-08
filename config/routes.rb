@@ -1,7 +1,9 @@
 Tamulol::Application.routes.draw do
   get "password_resets/new"
-
-  resources :teams 
+  resources :players
+  resources :teams do
+  resources :build, controller: 'teams/build'
+end
   
 resources :sessions, only: [:new, :create, :destroy]
 resources :password_resets
@@ -10,9 +12,10 @@ resources :password_resets
 match '/signup',  to: 'users#new'
 match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
-match '/teamnew', to: 'team_steps#new' 
-
-
+match '/teamnew', to: 'teams#new' 
+match '/addplayer/:tid'=> 'player#create', :as => :create
+match '/soon', to: 'page#soon'
+match '/showteam' ,to: 'teams#show'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

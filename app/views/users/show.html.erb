@@ -20,7 +20,14 @@
   <b>Phone:</b>
   <%= @user.phone %>
 </p>
-
+<p>Teams: 
+	</p><% @teams.each do |team| %>
+	<% if team.user_id == @user.id  %>
+	 <p>
+	 	<%= link_to  team.name, team_path(team) %>
+	 </p>
+	 <% end %>
+	 <% end %>
 
 <%= link_to 'Edit', edit_user_path(@user) %>  
 </div>

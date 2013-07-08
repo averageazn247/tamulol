@@ -202,7 +202,7 @@ body {
   padding-top: 60px;
   text-align: center;
    
- // background-image: url('lolbd1.jpg');
+  background-image: url('lolbd1.jpg');
  // background-repeat: repeat;
 }
    
@@ -335,4 +335,14 @@ background-color:#6495ed;
 .heads{
   
   
+}
+.dbox{
+    position:relative;
+left: 200px;
+  width:600px;
+  height: 800px;
+padding:10px;
+border:5px solid gray;
+margin:10px;
+background-color:#D8BFD8  ;
 }
