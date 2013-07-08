@@ -1,10 +1,11 @@
-<h1>Listing users</h1>
+<div class="span6">
+	<div class="dbox">
+<h1>Listing Users</h1>
 
 <table>
   <tr>
     <th>Name</th>
-    <th>Email</th>
-    <th>Password</th>
+    <th>Email</th> 
     <th></th>
     <th></th>
     <th></th>
@@ -14,14 +15,18 @@
   <tr>
     <td><%= user.name %></td>
     <td><%= user.email %></td>
-    <td><%= user.password %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+
+    <td><%= link_to '   Show  |', user %></td>
+    <% if current_user.name == 'khoa' || current_user.id == user.id %>
+    <td><%= link_to 'Edit     |', edit_user_path(user) %></td>
+    <% end %>
+    <% if current_user.name == 'khoa'%>
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  	<% end %>
   </tr>
 <% end %>
 </table>
 
-<br />
-
-<%= link_to 'New User', new_user_path %>
+<br /> 
+</div>
+</div>
