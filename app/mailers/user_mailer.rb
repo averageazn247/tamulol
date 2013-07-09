@@ -13,6 +13,14 @@ class UserMailer < ActionMailer::Base
     mail :to => user.email, :subject => "Password Reset"
   end
   def send_mess(message,people)
+    @message=message
+    @people=people
     
   end
+    def registration_confirmation(user)
+   @user=user
+   
+    mail(:to => user.email, :subject => "Registered")
+  end
+  
 end

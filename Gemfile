@@ -12,7 +12,7 @@ gem "mail"
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem "combined_time_select", "~> 1.0.0"
-
+gem 'delayed_job_active_record'
  gem 'sidekiq'
 gem 'sinatra', require: false
 gem 'slim'

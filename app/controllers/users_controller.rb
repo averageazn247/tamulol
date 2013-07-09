@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  # GET /users
-  # GET /users.json
+  
+
   def index
     @users = User.all
 
@@ -49,6 +49,7 @@ class UsersController < ApplicationController
       sign_in @user
       cookies.permanent[:auth_token] = @user.auth_token
       session[:user_id] = @user.id
+      @user.send_email_confirm(@user ).deliver
       flash[:success] = "Thanks for registering!"
       
       redirect_to @user
