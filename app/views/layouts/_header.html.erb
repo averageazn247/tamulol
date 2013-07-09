@@ -69,9 +69,13 @@ $(document).ready(function() {
               	Teams
               	<b class="caret"></b> </a>
               	<ul class="dropdown-menu">
-          <li><%= link_to "Create A Team", '/teamnew' %></li>
+          
+          <% if Team.find(current_user.id)%>
           <li><%= link_to "View Your Team", '/listteam' %></li>
           <li><%= link_to "Edit Your Team", '/soon' %></li>
+          <%else%>
+          <li><%= link_to "Create A Team", '/teamnew' %></li>
+          <% end %>
           <li><%= link_to "View All Teams", teams_path %></li>
           
            </ul>

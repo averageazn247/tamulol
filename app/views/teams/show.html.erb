@@ -26,7 +26,9 @@
 	<b>Player 5: </b> <%= @team.name5%>   |<%= link_to 'Edit', team_steps_path(:id =>  'play5', :team_id => @team.id)%>
 </p>
   <p>
-	<b>Subs  :</b> <%= @team.name6%>  and  <%= @team.name7%> |<%= link_to 'Edit', team_steps_path(:id =>  'subs', :team_id => @team.id)%>
+	<b>Subs  :<% if @team.name6%>
+		</b> <%= @team.name6%>  and<% end %>
+		<%if @team.name7%>  <%= @team.name7%> <%end %>|<%= link_to 'Edit', team_steps_path(:id =>  'subs', :team_id => @team.id)%>
 </p>
  
 <%= link_to 'Back', teams_path %>

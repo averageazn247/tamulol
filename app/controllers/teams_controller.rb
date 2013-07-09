@@ -1,6 +1,12 @@
 class TeamsController < ApplicationController
    def index
     @teams = Team.all
+        respond_to do |format|
+          format.html # index.html.erb
+          format.json { render json: @teams }
+          format.csv { send_data @teams.to_csv }
+          format.xls
+    end
   end
   
   def show

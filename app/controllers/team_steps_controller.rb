@@ -29,8 +29,15 @@ end
 
 
   def update
+    
     id=session[:team_id]
-    @team = Team.find(session[:team_id])
+    if session[:team_id]
+      @team = Team.find( session[:team_id])
+    else
+       session[:team_id] = @user.id
+      @team = Team.find(session[:team_id])
+     
+    end
     params[:team][:status] = step.to_s
     params[:team][:status] = 'active' if step == steps.last
     @team.attributes = params[:team]
