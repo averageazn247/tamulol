@@ -18,6 +18,8 @@ match '/soon', to: 'page#soon'
 match '/showteam' ,to: 'teams#show'
 match '/listteam', to: 'users#viewteam'
 match '/admin' , to: 'admin#main'
+match '/off_stream' , to: 'page#stream'
+match '/nocx', to: 'page#nocx'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
