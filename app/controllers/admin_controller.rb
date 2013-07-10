@@ -4,7 +4,12 @@ class AdminController < ApplicationController
     
   end
   def print
+        @teams=Team.all
+    respond_to do |format|
+          format.csv { send_data @teams.to_csv }
+      format.xls 
 
+    end
   end
   def email
     
@@ -14,9 +19,11 @@ class AdminController < ApplicationController
   end
   def index
         @teams=Team.all
-    respond_with @teams
+    respond_to do |format|
+          format.csv { send_data @teams.to_csv }
+      format.xls 
 
-  end
-  
+    end
+  end 
     
 end

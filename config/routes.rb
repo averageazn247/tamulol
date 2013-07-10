@@ -21,6 +21,7 @@ match '/admin' , to: 'admin#main'
 match '/off_stream' , to: 'page#stream'
 match '/nocx', to: 'page#nocx'
 match '/printcapt', to: 'admin#print'
+get '/photos/capt', to: 'admin#print', defaults: { format: 'xls' }
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
