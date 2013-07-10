@@ -1,0 +1,23 @@
+
+
+<table border="2">
+
+  <% @teams.each do |team| %>
+    <tr>Team Name
+     
+    <th>  Name</th>
+    <th>  Summoner</th>
+    <th>  Email</th> 
+  </tr>
+  <tr><%= team.id %>. <%= team.name %> 
+     <td><%= team.teamcapt %></td> 
+     <td><%= team.name1 %>
+     	</td>
+   
+    <td><%= team.email1 %></td>
+    <tr></tr>
+    
+    
+  </tr>
+  <% end %>
+</table>
