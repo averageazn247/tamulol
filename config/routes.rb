@@ -4,7 +4,7 @@ Tamulol::Application.routes.draw do
   resources :teams do
   resources :build, controller: 'teams/build'
 end
- # resources :admin
+  #resources :admin
 resources :sessions, only: [:new, :create, :destroy]
 resources :password_resets
   resources :users
@@ -20,7 +20,7 @@ match '/listteam', to: 'users#viewteam'
 match '/admin' , to: 'admin#main'
 match '/off_stream' , to: 'page#stream'
 match '/nocx', to: 'page#nocx'
-match '/printcapt', to: 'admin#print'
+match '/printcapt', to: 'admin#print', defaults: { format: 'xls' }
 get '/photos/capt', to: 'admin#print', defaults: { format: 'xls' }
   # The priority is based upon order of creation:
   # first created -> highest priority.
