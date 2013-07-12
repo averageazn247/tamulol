@@ -27,6 +27,8 @@ match '/zehtsu' , to: 'page#zehtsu'
 match '/rainbow', to: 'page#rainbow'
 match '/epicshots' , to: 'page#epicshots'
 match '/jay' , to: 'page#jay'
+match '/spring2013', to: 'page#spring2013'
+match '/playerlist',to: 'player#list'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
