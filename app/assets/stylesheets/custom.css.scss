@@ -213,7 +213,16 @@ body {
 }
    
  
-  
+  .wellsidebar-nav{
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid rgb(227, 227, 227);
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05) inset;
+    
+}
 
 .gravatar {
   float: center;
@@ -378,6 +387,24 @@ background-color:#6495ed;
   min-height: 1%;
 }
  
+ .full-height {
+    height: 100%;
+}
+.content-area {
+    background: green;
+    color: white;
+}
+
+.article-tree {
+    background: blue;
+    color: white;
+}
+ 
+.container-height {
+    margin: 0 auto;
+    min-height: 88%;
+    height: auto;    
+}
 /* float clearing for everyone else */
 .clearfix:after{
   clear: both;
