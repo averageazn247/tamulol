@@ -4,7 +4,11 @@ attr_accessible :name4, :player4, :email4, :name5, :player5, :email5, :name6, :p
 attr_accessible :name7, :player7, :email7 ,:user_id, :status
  
   belongs_to :user
+  def setteam(team,user)
+    user.team_id=team.id
+  end
 
+ 
   def active?
   status == 'active'
 end

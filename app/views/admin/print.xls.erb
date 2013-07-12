@@ -1,23 +1,19 @@
 
 
-<table border="2">
-
-  <% @teams.each do |team| %>
-    <tr>Team Name
-     
-    <th>  Name</th>
-    <th>  Summoner</th>
-    <th>  Email</th> 
+<table border="1">
+  <tr>
+    <th>Team Name</th>
+    <th>Capt Name</th>
+    <th>Summoner</th>
+    <th>email</th>
   </tr>
-  <tr><%= team.id %>. <%= team.name %> 
-     <td><%= team.teamcapt %></td> 
-     <td><%= team.name1 %>
-     	</td>
-   
-    <td><%= team.email1 %></td>
-    <tr></tr>
-    
-    
+  <% @teams.each do |product| %>
+  <tr>
+    <td><%= product.name %></td>
+    <td><%= product.teamcapt %></td>
+    <td><%= product.name1 %></td>
+    <td><%= product.email1 %></td>
   </tr>
   <% end %>
 </table>
+

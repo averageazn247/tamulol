@@ -8,4 +8,5 @@ class PageController < ApplicationController
   def news
     
   end
+  
 end

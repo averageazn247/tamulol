@@ -22,6 +22,11 @@ match '/off_stream' , to: 'page#stream'
 match '/nocx', to: 'page#nocx'
 match '/printcapt', to: 'admin#print', defaults: { format: 'xls' }
 get '/photos/capt', to: 'admin#print', defaults: { format: 'xls' }
+match '/anariil' , to: 'page#anariil'
+match '/zehtsu' , to: 'page#zehtsu'
+match '/rainbow', to: 'page#rainbow'
+match '/epicshots' , to: 'page#epicshots'
+match '/jay' , to: 'page#jay'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

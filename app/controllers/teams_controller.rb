@@ -22,8 +22,11 @@ class TeamsController < ApplicationController
   end
   def create
     @team= Team.create(params[:team])
+    @user=User.find(current_user.id)
     session[:team_id]=@team.id
       if @team.save
+            @user.setteam(@team,@user)
+     
         redirect_to team_steps_path(:first_step, :team_id => @team.id)
       # redirect_to @team
     end

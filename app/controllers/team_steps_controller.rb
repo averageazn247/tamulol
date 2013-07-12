@@ -18,7 +18,9 @@ end
 def create
   @team = Team.create
    @team.save
-    session[:user_id] = @user.id
+    @user=User.find(current_user.id)
+    @user.setteam(@team,@user)
+    session[:user_id] = current_user.id
     session[:team_id] = @team.id
     redirect_to wizard_path(steps.first, :team_id => @team.id)
  
@@ -34,8 +36,8 @@ end
     if session[:team_id]
       @team = Team.find( session[:team_id])
     else
-       session[:team_id] = @user.id
-      @team = Team.find(session[:team_id])
+       @user=User.find(current_user.id)
+      @team = Team.find(@user.team_id)
      
     end
     params[:team][:status] = step.to_s
