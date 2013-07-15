@@ -1,13 +1,13 @@
 <div class="span4 offset0"> 
 
 <div class='dbox'>
-<h4>Listing Teams</h4>
-
+<h4>Verified Teams</h4>
+<p>Your team only appear if verified. Please allow up to 3  days</p>
 <table>
   <tr>
     <th>Name</th>
-    <th>Team Capt</th>
-    <th></th>
+    <th>|Team Capt | </th>
+    <th>  Summoner</th>
     <th></th>
     <th></th>
   </tr>
@@ -16,6 +16,7 @@
   <tr>
     <td><%= team.name %></td>
     <td><%= team.teamcapt %></td>
+    <td><%= team.player1%></td>
     <td><%= link_to 'Show  |', team %></td>
     <% if current_user.name== 'khoa'|| team.user_id== current_user.id %>
     <td><%= link_to 'Edit  |', edit_team_path(team) %></td>
@@ -28,7 +29,8 @@
 </table>
 
 <br />
-
+<% if current_user.name== 'khoa'%>
 <%= link_to 'New Team', new_team_path %>
+<%end %>
 </div>
 </div>

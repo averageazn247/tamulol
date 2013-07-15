@@ -53,7 +53,7 @@ $(document).ready(function() {
           <li><%= link_to "Rules", '/soon'%></li>
           <li><%= link_to "Stuff", '/soon' %></li>
           <li><%= link_to "Stuff", '/soon'%></li>
-          <li><%= link_to "Filleer", '/soon'%></li>
+          <li><%= link_to "Filler", '/soon'%></li>
           
            </ul>
               <li id="fat-menu" class="dropdown">
@@ -74,9 +74,14 @@ $(document).ready(function() {
               	Teams
               	<b class="caret"></b> </a>
               	<ul class="dropdown-menu">
-            <li><%= link_to "Create A Team", '/teamnew' %></li>
+              		<% if current_user.hasteam?(current_user.id) %>
+              		<li><%= link_to "View Your Team", '/listteam' %></li>
+              		<% else %>
+              		 <li><%= link_to "Create A Team", '/teamnew' %></li>
+              		<% end %>
+           
           
-          <li><%= link_to "View Your Team", '/listteam' %></li>
+          
 
          
         

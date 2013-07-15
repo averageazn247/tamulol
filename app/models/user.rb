@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
      attr_accessible :name, :email, :password, :password_confirmation,  :phone , :team_id
   has_secure_password
   has_many :teams
+  has_many :microposts
   has_many :relationships, foreign_key: "team_
   id", dependent: :destroy
   before_save { |user| user.email = email.downcase }
@@ -27,14 +28,22 @@ class User < ActiveRecord::Base
   def setteam(team,user)
     user.team_id=team.id
   end
+ 
   def getteam(user)
     teams.find_by_user_id(user.id)
     
     
   end
 
-def hasteam?(user)
-  relationships.find_by_user_id
+def hasteam?(user_id)
+  gotteam=false
+  teams=Team.all
+  teams.each do |team|
+    if user_id==    team.user_id
+      gotteam=true
+    end
+  end
+  return gotteam
 end
 def send_password_reset
   generate_token(:password_reset_token)

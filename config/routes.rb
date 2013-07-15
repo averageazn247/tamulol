@@ -4,11 +4,17 @@ Tamulol::Application.routes.draw do
   resources :teams do
   resources :build, controller: 'teams/build'
 end
+resources :teams do
+  collection do
+    put :approve
+  end
+end
   #resources :admin
 resources :sessions, only: [:new, :create, :destroy]
 resources :password_resets
   resources :users
     resources :team_steps 
+    
 match '/signup',  to: 'users#new'
 match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
