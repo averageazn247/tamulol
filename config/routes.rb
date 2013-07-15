@@ -39,6 +39,7 @@ match '/playerlist',to: 'player#list'
 match '/talumar', to: 'page#talumar'
 match '/sendmessage', to: 'message#new'
 match '/contact', to: 'page#contact'
+match '/index', to: 'message#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
