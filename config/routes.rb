@@ -15,7 +15,7 @@ resources :sessions, only: [:new, :create, :destroy]
 resources :password_resets
   resources :users
     resources :team_steps 
-    
+    resources :messages
 match '/signup',  to: 'users#new'
 match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
@@ -37,6 +37,8 @@ match '/jay' , to: 'page#jay'
 match '/spring2013', to: 'page#spring2013'
 match '/playerlist',to: 'player#list'
 match '/talumar', to: 'page#talumar'
+match '/sendmessage', to: 'message#new'
+match '/contact', to: 'page#contact'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,25 @@
+
+<%= form_for(@message) do |f| %>
+ 
+  
+<div class="row">
+  <div class="span6 offset3">
+  <div class="field">
+    <%= f.label :topic %>
+    <%= f.text_field :topic %><br />
+    <%= f.label :mess, "Message" %>
+    <%= f.text_area :mess %><br />
+      
+    
+        <%= f.hidden_field :sender, :value=> current_user.name%>
+    
+    
+  </div>
+  <div class="actions">
+    <%= f.submit "Send", class: "btn btn-large btn-primary" %>
+    
+  </div>
+  
+   </div>
+    </div>
+<% end %>

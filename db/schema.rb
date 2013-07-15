@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130715143131) do
+ActiveRecord::Schema.define(:version => 20130715220246) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(:version => 20130715143131) do
     t.text     "mess"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "sender"
   end
 
   create_table "microposts", :force => true do |t|

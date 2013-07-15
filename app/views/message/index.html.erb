@@ -1,0 +1,37 @@
+<h1>Listing Send Messages</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<% if current_user.admin || current_user.name== "khoa"%>
+	<% @messages.each do |message| %>
+	  <tr>
+	    <td><%= message.title %> &nbsp</td>
+	    <td><%= link_to '   Show | ', message %></td>  
+	    <td><%= link_to 'Edit | ', edit_message_path(message) %></td>  
+	    <td><%= link_to 'Delete', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	  </tr></table>
+	<% end %>
+
+
+
+
+<%else %>
+	<% @messages.each do |message| %>
+	  <tr>
+	  	<% if current_user.name == message.creator %>
+	    <td><%= message.title %> &nbsp</td>
+	    <td><%= link_to '   Show | ', message %></td>  
+	    <td><%= link_to 'Edit | ', edit_message_path(message) %></td>  
+	    <td><%= link_to 'Delete', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	  </tr></table>
+	  <% end %>
+<% end %>
+<br />
+
+<%= link_to 'Send a new message', new_message_path %>
+<% end %>

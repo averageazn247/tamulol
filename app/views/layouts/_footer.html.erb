@@ -3,10 +3,10 @@
   <nav>
     <ul>
       <li><%= link_to "About",   "#" %></li>
-      <li><%= link_to "Contact", "#" %></li>
+      <li><%= link_to "Contact", "/contact" %></li>
       <li><a href="http://news.railstutorial.org/">News</a></li>
        <% if signed_in? %>
-         <li> <%= link_to "Send Message", '/create' %></li>
+         <li> <%= link_to "Send Message", '/sendmessage' %></li>
       <% else %>
        <li><%= link_to "Send Message", signin_path %></li>
        <% end %>
