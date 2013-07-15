@@ -87,7 +87,7 @@ ActiveRecord::Schema.define(:version => 20130715143131) do
     t.string   "tag"
     t.integer  "user_id"
     t.string   "status"
-    t.boolean  "verify",     :default => false
+    t.boolean  "verify",     :default => false, :null => false
   end
 
   create_table "users", :force => true do |t|

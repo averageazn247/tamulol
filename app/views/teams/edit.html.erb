@@ -14,6 +14,12 @@
     </div>
   <% end %>
 *Required 
+  <% if current_user.admin || current_user.name=='khoa'%>
+  <div class="field">
+        <%= f.check_box :verify %>
+        <%= f.label :verify %>
+      </div>
+      <% end %>
   <div class="field">
     <%= f.label :name, "*Team Name" %><br />
     <%= f.text_field :name %>
@@ -112,6 +118,7 @@
     <%= f.label :email7 , "Sub 2 Email"%><br />
     <%= f.text_field :email7 %>
   </div>    
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -2,13 +2,14 @@ Tamulol::Application.routes.draw do
   get "password_resets/new"
   resources :players
   resources :teams do
+    collection do
+      put :approve
+    end
+end
+  resources :teams do
   resources :build, controller: 'teams/build'
 end
-resources :teams do
-  collection do
-    put :approve
-  end
-end
+
   #resources :admin
 resources :sessions, only: [:new, :create, :destroy]
 resources :password_resets

@@ -3,25 +3,42 @@
 <div class='dbox'>
 <h4>Verified Teams</h4>
 <p>Your team only appear if verified. Please allow up to 3  days</p>
+<%= form_tag approve_teams_path, action: 'approve', method: :put do %>
 <table>
   <tr>
+  	<th></th>
     <th>Name</th>
     <th>|Team Capt | </th>
     <th>  Summoner</th>
-    <th></th>
-    <th></th>
+ 
+    <th>|  Approved</th>
+   
+
   </tr>
 
 <% @teams.each do |team| %>
   <tr>
+   <% if current_user.name== 'khoa' %>
+  	 <td> <%= check_box_tag "team_ids[]", team.id %> </td>
+  	 <% end %>
     <td><%= team.name %></td>
     <td><%= team.teamcapt %></td>
     <td><%= team.player1%></td>
+   <td>
+   	 <%= team.verify ? 'yes' : 'No' %>
+   </td>
+    <% if current_user.name== 'khoa' %>
+    
+    	
+    <% end %>
+    	
+    	
     <td><%= link_to 'Show  |', team %></td>
     <% if current_user.name== 'khoa'|| team.user_id== current_user.id %>
     <td><%= link_to 'Edit  |', edit_team_path(team) %></td>
     <% end %>
     <% if current_user.name== 'khoa'%>
+     
     <td><%= link_to 'Delete', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <%end%>
   </tr>
@@ -30,7 +47,11 @@
 
 <br />
 <% if current_user.name== 'khoa'%>
+<%= submit_tag "Approve Checked" %> 
+<br />
+<% end %>
 <%= link_to 'New Team', new_team_path %>
 <%end %>
 </div>
 </div>
+

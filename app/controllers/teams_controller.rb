@@ -34,11 +34,16 @@ class TeamsController < ApplicationController
   
     
   end
-  def update
-    session[:team_id]=@team.id
+  def approve
+    
+    Team.where(id: params[:team_ids]).update_all(verify: true)
+    redirect_to teams_path
+  end
+  
+  def update 
     @team= Team.find(params[:id])
     if @team.update_attributes(params[:team])
-        
+        redirect_to teams_url 
     else
       render action: "edit"
       
@@ -51,6 +56,15 @@ class TeamsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to teams_url }
       format.json { head :no_content }
+    end
+  end
+  def update_multiple
+    @products = Product.update(params[:products].keys, params[:products].values)
+    @products.reject! { |p| p.errors.empty? }
+    if @products.empty?
+      redirect_to products_url
+    else
+      render "edit_multiple"
     end
   end
 end
