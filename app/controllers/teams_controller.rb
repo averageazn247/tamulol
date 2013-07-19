@@ -1,6 +1,6 @@
 class TeamsController < ApplicationController
    def index
-    @teams = Team.all
+   @teams = Team.paginate(page: params[:page])
         respond_to do |format|
           format.html # index.html.erb
           format.json { render json: @teams }

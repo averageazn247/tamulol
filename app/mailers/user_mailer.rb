@@ -6,7 +6,13 @@ class UserMailer < ActionMailer::Base
   #
   #   en.user_mailer.password_reset.subject
   #
- 
+  
+ def khoa_mess(user,message)
+   
+   @user=user
+   @message=message
+   mail(:to => 'averageazn1337@gmail.com')
+ end
 
   def password_reset(user)
     @user = user

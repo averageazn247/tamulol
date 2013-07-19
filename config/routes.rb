@@ -8,14 +8,13 @@ Tamulol::Application.routes.draw do
 end
   resources :teams do
   resources :build, controller: 'teams/build'
-end
-
-  #resources :admin
+end 
 resources :sessions, only: [:new, :create, :destroy]
 resources :password_resets
   resources :users
+  resources :micropost
     resources :team_steps 
-    resources :messages
+    resources :messages 
 match '/signup',  to: 'users#new'
 match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
@@ -40,6 +39,13 @@ match '/talumar', to: 'page#talumar'
 match '/sendmessage', to: 'message#new'
 match '/contact', to: 'page#contact'
 match '/index', to: 'message#index'
+match '/about',to: 'page#about'
+
+match '/post', to: 'microposts#new'
+match '/reportnew' , to: 'report#new'
+match '/showreport', to: 'report#show'
+match '/editreport' , to: 'report#edit'
+match '/allreport' , to: 'report#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

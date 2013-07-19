@@ -14,11 +14,22 @@ $(document).ready(function() {
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
-      <%= link_to "TAMULeague", root_path, id: "logo" %>
+      <%= link_to "TAMU League", root_path, id: "logo" %>
       <nav>
+      	
         <ul class="nav pull-right">
-        	  
-          
+        	      
+               <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              	Sponsors
+              	<b class="caret"></b> </a>
+              	<ul class="dropdown-menu">
+          <li><%= link_to " :*(", '/soon'%></li>
+          <li><%= link_to " :*(", '/soon' %></li>
+          <li><%= link_to " :*(", '/soon'%></li>
+          <li><%= link_to " :*(", '/soon'%></li>
+          </ul>
+          </li>
                     <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               	Events
@@ -91,7 +102,7 @@ $(document).ready(function() {
            </ul>
               <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              	Buy shit
+              	Buy Shit
               	<b class="caret"></b> </a>
               	<ul class="dropdown-menu">
           <li><%= link_to "Shirt", '/soon' %></li>
@@ -103,16 +114,19 @@ $(document).ready(function() {
             
            <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                Logged in as <%=   current_user.name %> <b class="caret"></b>
+                 <%=   current_user.name %> <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
                 <li><%= link_to "Profile", current_user %></li>
                 <li><%= link_to "Settings", edit_user_path(current_user) %></li>
               
                 
-                  <li> <%= link_to "View Messages", '/sendmessage' %></li>
+                   
+                  
                   <% if current_user.name== 'khoa'%>
+                  <li> <%= link_to "View Messages", '/allmessage' %></li>
           <li><%= link_to "Admin", '/admin' %></li> 
+           <li><%= link_to "Post", '/post' %></li> 
           <% end %>
                 <li class="divider"></li>
                 <li>

@@ -9,7 +9,7 @@ gem 'jquery-ui-rails'
 gem 'simple_form' 
 gem 'rufus-scheduler'
 gem "mail"  
-gem 'will_paginate', '3.0.3'
+gem 'will_paginate' 
 gem 'bootstrap-will_paginate', '0.0.6'
 gem "combined_time_select", "~> 1.0.0"
 gem 'delayed_job_active_record'

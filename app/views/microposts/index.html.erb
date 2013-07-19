@@ -1,0 +1,16 @@
+ <div class="dbox">
+ <div class="posts">
+ 
+ <%= form_for(@micropost) do |f| %>
+   <div class="field">
+   	  <h3><%= f.label :topic , 'Topic'%></h3>  
+    <%= f.text_field :topic  %>
+   	</div>
+  <div class="field">
+    <%= f.text_area :content, placeholder: "Compose new Post..." %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+<% end %>
+
+</div>
+</div>

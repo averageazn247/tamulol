@@ -66,31 +66,55 @@ p {
   text-decoration: none;
 }
 footer {
-  margin-top: 95px;
-  padding-top: 50px;
-    //background-image:url(http://riot-web-static.s3.amazonaws.com/forum/ui/content_bottom.png) ;
-  color: #C0C0C0;
-  a {
-    color: #555;
-    &:hover { 
-      color: #222;
-    }
-  }  
+  left: 90px;
+  color:    #0052CC;
+  position: relative;
+  text-align: center;
+width: 600px;
+margin: 0px auto;
+overflow: hidden; 
+ 
+   background: #DFDFEA;
+  //background-image:url('footer_background.jpg');
+     //background-image:url(http://riot-web-static.s3.amazonaws.comimg/lol-footer-sprite.png) ;
+   
+  sponsers{
+    
+    display: table-cell;
+vertical-align: top;
+text-align: center;
+  position: relative;
+  }
   small { 
+      position: relative;
     float: left; 
   }
-  ul {
+  ul{ 
+      position: relative;
+    width: 300px;
     float: right;
-    list-style: none;
-    color: $black;
-    li {
-      float: left;
-      color: $black;
-      margin-left: 10px;
-      font-weight: bold;
+      li {
+    
+     
+      //float: right;
+      list-style: none;
+      color:    #0052CC;
       
-    }
+   
+        color:    #0052CC;
+       // float: left;
+                color:    #0052CC;
+      font-size: 14px;
+  font-family: Tahoma,sans-serif;
+        margin-left: 10px;
+        font-weight: bold;
+           display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    
+  } 
   }
+
 }
 
 .viewport {
@@ -437,4 +461,38 @@ border:5px solid gray;
 margin:10px;
 background-color:#FFFFCC;
 font-family: fantasy,   book antiqua;
+}
+.microposts {
+  list-style: none;
+  margin: 10px 0 0 0;
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+.content {
+  display: block;
+}
+.timestamp {
+  color: $grayLight;
+}
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+.posts
+{
+   position:relative;
+  width:700px;
+  height: 300px;
+  border:2px    #000000;
+  background-color:#FFFFCC;
+  font-family: fantasy,   book antiqua;
 }
