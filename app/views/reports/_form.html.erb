@@ -1,0 +1,47 @@
+ <div class='pbox'>
+	  <h3>Submit A Report</h3>
+
+  
+<%= form_for(@report) do |f| %>
+
+
+  <% if @report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@report.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @report.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.hidden_field :creator_id, :value => current_user.id %>
+*Required 
+  <div class="field">
+    <%= f.label :team ,"*Teams Played"%><br />
+    <%= f.text_field :team %>
+  </div>
+  <div class="field">
+    <%= f.label :winner,"*Winner" %><br />
+    <%= f.text_field :winner %>
+  </div>
+  <div class="field">
+    <%= f.label :password ,"*Password"%><br />
+    <%= f.password_field :password %>
+  </div>
+   <div class="field">
+        <%= f.label :desc, "Extra Info" %><br />
+      <%= f.text_area :desc %>
+      </div>
+      <div class="field">
+            <%= f.label :phone, " Phone Number  " %><br />
+      <%= f.text_field :phone, :size => 20%>
+      </div>
+      
+     <%= f.submit "Send Report", class: "btn btn-large btn-primary" %>
+     <br />
+  <%= link_to 'cancel', root_path %>
+  </div>
+  </div>
+<% end %>  

@@ -1,0 +1,35 @@
+ <div class='dbox'>
+	  <h3>Submit A Report</h3>
+
+  
+<%= form_for @report do |f| %>
+
+
+ 
+  <%= f.hidden_field :creator_id, :value => current_user.id %>
+*Required 
+  <div class="field">
+    <%= f.label :teams ,"*Teams Played"%><br />
+    <%= f.text_field :teams %>
+  </div>
+  <div class="field">
+    <%= f.label :winner,"*Winner" %><br />
+    <%= f.text_field :winner %>
+  </div> 
+
+   <%= f.label  :dayof, ' *Date  Played' %>
+ 
+
+<%= f.text_field :dayof, :class => 'auto-kal' %>
+ 
+   <div class="field">
+        <%= f.label :desc, "Extra Info" %><br />
+      <%= f.text_area :desc %>
+      </div> 
+      
+     <%= f.submit "Send Report", class: "btn btn-large btn-primary" %>
+     <br />
+  <%= link_to 'cancel', root_path %>
+  </div>
+  </div>
+<% end %>  

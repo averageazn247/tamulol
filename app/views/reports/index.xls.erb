@@ -1,0 +1,34 @@
+<div class="span6">
+	<div class="dbox">
+		<%= will_paginate %>
+<h1>Listing Matches</h1>
+
+<table>
+  <tr>
+    <th>Teams </th>
+    <th>Date</th> 
+    <th>Winner</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @reports.each do |user| %>
+  <tr>
+    <td><%= user.teams %></td>
+    <td><%= user.dayof %></td>
+<td><%= user.winner%></td>
+    <td><%= link_to '   Show  |', user %></td>
+    <% if current_user.name == 'khoa' || current_user.id == user.id %>
+    <td><%= link_to 'Edit     |', edit_user_path(user) %></td>
+    <% end %>
+    <% if current_user.name == 'khoa'%>
+    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  	<% end %>
+  </tr>
+<% end %>
+</table>
+
+<br /> 
+</div>
+</div>
+<%= will_paginate %>

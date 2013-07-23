@@ -16,6 +16,7 @@ gem 'delayed_job_active_record'
  gem 'sidekiq'
 gem 'sinatra', require: false
 gem 'slim'
+gem 'bootstrap-datepicker-rails'
 gem 'carrierwave'
 group :development, :test do
   gem 'sqlite3', '1.3.5'
@@ -33,9 +34,11 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
+  gem 'kalendae_assets'
   gem 'sass-rails',   '3.2.5' 
   gem 'uglifier', '1.2.3'
   gem 'coffee-rails'
+  gem 'jquery-ui-rails'
 end
  
 

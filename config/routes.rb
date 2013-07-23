@@ -11,7 +11,8 @@ end
 end 
 resources :sessions, only: [:new, :create, :destroy]
 resources :password_resets
-  resources :users
+  resources :users 
+  resources :reports
   resources :micropost
     resources :team_steps 
     resources :messages 
@@ -42,10 +43,10 @@ match '/index', to: 'message#index'
 match '/about',to: 'page#about'
 
 match '/post', to: 'microposts#new'
-match '/reportnew' , to: 'report#new'
-match '/showreport', to: 'report#show'
-match '/editreport' , to: 'report#edit'
-match '/allreport' , to: 'report#index'
+match '/reportnew' , to: 'reports#new'
+match '/showreport', to: 'reports#show'
+match '/editreport' , to: 'reports#edit'
+match '/allreport' , to: 'reports#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
