@@ -15,8 +15,7 @@ gem "combined_time_select", "~> 1.0.0"
 gem 'delayed_job_active_record'
  gem 'sidekiq'
 gem 'sinatra', require: false
-gem 'slim'
-gem 'bootstrap-datepicker-rails'
+gem 'slim' 
 gem 'carrierwave'
 group :development, :test do
   gem 'sqlite3', '1.3.5'
