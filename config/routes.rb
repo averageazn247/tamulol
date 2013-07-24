@@ -41,7 +41,7 @@ match '/sendmessage', to: 'message#new'
 match '/contact', to: 'page#contact'
 match '/index', to: 'message#index'
 match '/about',to: 'page#about'
-
+match '/tos', to: 'page#tos'
 match '/post', to: 'microposts#new'
 match '/reportnew' , to: 'reports#new'
 match '/showreport', to: 'reports#show'

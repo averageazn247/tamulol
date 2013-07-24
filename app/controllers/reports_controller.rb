@@ -72,6 +72,6 @@ class ReportsController < ApplicationController
   end
   
     def index
-    @reports = Report.all.group_by {|m|m.dayof}
+    @reports = Report.all 
   end
 end

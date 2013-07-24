@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130719160604) do
+ActiveRecord::Schema.define(:version => 20130724162940) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -66,6 +66,9 @@ ActiveRecord::Schema.define(:version => 20130719160604) do
     t.text     "desc"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "game1"
+    t.string   "game2"
+    t.string   "game3"
   end
 
   create_table "teams", :force => true do |t|
@@ -99,6 +102,7 @@ ActiveRecord::Schema.define(:version => 20130719160604) do
     t.integer  "user_id"
     t.string   "status"
     t.boolean  "verify",     :default => false, :null => false
+    t.boolean  "tos"
   end
 
   create_table "users", :force => true do |t|

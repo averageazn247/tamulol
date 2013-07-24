@@ -1,4 +1,6 @@
 <% provide(:title, @user.name) %>
+<div class="center hero-unit">
+
 <h2>
   <%= gravatar_for @user %><%= @user.name %>
   
@@ -10,7 +12,7 @@
 	
 
 </p>
- <div class="center hero-unit">
+ 
 <p>
   <b>Email:</b>
   <%= @user.email %>

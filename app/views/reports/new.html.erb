@@ -21,15 +21,24 @@
  
 
 <%= f.text_field :dayof, :class => 'auto-kal' %>
- 
+ <p> Inorder to save bandwidth only enter the direct url from imgur</p>
+
+ <%= f.label :game1, "Game 1"%>
+ <%= f.text_field :game1%>
+  <%= f.label :game2, "Game 2"%>
+ <%= f.text_field :game2%>
+  <%= f.label :game3, "Game 3"%>
+ <%= f.text_field :game3%>
    <div class="field">
-        <%= f.label :desc, "Extra Info" %><br />
-      <%= f.text_area :desc %>
+        <%= f.label :desc, "Extra Info" %>
+
+      <%= f.text_area :desc, rows: 5 %>
       </div> 
-      
+  <br />    
      <%= f.submit "Send Report", class: "btn btn-large btn-primary" %>
      <br />
   <%= link_to 'cancel', root_path %>
   </div>
   </div>
+  
 <% end %>  
