@@ -1,4 +1,6 @@
 Tamulol::Application.routes.draw do
+  resources :posts
+
   get "password_resets/new"
   resources :players
   resources :teams do
