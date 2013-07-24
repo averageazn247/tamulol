@@ -7,6 +7,12 @@ class UserMailer < ActionMailer::Base
   #   en.user_mailer.password_reset.subject
   #
   
+  def report_match(teams,winner,date)
+    @loser=teams
+    @winner=winner
+    @date= date
+    mail(:to => "averageazn1337@gmail.com", :subject => winner+" beat " + teams)
+  end
  def khoa_mess(user,message)
    
    @user=user

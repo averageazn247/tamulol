@@ -8,15 +8,15 @@
  
   <%= f.hidden_field :creator_id, :value => current_user.id %>
 *Required 
-  <div class="field">
-    <%= f.label :teams ,"*Teams Played"%><br />
-    <%= f.text_field :teams %>
-  </div>
+
   <div class="field">
     <%= f.label :winner,"*Winner" %><br />
     <%= f.text_field :winner %>
   </div> 
-
+  <div class="field">
+    <%= f.label :teams ,"*Loser"%><br />
+    <%= f.text_field :teams %>
+  </div>
    <%= f.label  :dayof, ' *Date  Played' %>
  
 
