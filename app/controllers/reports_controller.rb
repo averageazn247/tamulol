@@ -33,9 +33,11 @@ class ReportsController < ApplicationController
   # POST /reports.json
   def create
     @report = Report.new(params[:report])
-
+    teams=@report.teams
+    winner=@report.winner
+    date=@report.dayof
     if @report.save
-      #ReportMailer.registration_confirmation(@report).deliver  
+       UserMailer.report_match(teams,winner,date).deliver  
       flash[:success] = "Thanks for reporting!"
       
       redirect_to @report

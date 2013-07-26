@@ -240,21 +240,23 @@ aside {
   }
 }
 body {
-  padding-top: 60px;
+  padding-top: 40px;
   text-align: center;
    font-family:   book antiqua;
   background-image: url('lolbd1.jpg');
- // background-repeat: repeat;
+  background-size:120% 120%;
+    background-repeat: repeat-y;
 }
+
    
  
   .wellsidebar-nav{
-    min-height: 20px;
+    min-height: 60px;
     padding: 19px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     background-color: rgb(245, 245, 245);
-    border: 1px solid rgb(227, 227, 227);
-    border-radius: 4px 4px 4px 4px;
+    //border: 1px solid rgb(227, 227, 227);
+   // border-radius: 4px 4px 4px 4px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05) inset;
     
 }
@@ -399,7 +401,7 @@ font-family:    book antiqua;
  
 /*Image*/
 #bigPic {
-    margin-top: 30px;
+    margin-top: 10px;
 }
 .ptext  {
     color: #999;
@@ -435,7 +437,19 @@ font-family:    book antiqua;
     background: blue;
     color: white;
 }
- 
+ #container
+{
+position: relative;
+//background-image: url('headerbg.jpg');
+}
+ #navigation
+{
+position: absolute;
+left:900px;
+top: 5px;
+
+
+} 
 .container-height {
     margin: 0 auto;
     min-height: 88%;
@@ -520,3 +534,21 @@ aside {
   background-color:#FFFFCC;
   font-family:    book antiqua;
 }
+.navbar-inner{
+  min-height:50px;
+   border: 0px ;
+    background-repeat: repeat;
+ 
+    background-image: url('headers-maroon11.jpg');
+    
+}
+.header2{
+ width: 100%; 
+
+}
+#logo{
+  font-size: 2em;
+  font-family:    book antiqua;
+  
+}
+
