@@ -31,6 +31,7 @@ match '/off_stream' , to: 'page#stream'
 match '/nocx', to: 'page#nocx'
 match '/printcapt', to: 'admin#print', defaults: { format: 'xls' }
 get '/photos/capt', to: 'admin#print', defaults: { format: 'xls' }
+get '/print/match', to: 'admin#match', defaults: { format: 'xls'}
 match '/anariil' , to: 'page#anariil'
 match '/zehtsu' , to: 'page#zehtsu'
 match '/rainbow', to: 'page#rainbow'

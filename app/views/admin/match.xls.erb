@@ -1,0 +1,17 @@
+
+
+<table border="1">
+  <tr>
+    <th>Winner </th>
+    <th>Loser</th>
+    <th>Date</th>
+   
+  </tr>
+  <% @matchs.each do |product| %>
+  <tr>
+    <td><%= product.winner %></td>
+    <td><%= product.teams %></td>
+    <td><%= product.dayof %></td> 
+  </tr>
+  <% end %>
+</table>

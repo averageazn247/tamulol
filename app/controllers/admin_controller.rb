@@ -25,5 +25,12 @@ class AdminController < ApplicationController
 
     end
   end 
-    
+  def match
+            @matchs=Report.find(:all, :order => "dayof")
+    respond_to do |format|
+          format.csv { send_data @matchs.to_csv }
+      format.xls 
+  end
+  end
+  
 end
