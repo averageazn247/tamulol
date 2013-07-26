@@ -16,7 +16,7 @@
   Full	Teams Info : <%= link_to "Excel", teams_path(format: "xls") %>
   </p>
  <p>Captains:<%= link_to " Excel",  '/photos/capt'+'.xls'%></p> 
- <p>Matches: <%= link_to " Excel",  '/print/match'+'.xls'%></p>
+ <p>Matches: <%= link_to " Excel",  '/print/match'+'.xls', :sort => "dayof"%></p>
  <p>Players:</p>
  <p>Players</p>
  
