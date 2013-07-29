@@ -20,9 +20,13 @@ class TeamsController < ApplicationController
     @team = Team.find(params[:id])
     
   end
+  def editbio
+    @team = Team.find(params[:id])
+  end
   def create
     @team= Team.create(params[:team])
     @user=User.find(current_user.id)
+    
     session[:team_id]=@team.id
       if @team.save || @team.tos== true
             @user.setteam(@team,@user)

@@ -1,6 +1,6 @@
 class TeamStepsController < ApplicationController
       include Wicked::Wizard
-    steps   :capt, :play2, :play3, :play4 , :play5 , :subs
+    steps   :capt, :play2, :play3, :play4 , :play5 , :subs, :backup
   
  
 
@@ -31,18 +31,19 @@ end
 
 
   def update
-    
+    team_id=params[:team_id]
     id=session[:team_id]
     if session[:team_id]
       @team = Team.find( session[:team_id])
     else
        @user=User.find(current_user.id)
-      @team = Team.find(@user.team_id)
+      @team = Team.find( team_id)
      
     end
     params[:team][:status] = step.to_s
     params[:team][:status] = 'active' if step == steps.last
     @team.attributes = params[:team]
+    session[:team_id] = @team.id
     render_wizard @team
   end
 def redirect_to_finish_wizard(team)

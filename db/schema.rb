@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130724203518) do
+ActiveRecord::Schema.define(:version => 20130729194314) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -83,8 +83,8 @@ ActiveRecord::Schema.define(:version => 20130724203518) do
   create_table "teams", :force => true do |t|
     t.string   "name"
     t.string   "teamcapt"
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
     t.string   "player1"
     t.string   "player2"
     t.string   "player3"
@@ -110,8 +110,14 @@ ActiveRecord::Schema.define(:version => 20130724203518) do
     t.string   "tag"
     t.integer  "user_id"
     t.string   "status"
-    t.boolean  "verify",     :default => false, :null => false
+    t.boolean  "verify",      :default => false, :null => false
     t.boolean  "tos"
+    t.string   "sec_name"
+    t.string   "sec_play"
+    t.string   "sec_email"
+    t.string   "third_name"
+    t.string   "third_play"
+    t.string   "third_email"
   end
 
   create_table "users", :force => true do |t|

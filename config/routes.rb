@@ -50,7 +50,8 @@ match '/post', to: 'microposts#new'
 match '/reportnew' , to: 'reports#new'
 match '/showreport', to: 'reports#show'
 match '/editreport' , to: 'reports#edit'
-match '/allreport' , to: 'reports#index'
+match '/allreport' , to: 'reports#index' 
+match '/teams/:id/editbio', to: 'teams#editbio'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

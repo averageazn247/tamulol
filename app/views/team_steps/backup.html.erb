@@ -1,0 +1,40 @@
+<div class="span6 offset5"> 
+<div class="center hero-unit">
+<%= form_for @team , url: wizard_path do |f| %>
+  <h2>Secondary Contacts </h2>
+ <p> Plan B if you are busy</p>
+ 
+   <div class="field">
+    <%= f.label :sec_name , "Secondary Contact Name"%><br />
+    <%= f.text_field :sec_name %>
+  </div>
+   <div class="field">
+    <%= f.label :sec_play , " Summoner"%><br />
+    <%= f.text_field :sec_play %>
+  </div>  
+     <div class="field">
+    <%= f.label :sec_email, " Email"%><br />
+    <%= f.text_field :sec_email %>
+  </div>
+     <div class="field">
+    <%= f.label :third_name , "Third Contact Name"%><br />
+    <%= f.text_field :third_name %>
+  </div>
+   <div class="field">
+    <%= f.label :third_play , "Sub 2 Summoner"%><br />
+    <%= f.text_field :third_play %>
+  </div>  
+     <div class="field">
+    <%= f.label :third_email, "Email"%><br />
+    <%= f.text_field :third_email %>
+  </div>
+  
+  
+  <div class="actions">
+    <%= f.submit "Finished" , :class => 'btn btn-primary' %>
+  </div>
+<%= link_to "<--- Back ",team_steps_path(:id =>  'subs', :team_id => @team.id), :class => 'btn btn-primary' %> 
+
+<%= link_to "  View  Team ",  team_path(@team), :class => 'btn btn-primary' %>
+</div><% end %>
+</div>

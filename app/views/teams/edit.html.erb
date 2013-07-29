@@ -1,5 +1,5 @@
 <div class="span6">
-<div class="dbox"> <h1>Editing team</h1>
+<div class="dbox"> <h1>Editing Team</h1>
 
 <%= form_for(@team) do |f| %>
   <% if @team.errors.any? %>
@@ -27,6 +27,10 @@
     <div class="field">
     <%= f.label :tag, "*Team Tag 5 Char Max" %><br />
     <%= f.text_field :tag%>
+  </div>
+      <div class="field">
+    <%= f.label :bio, "Bio" %><br />
+    <%= f.text_area :bio%>
   </div>
   <div class="field">
     <%= f.label :teamcapt, "*Team Captain Name" %><br />
@@ -118,7 +122,32 @@
     <%= f.label :email7 , "Sub 2 Email"%><br />
     <%= f.text_field :email7 %>
   </div>    
-
+  </div>
+    <div class="dbox"> 
+   <div class="field">
+    <%= f.label :sec_name , "Secondary Contact Name"%><br />
+    <%= f.text_field :sec_name %>
+  </div>
+   <div class="field">
+    <%= f.label :sec_play , " Summoner"%><br />
+    <%= f.text_field :sec_play %>
+  </div>  
+     <div class="field">
+    <%= f.label :sec_email, " Email"%><br />
+    <%= f.text_field :sec_email %>
+  </div>
+     <div class="field">
+    <%= f.label :third_name , "Third Contact Name"%><br />
+    <%= f.text_field :third_name %>
+  </div>
+   <div class="field">
+    <%= f.label :third_play , "Sub 2 Summoner"%><br />
+    <%= f.text_field :third_play %>
+  </div>  
+     <div class="field">
+    <%= f.label :third_email, "Email"%><br />
+    <%= f.text_field :third_email %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
