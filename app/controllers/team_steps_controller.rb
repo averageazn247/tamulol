@@ -19,7 +19,7 @@ def create
   @team = Team.create
    @team.save
     @user=User.find(current_user.id)
-    @user.setteam(@team,@user)
+    @user.setteam(@team.id,@user)
     session[:user_id] = current_user.id
     session[:team_id] = @team.id
     redirect_to wizard_path(steps.first, :team_id => @team.id)

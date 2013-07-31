@@ -1,18 +1,21 @@
 class User < ActiveRecord::Base
  
      attr_accessible :name, :email, :password, :password_confirmation,  :phone , :team_id
-  has_secure_password
+  
+
   has_many :teams
   has_many :microposts
-  has_many :relationships, foreign_key: "team_
-  id", dependent: :destroy
-  before_save { |user| user.email = email.downcase }
-  before_save :create_remember_token
-    VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  
-  validates :email, presence:   true,
-                    format:     { with: VALID_EMAIL_REGEX },
-                    uniqueness: { case_sensitive: false }
+  has_many :authorizations
+validates :name, :email, :presence => true
+ 
+
+  before_save { |user| user.email = email.downcase unless user.email.blank? }
+  # before_save :create_remember_token
+    # VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+#   
+  # validates :email, presence:   true,
+                    # format:     { with: VALID_EMAIL_REGEX },
+                    # uniqueness: { case_sensitive: false }
   
   before_save :create_remember_token
      before_create { generate_token(:auth_token) }
@@ -25,8 +28,8 @@ class User < ActiveRecord::Base
       self[column] = SecureRandom.urlsafe_base64
     end while User.exists?(column => self[column])
   end
-  def setteam(team,user)
-    user.team_id=team.id
+  def setteam(team_id,user)
+    user.team_id=team_id
   end
  
   def getteam(user)
@@ -34,7 +37,18 @@ class User < ActiveRecord::Base
     
     
   end
-
+def self.from_omniauth(auth)
+    where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
+      user.provider = auth.provider
+      user.uid = auth.uid
+      user.email= auth.info.email
+      user.phone= auth.info.phone
+      user.name = auth.info.name
+      user.oauth_token = auth.credentials.token
+      user.oauth_expires_at = Time.at(auth.credentials.expires_at)
+      user.save!
+    end
+  end
 def hasteam?(user_id)
   gotteam=false
   teams=Team.all

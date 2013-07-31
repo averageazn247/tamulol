@@ -52,6 +52,10 @@ match '/showreport', to: 'reports#show'
 match '/editreport' , to: 'reports#edit'
 match '/allreport' , to: 'reports#index' 
 match '/teams/:id/editbio', to: 'teams#editbio'
+
+get   '/login', :to => 'sessions#new', :as => :login
+match '/auth/:provider/callback', :to => 'sessions#create'
+match '/auth/failure', :to => 'sessions#failure'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

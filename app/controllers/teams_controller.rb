@@ -29,7 +29,7 @@ class TeamsController < ApplicationController
     
     session[:team_id]=@team.id
       if @team.save || @team.tos== true
-            @user.setteam(@team,@user)
+            @user.setteam(@team.id,@user)
      
         redirect_to team_steps_path(:first_step, :team_id => @team.id)
       # redirect_to @team
