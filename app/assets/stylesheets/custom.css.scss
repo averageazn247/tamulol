@@ -380,12 +380,14 @@ font-family:    book antiqua;
 }/*Navigation*/
  
 #nav {
-    font: 12px/30px Helvetica, sans-serif;
+   // font: 12px/30px Helvetica, sans-serif;
+    font-family:'Kozuka Gothic Pro B';
     text-align: center;
 }
  
 #nav a {
     background: #444;
+     font-family:'Kozuka Gothic Pro B';
     color: #fff;
     margin-right: 30px;
     width: 30px;
