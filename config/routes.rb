@@ -52,7 +52,7 @@ match '/showreport', to: 'reports#show'
 match '/editreport' , to: 'reports#edit'
 match '/allreport' , to: 'reports#index' 
 match '/teams/:id/editbio', to: 'teams#editbio'
-
+match '/shirt', to: 'player#shirt'
 get   '/login', :to => 'sessions#new', :as => :login
 match '/auth/:provider/callback', :to => 'sessions#create'
 match '/auth/failure', :to => 'sessions#failure'
