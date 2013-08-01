@@ -1,10 +1,9 @@
-/* http://www.menucool.com */
-
+ 
 #sliderFrame {position:relative;width:700px;margin: 0 auto;} /*remove the "margin:0 auto;" if you want to align the whole slider to the left side*/
 
 #slider {
     width:500px;height:600px;/* Make it the same size as your images */
-	background:#fff url(loading.gif) no-repeat 50% 50%;
+	background:#fff url(loading.gif) no-repeat 100% 100%;
 	position:relative;
 	margin:0 auto;/*make the image slider center-aligned */
     box-shadow: 0px 1px 5px #999999;
@@ -15,6 +14,7 @@
 	display:none;
 }
 #slider>a {display:none;}
+ 
 
 /* the link style (if an image is wrapped in a link) */
 #slider a.imgLink {
@@ -60,10 +60,9 @@ div.mc-caption a:hover {
 
 /* ------ built-in navigation bullets wrapper ------*/
 div.navBulletsWrapper  {
-    top:520px; left:300px; /* Refer to demo 8's CSS file that has an easier approach to center the nav bullets */
+    top:520px; left:210px; /* Refer to demo 8's CSS file that has an easier approach to center the nav bullets */
     width:150px;
-    background:none;
-    padding-left:20px;
+    background:none; 
     position:relative;
     z-index:5;
     cursor:pointer;
@@ -74,7 +73,10 @@ div.navBulletsWrapper div
 {
     width:11px; height:11px;
     background:transparent url(bullet.png) no-repeat 0 0;
-    float:left;overflow:hidden;vertical-align:middle;cursor:pointer;
+     
+    overflow:hidden;
+    vertical-align:middle;cursor:pointer;
+    position: center
     margin-right:11px;/* distance between each bullet*/
     _position:relative;/*IE6 hack*/
 }
@@ -97,7 +99,7 @@ div.navBulletsWrapper div.active {background-position:0 -11px;}
     background:transparent url(loading.gif) no-repeat 50% 50%;
     filter: alpha(opacity=60);
     opacity:0.6;
-    position:absolute;
+    position:relative;
     left:0;
     top:0; 
     z-index:9;
