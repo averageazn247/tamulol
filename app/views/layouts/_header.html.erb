@@ -33,17 +33,7 @@ $(document).ready(function() {
       	 <%= link_to "TAMU Esports", root_path, id: "logo" %> 
         <ul class="nav pull-right">
         	     
-               <li id="fat-menu" class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              	Sponsors
-              	<b class="caret"></b> </a>
-              	<ul class="dropdown-menu">
-          <li><%= link_to " :*(", '/soon'%></li>
-          <li><%= link_to " :*(", '/soon' %></li>
-          <li><%= link_to " :*(", '/soon'%></li>
-          <li><%= link_to " :*(", '/soon'%></li>
-          </ul>
-          </li>
+            
                     <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               	Events
@@ -69,9 +59,10 @@ $(document).ready(function() {
                 
  				    <li>	<%= link_to "Stuff", '/soon'%></li>
               </ul>
+              
    <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              	Tournament
+              	TAMU Season
               	<b class="caret"></b> </a>
               	<ul class="dropdown-menu">
           <li><%= link_to "Rules", '/soon'%></li>
@@ -91,7 +82,17 @@ $(document).ready(function() {
           <li><%= link_to "Filleer", '/soon' %></li>
           
            </ul>
-            
+               <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              	Sponsors
+              	<b class="caret"></b> </a>
+              	<ul class="dropdown-menu">
+          <li><%= link_to " :*(", '/soon'%></li>
+          <li><%= link_to " :*(", '/soon' %></li>
+          <li><%= link_to " :*(", '/soon'%></li>
+          <li><%= link_to " :*(", '/soon'%></li>
+          </ul>
+          </li>
           <% if signed_in? %>
                      	<li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">

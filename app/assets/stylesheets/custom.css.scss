@@ -239,7 +239,7 @@ aside {
     }
   }
 }
-body {
+ body {
   padding-top: 00px;
   text-align: center;
    font-family:   book antiqua;
@@ -247,6 +247,7 @@ body {
   background-size:100% 1200px;
   background-position: 0px 200px;
     background-repeat: repeat-y;
+    overflow:auto;
 }
 
    
@@ -540,10 +541,7 @@ aside {
 }
 .navbar-inner{
   min-height:50px;
-   border: 0px ;
-    background-repeat: repeat;
- 
-    background-image: url('headers-maroon11.jpg');
+   border: 0px ; 
     
 }
 .header2{
@@ -555,7 +553,7 @@ aside {
   font-family:    book antiqua;
   
 }
-.wrapper {
+.wrapper2 {
   background-image: url('tophead.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;

@@ -60,7 +60,7 @@ div.mc-caption a:hover {
 
 /* ------ built-in navigation bullets wrapper ------*/
 div.navBulletsWrapper  {
-    top:520px; left:300px; /* Refer to demo 8's CSS file that has an easier approach to center the nav bullets */
+    top:520px; left:210px; /* Refer to demo 8's CSS file that has an easier approach to center the nav bullets */
     width:150px;
     background:none;
     padding-left:20px;
