@@ -1,6 +1,6 @@
 /* http://www.menucool.com */
 
-#sliderFrame {position:relative;width:700px;margin: 0 auto;} /*remove the "margin:0 auto;" if you want to align the whole slider to the left side*/
+#sliderFrame {position:center;width:700px;margin: 0 auto;} /*remove the "margin:0 auto;" if you want to align the whole slider to the left side*/
 
 #slider {
     width:700px;height:500px;/* Make it the same size as your images */
@@ -76,6 +76,7 @@ div.navBulletsWrapper div
     background:transparent url(bullet.png) no-repeat 0 0;
     float:left;overflow:hidden;vertical-align:middle;cursor:pointer;
     margin-right:11px;/* distance between each bullet*/
+   	margin-top:5px;
     _position:relative;/*IE6 hack*/
 }
  

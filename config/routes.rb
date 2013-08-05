@@ -40,6 +40,7 @@ match '/jay' , to: 'page#jay'
 match '/spring2013', to: 'page#spring2013'
 
 match '/playerlist',to: 'player#list'
+match '/tusla2013', to: 'player#tusla'
 match '/talumar', to: 'page#talumar'
 match '/sendmessage', to: 'message#new'
 match '/contact', to: 'page#contact'
