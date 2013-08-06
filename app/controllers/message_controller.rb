@@ -46,7 +46,7 @@ class MessageController < ApplicationController
       
       flash[:success] = "Thanks for Messaging Khoa"
       
-      redirect_to @message
+      redirect_to root_path
     else
       render 'new'
     end
