@@ -38,7 +38,7 @@ match '/rainbow', to: 'page#rainbow'
 match '/epicshots' , to: 'page#epicshots'
 match '/jay' , to: 'page#jay'
 match '/spring2013', to: 'page#spring2013'
-
+match '/messages', to: 'message#index'
 match '/playerlist',to: 'player#list'
 match '/tusla2013', to: 'player#tusla'
 match '/talumar', to: 'page#talumar'
