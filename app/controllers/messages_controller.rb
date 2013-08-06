@@ -1,4 +1,4 @@
-class MessageController < ApplicationController
+class MessagesController < ApplicationController
 
   def index
     @messages = Message.all
@@ -46,7 +46,7 @@ class MessageController < ApplicationController
       
       flash[:success] = "Thanks for Messaging Khoa"
       
-      redirect_to root_path
+      redirect_to @message
     else
       render 'new'
     end

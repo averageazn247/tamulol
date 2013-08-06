@@ -17,8 +17,7 @@ resources :password_resets
   resources :reports
   resources :micropost
     resources :team_steps 
-    resources :messages 
-    resources :message
+    resources :messages  
 match '/signup',  to: 'users#new'
 match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
@@ -43,9 +42,9 @@ match '/messages', to: 'message#index'
 match '/playerlist',to: 'player#list'
 match '/tusla2013', to: 'player#tusla'
 match '/talumar', to: 'page#talumar'
-match '/sendmessage', to: 'message#new'
+match '/sendmessage', to: 'messages#new'
 match '/contact', to: 'page#contact'
-match '/index', to: 'message#index'
+match '/index', to: 'messages#index'
 match '/about',to: 'player#about'
 match '/tos', to: 'page#tos'
 match '/post', to: 'microposts#new'

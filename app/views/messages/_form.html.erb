@@ -10,9 +10,9 @@
     <%= f.label :mess, "Message" %>
     <%= f.text_area :mess %><br />
       
-    
+    <% if current_user !=nil %>
         <%= f.hidden_field :sender, :value=> current_user.name%>
-    
+    <% end %>
       <div class="actions">
     <%= f.submit "Send", class: "btn btn-large btn-primary" %>
     
