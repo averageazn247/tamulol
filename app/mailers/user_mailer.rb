@@ -17,7 +17,7 @@ class UserMailer < ActionMailer::Base
    
    @user=user
    @message=message
-   mail(:to => 'averageazn1337@gmail.com')
+   mail(:to => 'averageazn1337@gmail.com',:subject =>message.topic)
  end
 
   def password_reset(user)
