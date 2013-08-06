@@ -5,11 +5,14 @@ attr_accessible :name7, :player7, :email7 ,:user_id, :status, :verify, :tos ,:se
 attr_accessible :third_name, :third_email, :third_play
 validates_acceptance_of :tos, :allow_nil => false, :accept => true, :on => :create
   belongs_to :user
+  
   def setteam(team,user)
     user.team_id=team.id
   end
-
- 
+validates :email1,      :presence => true, :if => :active_or_email?
+ def active_or_email?
+    status.include?('email') || active?
+  end
   def active?
   status == 'active'
 end
