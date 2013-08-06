@@ -1,5 +1,6 @@
 <div class='hero-unit'>
 <h1>Listing Send Messages</h1>
+<% if current_user !=nil %>
  <% if current_user.name == 'khoa' || current_user.admin %>
 <table>
   <tr>
@@ -11,7 +12,7 @@
 
 	<% @messages.each do |message| %>
 	  <tr>
-	    <td><%= message.title %> &nbsp</td>
+	    <td><%= message.topic %> &nbsp</td>
 	    <td><%= link_to '   Show | ', message %></td>  
 	    <td><%= link_to 'Edit | ', edit_message_path(message) %></td>  
 	    <td><%= link_to 'Delete', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -28,14 +29,17 @@
     <th></th>
     <th></th>
   </tr>
+  
 	<% @messages.each do |message| %>
 	  <tr>
+	  	 
 	  	<% if current_user.name == message.creator %>
-	    <td><%= message.title %> &nbsp</td>
+	    <td><%= message.topic %> &nbsp</td>
 	    <td><%= link_to '   Show | ', message %></td>  
 	    <td><%= link_to 'Edit | ', edit_message_path(message) %></td>  
 	    <td><%= link_to 'Delete', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 	  </tr></table>
+	  <% end %>
 	  <% end %>
  	  <% end %>
 <% end %>
