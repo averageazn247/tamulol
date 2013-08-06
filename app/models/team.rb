@@ -9,7 +9,7 @@ validates_acceptance_of :tos, :allow_nil => false, :accept => true, :on => :crea
   def setteam(team,user)
     user.team_id=team.id
   end
- 
+validates :email1,      :presence => true, :if => :active_or_email?
  def active_or_email?
     status.include?('email') || active?
   end
