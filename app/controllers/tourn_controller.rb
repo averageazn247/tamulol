@@ -1,0 +1,2 @@
+class TournController < ApplicationController
+end

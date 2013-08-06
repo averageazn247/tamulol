@@ -57,6 +57,7 @@ match '/shirt', to: 'player#shirt'
 get   '/login', :to => 'sessions#new', :as => :login
 match '/auth/:provider/callback', :to => 'sessions#create'
 match '/auth/failure', :to => 'sessions#failure'
+match '/gamerep', :to => 'tourn#gamerepublik'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
