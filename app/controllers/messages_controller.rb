@@ -1,4 +1,4 @@
-class MessageController < ApplicationController
+class MessagesController < ApplicationController
 
   def index
     @messages = Message.all
@@ -42,7 +42,7 @@ class MessageController < ApplicationController
     @message = Message.new(params[:message])
 
     if @message.save
-      UserMailer.message_confirmation(current_user,@message).deliver
+      UserMailer.khoa_mess(current_user,@message).deliver
       
       flash[:success] = "Thanks for Messaging Khoa"
       
