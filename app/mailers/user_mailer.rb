@@ -6,7 +6,13 @@ class UserMailer < ActionMailer::Base
   #
   #   en.user_mailer.password_reset.subject
   #
-  
+  def report_team(team)
+    @team=team
+    @email1=team.email1
+    @email2=team.email2
+    
+    
+  end
   def report_match(teams,winner,date)
     @loser=teams
     @winner=winner
