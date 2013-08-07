@@ -1,14 +1,17 @@
 /* http://www.menucool.com */
 
-#sliderFrame {position:relative;width:700px} /*remove the "margin:0 auto;" if you want to align the whole slider to the left side*/
+#sliderFrame {position:center; } /*remove the "margin:0 auto;" if you want to align the whole slider to the left side*/
 
 #slider {
-    width:700px;height:500px;/* Make it the same size as your images */
-	background:#fff url(loading.gif) no-repeat 50% 50%;
+	 
+    background-size:cover;
+	background:#fff url(loading.gif) ;
 	position:relative;
+	background-repeat:no-repeat;
 	margin:0 auto;/*make the image slider center-aligned */
     box-shadow: 0px 1px 5px #999999;
-}
+     left: -50px; 
+     }
 #slider img, #slider>b, #slider a>b{
 	position:absolute;
 	border:none;
@@ -22,6 +25,7 @@
 	position:absolute;
 	top:0px;left:0px;border:0;padding:0;margin:0;
 	width:100%;height:100%;
+	
 }
 
 /* Caption styles */
@@ -60,7 +64,7 @@ div.mc-caption a:hover {
 
 /* ------ built-in navigation bullets wrapper ------*/
 div.navBulletsWrapper  {
-    top:520px; left:300px; /* Refer to demo 8's CSS file that has an easier approach to center the nav bullets */
+    top:520px; left:210px; /* Refer to demo 8's CSS file that has an easier approach to center the nav bullets */
     width:150px;
     background:none;
     padding-left:20px;
@@ -76,6 +80,7 @@ div.navBulletsWrapper div
     background:transparent url(bullet.png) no-repeat 0 0;
     float:left;overflow:hidden;vertical-align:middle;cursor:pointer;
     margin-right:11px;/* distance between each bullet*/
+   	margin-top:5px;
     _position:relative;/*IE6 hack*/
 }
  
