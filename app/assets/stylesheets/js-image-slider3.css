@@ -3,7 +3,7 @@
 #sliderFrame {position:center; } /*remove the "margin:0 auto;" if you want to align the whole slider to the left side*/
 
 #slider {
-	 
+	   width:800px;height:500px;
     background-size:cover;
 	background:#fff url(loading.gif) ;
 	position:relative;
