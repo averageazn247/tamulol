@@ -9,16 +9,13 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
 
+
  *= require_self
- *= require bootstrap
- 
- *= require custom
+ *= require_tree .
  *= require kalendae
  */
 
-.hero-unit{
-	left:300px;
-}
+
  
 
 html, body {
@@ -26,7 +23,7 @@ html, body {
   font-family: Verdana, Helvetica;
   font-size: 12px;
   p{
-	
+	text-align:right;
 }
 
 }

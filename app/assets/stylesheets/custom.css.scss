@@ -4,15 +4,11 @@ $black: #000000;
 $blue: #0000FF;
 $lightblue:#6495ed;
 $grayMediumLight: #eaeaea;
-@media (max-width: 767px) { .hero-container { margin-right: -20px; margin-left: -20px; } }
+
 @mixin box_sizing {
   -moz-box-sizing: border-box; 
   -webkit-box-sizing: border-box; 
   box-sizing: border-box;
-}
-.hero-unit{
-  left:400px;
-  
 }
 
 .debug_dump {
