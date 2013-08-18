@@ -1,7 +1,9 @@
 /* http://www.menucool.com */
 
 #sliderFrame {position:center; } /*remove the "margin:0 auto;" if you want to align the whole slider to the left side*/
-
+  p{
+	text-align:center;
+}
 #slider {
 	   width:800px;height:500px;
     background-size:cover;
