@@ -1,23 +1,21 @@
- 
-<footer class="footer">
-
-
+<div class="container">
+	<div class="hero-unit">
  <div class="sponsers">
  	
     <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %> 
     <!-- <%= link_to image_tag("Riot_logo.png", alt: "Riot" ), 'http://www.riotgames.com/' %> -->
  
-  </div>
+ 
   
     <ul>
-      <li><%= link_to "About | ",   "/about" %></li>
-      <li><%= link_to "Contact   ", "/contact" %></li>
+      <%= link_to "About | ",   "/about" %>
+      <%= link_to "Contact   ", "/contact" %>
 
        <% if signed_in? %>
-         <li> <%= link_to "   |Send Message", '/sendmessage' %></li>
+          <%= link_to "   |Send Message", '/sendmessage' %>
       
        <% end %>
     </ul>
-    
-   
-</footer> 
+     </div>
+     </div>
+     </div>
