@@ -12,7 +12,7 @@
   <%= render 'layouts/header' %>
 
     <body>
-<div class="wrapper">
+
       
            <div class="container-fluid  container-height">
       <div class="row-fluid full-height">
@@ -57,7 +57,7 @@
 
 </div>
         </div><!--/span-->
-
+<div class="wrapper">
     <div class="container" style="margin-left: 220px;">
     	<p class= "notice">   
     		 <%= notice %></p> 
@@ -67,21 +67,23 @@
       <% end %>
  
       <%= yield %>
-      
-             <div class="footer">
+        <div class="footer">
   <%= render 'layouts/footer' %>
 
    
 </div>
-  
-          </div> 
+      </div> 
+         
 
-        </div>     
+
+  </div>
+           </div> 
+</div>
+  
+          
+            
 
       
-    </div>
-
-</div>
 
 
 
