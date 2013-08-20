@@ -60,6 +60,7 @@ match '/auth/failure', :to => 'sessions#failure'
 match '/gamerep', :to => 'tourn#gamerepublik' 
 match '/tulsa2013' , to: 'player#tulsa'
 match '/rules', to: 'player#rules'
+match '/streams', to: 'player#stream'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
