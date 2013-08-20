@@ -58,7 +58,8 @@
 </div>
         </div><!--/span-->
 
-    <div class="container" style="margin-left: 220px;"><div class="wrapper">
+    <div class="container" style="margin-left: 220px;">
+    	<div class="wrapper">
     	<p class= "notice">   
     		 <%= notice %></p> 
       <% flash.each do |key, value| %>
@@ -67,7 +68,9 @@
       <% end %>
  
       <%= yield %>
+      <div class="push"></div>
       </div>
+      
         <div class="footer">
   <%= render 'layouts/footer' %>
 
