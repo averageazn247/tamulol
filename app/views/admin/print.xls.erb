@@ -5,7 +5,8 @@
     <th>Team Name</th>
     <th>Capt Name</th>
     <th>Summoner</th>
-    <th>email</th>
+    <th>Email</th>
+    <th>Team Elo</th>
   </tr>
   <% @teams.each do |product| %>
   <tr>
@@ -13,6 +14,7 @@
     <td><%= product.teamcapt %></td>
     <td><%= product.name1 %></td>
     <td><%= product.email1 %></td>
+    <td><%= product.teamelo %></td>
   </tr>
   <% end %>
 </table>

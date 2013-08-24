@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130731004547) do
+ActiveRecord::Schema.define(:version => 20130824171943) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
@@ -124,6 +124,7 @@ ActiveRecord::Schema.define(:version => 20130731004547) do
     t.string   "third_name"
     t.string   "third_play"
     t.string   "third_email"
+    t.string   "teamelo"
   end
 
   create_table "users", :force => true do |t|

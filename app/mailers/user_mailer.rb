@@ -10,14 +10,14 @@ class UserMailer < ActionMailer::Base
     @team=team
     @email1=team.email1
     @email2=team.email2
-    
+        mail(:to => "tamuleague@yahoo.com", :subject => "Team " + @team.name + " has Registratered")
     
   end
   def report_match(teams,winner,date)
     @loser=teams
     @winner=winner
     @date= date
-    mail(:to => "averageazn1337@gmail.com", :subject => winner+" beat " + teams)
+    mail(:to => "tamuleague@yahoo.com", :subject => winner+" beat " + teams)
   end
  def khoa_mess(user,message)
    

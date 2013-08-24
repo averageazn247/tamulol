@@ -47,6 +47,8 @@
  	<p>
  		<%= link_to 'Back', teams_path %>
  	</p>
-
+	 	<% if not ( @team.email1.include? "tamu.edu" or @team.email1.include? "blinn.edu" ) %>
+	 	Team Captain email is not valid
+	 	<% end %>
 </div>
  

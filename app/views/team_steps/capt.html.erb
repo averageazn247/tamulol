@@ -20,6 +20,12 @@
     <%= f.label :email1, "*Team Capt Email"%><br />
     <%= f.text_field :email1 %>
   </div>
+       <div class="field">
+     	Summoner That will Represent the Team's Elo for Seeding
+    <%= f.label :teamelo, "*Team Elo Representive"%><br />
+    <%= f.text_field :teamelo %>
+  </div>
+  
  <div class="actions">
  	<%= link_to "  <--- Back ",team_steps_path(:id =>  'new', :team_id => @team.id), :class => 'btn btn-primary' %>
         <%= f.submit "Continue --->",    :class => 'btn btn-primary' %>

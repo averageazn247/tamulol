@@ -6,6 +6,10 @@
 	<% if team.user_id == @user.id  %>
 	 <p>
 	 	<%= link_to  team.name, team_path(team) %>
+	 	
+	 	<% if not ( team.email1.include? "tamu.edu" or team.email1.include? "blinn.edu" ) %>
+	 	Team Captain email is not valid
+	 	<% end %>
 	 </p>
 	 <% end %>
 	 <% end %>
