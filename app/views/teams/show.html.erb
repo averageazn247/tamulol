@@ -31,6 +31,7 @@
 		</b> <%= @team.name6%>  and<% end %>
 		<%if @team.name7%>  <%= @team.name7%> <%end %>|<%= link_to 'Edit', team_steps_path(:id =>  'subs', :team_id => @team.id)%>
 </p>
+<p><b> Elo Representive: </b><%= @team.teamelo%>  </p>
 <p>
 	Secondary Contacts:
 	<br />
