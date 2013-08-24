@@ -5,12 +5,8 @@ class TeamStepsController < ApplicationController
  
 
   def show
-     id=session[:team_id]
-     if id!=nil
-      @team = Team.find(id) 
-      else
-        @team= Team.find(params[:team_id])
-      end
+    
+ 
    render_wizard @team
 end
   
