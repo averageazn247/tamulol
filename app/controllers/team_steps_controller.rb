@@ -37,7 +37,7 @@ end
       @team = Team.find( session[:team_id])
     else
        @user=User.find(current_user.id)
-      @team = Team.find( team_id)
+      @team = Team.find( current_user.id)
      
     end
     params[:team][:status] = step.to_s

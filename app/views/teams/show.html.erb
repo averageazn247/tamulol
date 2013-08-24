@@ -3,15 +3,16 @@
 
  <h3>
    Team Name:</h3>
-  <h3><%= @team.name %>, [ <%= @team.tag %> ]
+  <h4> <%= @team.name %>  [ <%= @team.tag %> ]</h4>
   
-</h3>
+ <br />
+ <br />
 <p>
-  <b>Teamcapt:</b> <%= @team.teamcapt %>  |<%= link_to 'Edit', team_steps_path(:id =>  'capt', :team_id => @team,id)%>
+<b>Team Capt: </b> <%= @team.teamcapt %>   |<%= link_to 'Edit', team_steps_path(:id =>  'capt', :team_id => @team.id)%>
   
 </p>
 <p>
-	<b>Player 2: </b> <%= @team.name2%>   |<%= link_to 'Edit', team_steps_path(:id =>  'play2', :team_id => @team.id)%>
+	<b>Player 2: </b> <%= @team.name2 %>   |<%= link_to 'Edit', team_steps_path(:id =>  'play2', :team_id => @team.id)%>
 </p>
  
 <p>
@@ -50,5 +51,20 @@
 	 	<% if not ( @team.email1.include? "tamu.edu" or @team.email1.include? "blinn.edu" ) %>
 	 	Team Captain email is not valid
 	 	<% end %>
+ 
+	 	<% if not ( @team.email2.include? "tamu.edu" or @team.email2.include? "blinn.edu" ) %>
+	 	
+	 	Player 2's Email is not valid
+	 	<% end %>
+	 	<% if not ( @team.email3.include? "tamu.edu" or @team.email3.include? "blinn.edu" ) %>
+	 	Player 3's Email is not valid
+	 	<% end %>
+	 	<% if not ( @team.email4.include? "tamu.edu" or @team.email4.include? "blinn.edu" ) %>
+	 	Player 4's Email is not valid
+	 	<% end %>	
+	 	<% if not ( @team.email5.include? "tamu.edu" or @team.email5.include? "blinn.edu" ) %>
+	 	Player 5's Email is not valid
+	 	<% end %>	
+	 	
 </div>
  
