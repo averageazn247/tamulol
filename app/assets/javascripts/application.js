@@ -23,5 +23,5 @@
 $(function (){
         $('#report_dayof').datepicker();
 });
-$('.datepicker').datepicker()
-$('.dropdown-toggle').dropdown()  
+$('.datepicker').datepicker();
+$('.dropdown-toggle').dropdown()  ;
