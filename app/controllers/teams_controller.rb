@@ -10,7 +10,7 @@ class TeamsController < ApplicationController
   end
   
   def show
-    @team = Team.find(params[:id])
+    @team = Team.find(params[:team_id])
   end
   def new
     @team= Team.new
