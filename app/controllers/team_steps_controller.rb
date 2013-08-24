@@ -6,7 +6,7 @@ class TeamStepsController < ApplicationController
 
   def show
     
- 
+ @team=Team.find(:team_id)
    render_wizard @team
 end
   
