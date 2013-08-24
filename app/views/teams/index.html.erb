@@ -17,6 +17,7 @@
 
 <% @teams.each do |team| %>
   <tr>
+  	<td></td>
    <% if current_user.name== 'khoa' %>
   	 <td> <%= check_box_tag "team_ids[]", team.id %> </td>
   	 <% end %>
