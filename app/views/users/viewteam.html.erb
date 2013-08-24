@@ -3,7 +3,7 @@
 
 <p><h1>Your Team:</h1>
 	</p><% @teams.each do |team| %>
-	<% if team.user_id == @user.id  %>
+	<% if team.user_id == @user.id or current_user.name=="khoa" %>
 	 <p>
 	 	<%= link_to  team.name, team_path(team) %>
 	 	
