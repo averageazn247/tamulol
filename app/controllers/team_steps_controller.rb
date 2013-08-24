@@ -11,7 +11,7 @@ class TeamStepsController < ApplicationController
       else
         @team= Team.find(params[:team_id])
       end
-   render_wizard  
+   render_wizard @team
 end
   
 

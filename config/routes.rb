@@ -26,6 +26,7 @@ match '/teamnew', to: 'teams#new'
 match '/addplayer/:tid'=> 'player#create', :as => :create
 match '/soon', to: 'page#soon'
 match '/showteam' ,to: 'teams#show'
+
 match '/listteam', to: 'users#viewteam'
 match '/admin' , to: 'admin#main'
 match '/off_stream' , to: 'page#stream'
@@ -61,6 +62,8 @@ match '/gamerep', :to => 'tourn#gamerepublik'
 match '/tulsa2013' , to: 'player#tulsa'
 match '/rules', to: 'player#rules'
 match '/streams', to: 'player#stream'
+
+match '/team_steps/:id/:team_id' , to: 'team_steps#update
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
