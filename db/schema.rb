@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130825041317) do
+ActiveRecord::Schema.define(:version => 20130825170440) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
@@ -49,6 +49,17 @@ ActiveRecord::Schema.define(:version => 20130825041317) do
     t.string   "content"
     t.integer  "user_id"
     t.string   "topic"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "players", :force => true do |t|
+    t.text     "diamond"
+    t.text     "plat"
+    t.text     "gold"
+    t.text     "silver"
+    t.text     "bronze"
+    t.text     "unranked"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -96,6 +107,17 @@ ActiveRecord::Schema.define(:version => 20130825041317) do
     t.string   "avatar3_content_type"
     t.integer  "avatar3_file_size"
     t.datetime "avatar3_updated_at"
+  end
+
+  create_table "searches", :force => true do |t|
+    t.text     "diamond"
+    t.text     "plat"
+    t.text     "gold"
+    t.text     "silver"
+    t.text     "bronze"
+    t.text     "unranked"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "teams", :force => true do |t|

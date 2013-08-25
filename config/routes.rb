@@ -1,5 +1,6 @@
 Tamulol::Application.routes.draw do
   resources :posts
+resources :lists
 
   get "password_resets/new"
   resources :players
@@ -62,6 +63,9 @@ match '/gamerep', :to => 'tourn#gamerepublik'
 match '/tulsa2013' , to: 'player#tulsa'
 match '/rules', to: 'player#rules'
 match '/streams', to: 'player#stream'
+
+
+
 #match '/team_steps/:id/:team_id' , to: 'team_steps#update'
 #match '/team_steps/:id/:team_id' , to: 'team_steps#update'
   # The priority is based upon order of creation:

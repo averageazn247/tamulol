@@ -1,0 +1,28 @@
+<div class="hero-unit">
+	<h1> TAMU Player List</h1>
+	<br />
+		<p>
+  <b>Unranked:</b>
+  <%= best_in_place @player, :unranked, :type => :textarea %>
+</p>
+	<p>
+  <b>Bronze:</b>
+  <%= best_in_place @player, :bronze, :type => :textarea %>
+</p>
+	<p>
+  <b>Silver:</b>
+  <%= best_in_place @player, :silver, :type => :textarea %>
+</p>
+	<p>
+  <b>Gold:</b>
+  <%= best_in_place @player, :gold, :type => :textarea %>
+</p>
+	<p>
+  <b>Plat:</b>
+  <%= best_in_place @player, :plat, type: :textarea %>
+</p>
+	<p>
+  <b>Diamond:</b>
+  <%= best_in_place @player, :diamond, type: :textarea %>
+</p>
+	</div>

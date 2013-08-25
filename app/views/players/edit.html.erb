@@ -1,0 +1,35 @@
+<div class="hero-unit">
+	<h1> TAMU Player List</h1>
+	<br />
+	<%= form_for(@player) do |f| %>
+	<p>
+		
+  <b>Bronze:</b>
+   
+    <%= f.text_area :bronze %>
+</p> 
+	<p>
+		<b>Silver:
+			</b>
+			<%= f.text_area :silver %>
+			
+		</p>
+		<p>
+			<b>Gold:</b>
+			<%= f.text_area :gold %>
+		</p>
+		<p>
+		  <b>Plat:</b>
+   
+    <%= f.text_area :plat %>
+</p> 
+<p>
+  <b>Diamond:</b>
+   
+    <%= f.text_area :diamond %>
+</p> 
+<div class="actions">
+    <%= f.submit %>
+  </div>
+  <% end %>
+	</div>
