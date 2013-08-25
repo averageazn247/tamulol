@@ -15,13 +15,13 @@
  Date played:   <%= @report.dayof%> <br />
  
   Game  :<br />
-   
-  <%= image_tag @report.game1_url(:thumb).to_s %>
+   <%= image_tag @report.game1.url(:thumb) %>
+ 
   <br />
   
-   <%= image_tag @report.game2_url(:thumb).to_s %>
+     <%= image_tag @report.game2.url(:thumb) %>
   <br />
-   <%= image_tag @report.game3_url(:thumb).to_s %>
+      <%= image_tag @report.game3.url(:thumb) %>
 <br /> <br />
       Extra Info:   <br />
  <%= @report.desc%> 

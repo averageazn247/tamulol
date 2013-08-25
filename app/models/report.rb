@@ -6,7 +6,21 @@ class Report < ActiveRecord::Base
        mount_uploader :game1, ImageUploader
        mount_uploader :game2, ImageUploader
        mount_uploader :game3, ImageUploader
-       
+         has_attached_file :game1, styles: {
+    thumb: '200x200>',
+    square: '200x200#',
+    medium: '300x300>'
+  }
+           has_attached_file :game2, styles: {
+    thumb: '200x200>',
+    square: '200x200#',
+    medium: '300x300>'
+  }
+           has_attached_file :game3, styles: {
+    thumb: '200x200>',
+    square: '200x200#',
+    medium: '300x300>'
+  }     
        
        
 end

@@ -10,6 +10,7 @@ gem 'jquery-ui-rails'
 gem 'simple_form' 
 gem 'rufus-scheduler'
 gem "rmagick"
+gem 'fog'
 gem "mail"  
 gem 'will_paginate' 
 gem 'bootstrap-will_paginate', '0.0.6'
@@ -19,6 +20,10 @@ gem 'delayed_job_active_record'
 gem 'sinatra', require: false
 gem 'slim' 
 gem 'carrierwave'
+gem 'carrierwave_direct'
+gem 'sidekiq'
+gem 'paperclip'
+gem 'aws-sdk'
 gem 'omniauth-facebook', '1.4'
 group :development, :test do
   gem 'sqlite3', '1.3.5'

@@ -36,10 +36,12 @@ class ReportsController < ApplicationController
     teams=@report.teams
     winner=@report.winner
     date=@report.dayof
+
     if @report.save
        UserMailer.report_match(teams,winner,date).deliver  
       flash[:success] = "Thanks for reporting!"
-      
+
+
       redirect_to @report
     else
       render 'new'
