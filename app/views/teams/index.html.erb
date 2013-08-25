@@ -3,7 +3,9 @@
 <h4>Paid Teams</h4> 
 <%= form_tag approve_teams_path, action: 'approve', method: :put do %>
 <table>
-  <tr>
+  <tr> <% if current_user.name== 'khoa' %>
+  	<th></th>
+  	<% end %>
   	<th></th>
     <th>Name</th>
     <th>|Team Capt | </th>

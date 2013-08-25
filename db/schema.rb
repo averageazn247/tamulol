@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130824171943) do
+ActiveRecord::Schema.define(:version => 20130825041317) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
@@ -79,11 +79,23 @@ ActiveRecord::Schema.define(:version => 20130824171943) do
     t.string   "teams"
     t.integer  "creator_id"
     t.text     "desc"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
     t.string   "game1"
     t.string   "game2"
     t.string   "game3"
+    t.string   "avatar1_file_name"
+    t.string   "avatar1_content_type"
+    t.integer  "avatar1_file_size"
+    t.datetime "avatar1_updated_at"
+    t.string   "avatar2_file_name"
+    t.string   "avatar2_content_type"
+    t.integer  "avatar2_file_size"
+    t.datetime "avatar2_updated_at"
+    t.string   "avatar3_file_name"
+    t.string   "avatar3_content_type"
+    t.integer  "avatar3_file_size"
+    t.datetime "avatar3_updated_at"
   end
 
   create_table "teams", :force => true do |t|

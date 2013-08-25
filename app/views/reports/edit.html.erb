@@ -2,7 +2,7 @@
 	  <h3>Edit A Report</h3>
 
   
-<%= form_for @report do |f| %>
+<%= form_for @report ,:html => {:multipart => true } do |f| %>
 
 
  
@@ -22,14 +22,19 @@
 
 <%= f.text_field :dayof, :class => 'auto-kal' %>
   
- <%= f.label :game1, "Game 1"%> 
- <%= f.file_field :game1 %>
+ <%= f.label :avatar1, "Game 1"%> 
+ <%= f.file_field :avatar1 %>
+   <p>
  
-  <%= f.label :game2, "Game 2"%> 
-  <%= f.file_field :game2 %>
-  
-  <%= f.label :game3, "Game 3"%>
-  <%= f.file_field :game3 %> 
+  </p>
+  <%= f.label :avatar2, "Game 2"%> 
+  <%= f.file_field :avatar2 %>
+     <p> 
+ 
+  </p>
+  <%= f.label :avatar3, "Game 3"%>
+  <%= f.file_field :avatar3 %> 
+     <p>
    <div class="field">
         <%= f.label :desc, "Extra Info" %><br />
       <%= f.text_area :desc %>
