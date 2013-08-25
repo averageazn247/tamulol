@@ -22,13 +22,14 @@
 
 <%= f.text_field :dayof, :class => 'auto-kal' %>
   
- Inorder to save bandwidth only enter the direct url from imgur
- <%= f.label :game1, "Game 1"%>
- <%= f.text_field :game1%>
-  <%= f.label :game2, "Game 2"%>
- <%= f.text_field :game2%>
+ <%= f.label :game1, "Game 1"%> 
+ <%= f.file_field :game1 %>
+ 
+  <%= f.label :game2, "Game 2"%> 
+  <%= f.file_field :game2 %>
+  
   <%= f.label :game3, "Game 3"%>
- <%= f.text_field :game3%>
+  <%= f.file_field :game3 %> 
    <div class="field">
         <%= f.label :desc, "Extra Info" %><br />
       <%= f.text_area :desc %>

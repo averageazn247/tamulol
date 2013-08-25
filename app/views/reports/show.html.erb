@@ -14,10 +14,12 @@
 
  Date played:   <%= @report.dayof%> <br />
  
-  Game url : <%= @report.game1%><br />
-  <%= @report.game2%>
+  Game  : <%= @report.game1_url.to_s%>
   <br />
-  <%= @report.game3%>
+  
+  <%= @report.game2_url.to_s%>
+  <br />
+  <%= @report.game3_url.to_s%>
 <br /> <br />
       Extra Info   <br />
  <%= @report.desc%> 

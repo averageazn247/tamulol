@@ -2,7 +2,7 @@
 	  <h3>Submit A Report</h3>
 
   
-<%= form_for @report do |f| %>
+<%= form_for @report ,:html => {:multipart => true } do |f| %>
 
 
  
@@ -20,15 +20,16 @@
    <%= f.label  :dayof, ' *Date  Played' %>
  
 
-<%= f.text_field :dayof, :class => 'auto-kal' %>
- <p> Inorder to save bandwidth only enter the direct url from imgur</p>
+<%= f.text_field :dayof, :class => 'auto-kal' %> 
 
- <%= f.label :game1, "Game 1"%>
- <%= f.text_field :game1%>
-  <%= f.label :game2, "Game 2"%>
- <%= f.text_field :game2%>
+ <%= f.label :game1, "Game 1"%> 
+ <%= f.file_field :game1 %>
+ 
+  <%= f.label :game2, "Game 2"%> 
+  <%= f.file_field :game2 %>
+  
   <%= f.label :game3, "Game 3"%>
- <%= f.text_field :game3%>
+  <%= f.file_field :game3 %> 
    <div class="field">
         <%= f.label :desc, "Extra Info" %>
 

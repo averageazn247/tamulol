@@ -3,5 +3,10 @@ class Report < ActiveRecord::Base
    validates :dayof, presence: true 
      validates :winner, presence: true 
        validates :teams, presence: true 
+       mount_uploader :game1, ImageUploader
+       mount_uploader :game2, ImageUploader
+       mount_uploader :game3, ImageUploader
+       
+       
        
 end
