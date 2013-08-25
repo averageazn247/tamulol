@@ -14,14 +14,14 @@
 
  Date played:   <%= @report.dayof%> <br />
  
-  Game  : <%= @report.game1.url.to_s%>
+  Game  : <%= image_tag  @report.game1.url.to_s%>
   <br />
   
-  <%= @report.game2.url.to_s%>
+  <%= image_tag  @report.game2.url.to_s%>
   <br />
-  <%= @report.game3.url.to_s%>
+  <%= image_tag  @report.game3.url.to_s%>
 <br /> <br />
-      Extra Info   <br />
+      Extra Info:   <br />
  <%= @report.desc%> 
      <br /></span>
   <%= link_to 'home ', root_path %>
