@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'simple_form' 
 gem 'rufus-scheduler'
+gem "rmagick"
 gem "mail"  
 gem 'will_paginate' 
 gem 'bootstrap-will_paginate', '0.0.6'

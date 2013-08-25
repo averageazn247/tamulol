@@ -1,4 +1,4 @@
- <div class='dbox'>
+ <div class='hero-unit'>
 	  <h1>Show</h1>
 
    <body>
@@ -14,12 +14,14 @@
 
  Date played:   <%= @report.dayof%> <br />
  
-  Game  : <%= image_tag  @report.game1.url.to_s%>
+  Game  :<br />
+   
+  <%= image_tag @report.game1_url(:thumb).to_s %>
   <br />
   
-  <%= image_tag  @report.game2.url.to_s%>
+   <%= image_tag @report.game2_url(:thumb).to_s %>
   <br />
-  <%= image_tag  @report.game3.url.to_s%>
+   <%= image_tag @report.game3_url(:thumb).to_s %>
 <br /> <br />
       Extra Info:   <br />
  <%= @report.desc%> 
