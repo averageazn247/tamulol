@@ -10,7 +10,7 @@
 	position:relative;
 	margin:0 auto;/*make the image slider center-aligned */
     box-shadow: 0px 1px 5px #999999;
-     left: -50px; 
+      
      }
 #slider img, #slider>b, #slider a>b{
 	position:absolute;
