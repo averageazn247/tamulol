@@ -3,9 +3,7 @@ Tamulol::Application.routes.draw do
 resources :lists
 
   get "password_resets/new"
-  
-resources :players
-resources :player
+  resources :players
   resources :teams do
     collection do
       put :approve
@@ -44,11 +42,7 @@ match '/epicshots' , to: 'page#epicshots'
 match '/jay' , to: 'page#jay'
 match '/spring2013', to: 'page#spring2013'
 match '/messages', to: 'messages#index'
-<<<<<<< HEAD
- 
-=======
-match '/playerlist',to: 'player#list'
->>>>>>> parent of 2db49d8... fix players
+match '/playerlist',to: 'players/1' 
 match '/tusla2013', to: 'player#tusla'
 match '/talumar', to: 'page#talumar'
 match '/sendmessage', to: 'messages#new'
