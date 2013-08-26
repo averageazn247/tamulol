@@ -5,6 +5,7 @@ resources :lists
   get "password_resets/new"
   
 resources :players
+resources :player
   resources :teams do
     collection do
       put :approve
