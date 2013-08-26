@@ -23,6 +23,9 @@
 </p>
 	<p>
   <b>Diamond:</b>
-  <%= best_in_place @player, :diamond, type: :textarea %>
+ <%= simple_format(@player.diamond) %>
 </p>
+
+
+<%= link_to "Edit List" ,players_path(@player)%>
 	</div>
