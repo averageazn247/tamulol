@@ -3,23 +3,23 @@
 	<br />
 		<p>
   <b>Unranked:</b>
-  <%= best_in_place @player, :unranked, :type => :textarea %>
+ <%= simple_format(@player.unranked) %>
 </p>
 	<p>
   <b>Bronze:</b>
-  <%= best_in_place @player, :bronze, :type => :textarea %>
+  <%= simple_format(@player.bronze) %>
 </p>
 	<p>
   <b>Silver:</b>
-  <%= best_in_place @player, :silver, :type => :textarea %>
+   <%= simple_format(@player.silver) %>
 </p>
 	<p>
   <b>Gold:</b>
-  <%= best_in_place @player, :gold, :type => :textarea %>
+  <%= simple_format(@player.gold) %>
 </p>
 	<p>
   <b>Plat:</b>
-  <%= best_in_place @player, :plat, type: :textarea %>
+  <%= simple_format(@player.plat) %>
 </p>
 	<p>
   <b>Diamond:</b>
@@ -27,5 +27,5 @@
 </p>
 
 
-<%= link_to "Edit List" ,players_path(@player)%>
+<%= link_to "Edit List" ,edit_players_path(@player)%>
 	</div>
