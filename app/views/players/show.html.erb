@@ -29,7 +29,7 @@
 		<% if current_user.id %>
 	<%= f.text_area :unranked %>
 	<% else %>
-		 <%= simple_format best_in_place f, :unranked %> 
+		 <%= simple_format best_in_place @player, :unranked %> 
 	<% end%>
 	
 </p></div> 
