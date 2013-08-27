@@ -36,9 +36,9 @@
 <div id="official">
 	<b>Bronze</b><p>
 		<% if current_user != nil %>
-	<%= f.text_area :unranked %>
+	<%= f.text_area :bronze %>
 	<% else %>
-		 <%= simple_format best_in_place @player, :unranked %> 
+		 <%= simple_format best_in_place @player, :bronze %> 
 	<% end%>
 </p></div>
 <div id="silver">
