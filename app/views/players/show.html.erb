@@ -41,11 +41,11 @@
 </p></div>
 <div id="plat">
 	<b>Plat</b><p>
-	<%= best_in_place @player, :plat, type: :textarea  %>
+	simple_format(<%= best_in_place @player, :plat, type: :textarea  %>)
 </p></div>
 <div id="diamond">
 	<b>Diamond</b><p>
-	simple_format(<%= f.text_area :diamond   %>)
+	<%= f.text_area :diamond   %>
 </p></div>
 
 <% end %>
