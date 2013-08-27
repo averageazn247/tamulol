@@ -20,14 +20,5 @@ class Report < ActiveRecord::Base
     square: '200x200#',
     medium: '300x300>'
   }     
-       has_attached_file :avatar1,
-    :path => ':class/:attachment/:id_partition/:style/:filename',
-    :url => ":s3_domain_url"
-    has_attached_file :avatar2,
-    :path => ':class/:attachment/:id_partition/:style/:filename',
-    :url => ":s3_domain_url"
-    has_attached_file :avatar3,
-    :path => ':class/:attachment/:id_partition/:style/:filename',
-    :url => ":s3_domain_url"
 
 end
