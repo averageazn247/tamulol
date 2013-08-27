@@ -1,40 +1,45 @@
 <div class="hero-unit">
+	 <script type="text/javascript" src="jquery.idTabs.min.js"></script>
+<%= form_for(@player) do |f| %>
+ 
+               	<% if @player.id == 1%>
 	<h1> TAMU Player List</h1>
-	<br />
-	<%= form_for(@player) do |f| %>
-<br />
-<p>
+	<% else %>
+	<h1>People Searching For a Team</h1>
+	<% end %> 
+<ul class="idTabs"> 
+  <li><a href="#jquery">Unranked</a></li> 
+  <li><a href="#official">Bronze</a></li> 
+    <li><a href="#silver">Silver</a></li> 
+      <li><a href="#gold">Gold</a></li> 
+        <li><a href="#plat">Plat</a></li> 
+          <li><a href="#diamond">Diamond</a></li> 
+          
+</ul> 
+<div id="jquery"><p>
 	<b>Unranked</b>
-	<%= f.text_area :unranked %>
-</p>
-	<p>
-		
-  <b>Bronze:</b>
-   
-    <%= f.text_area :bronze %>
-</p> 
-	<p>
-		<b>Silver:
-			</b>
-			<%= f.text_area :silver %>
-			
-		</p>
-		<p>
-			<b>Gold:</b>
-			<%= f.text_area :gold %>
-		</p>
-		<p>
-		  <b>Plat:</b>
-   
-    <%= f.text_area :plat %>
-</p> 
-<p>
-  <b>Diamond:</b>
-   
-    <%= f.text_area :diamond %>
-</p> 
-<div class="actions">
-    <%= f.submit %>
-  </div>
-  <% end %>
+	<%= f.text_area :unranked , :cols => "10", :rows => "30"%>
+</p></div> 
+<div id="official"><p>
+	<b>Bronze</b>
+	<%= f.text_area :bronze , :size => "10x30" %>
+</p></div>
+<div id="silver"><p>
+	<b>Silver</b>
+	<%= f.text_area :silver , :size => "10x30" %>
+</p></div>
+<div id="gold"><p>
+	<b>Gold</b>
+	<%= f.text_area :gold , :cols => "10", :rows => "10"%>
+</p></div>
+<div id="plat"><p>
+	<b>Plat</b>
+	<%= f.text_area :plat , :cols => "30", :rows => "10"%>
+</p></div>
+<div id="diamond"><p>
+	<b>Diamond</b>
+	<%= f.text_area :diamond, :cols => "30", :rows => "10" %>
+</p></div>
+     <%= f.submit "Finished", class: "btn btn-large btn-primary" %>
+<% end %>
 	</div>

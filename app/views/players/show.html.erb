@@ -1,79 +1,51 @@
-<link href='tabulous.css' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="tabulous.js"></script>
-
+ <script type="text/javascript" src="jquery.idTabs.min.js"></script>
 <div class="hero-unit">
-
-	<div id="tabs3">
-    <ul>
-            <li><a href="#tabs-1" title="">Tab 1</a></li>
-            <li><a href="#tabs-2" title="">Tab 2</a></li>
-            <li><a href="#tabs-3" title="">Tab 3</a></li>
-           <li><a href="#tabs-4" title="">Tab 4</a></li>
-             <li><a href="#tabs-5" title="">Tab 5</a></li>
-               <li><a href="#tabs-6" title="">Tab 6</a></li>
-        </ul>
+<%= form_for(@player) do |f| %>
+ 
                	<% if @player.id == 1%>
 	<h1> TAMU Player List</h1>
 	<% else %>
 	<h1>People Searching For a Team</h1>
-	<% end %>
-	<br />   
-	<br />
+	<% end %> 
+<ul class="idTabs"> 
+  <li><a href="#jquery">Unranked</a></li> 
+  <li><a href="#official">Bronze</a></li> 
+    <li><a href="#silver">Silver</a></li> 
+      <li><a href="#gold">Gold</a></li> 
+        <li><a href="#plat">Plat</a></li> 
+          <li><a href="#diamond">Diamond</a></li> 
+          
+</ul> 
+<div id="jquery"><p>
+	<b>Unranked</b>
+	<%= f.text_area :unranked  %>
+</p></div> 
+<div id="official"><p>
+	<b>Bronze</b>
+	<%= f.text_area :bronze  %>
+</p></div>
+<div id="silver"><p>
+	<b>Silver</b>
+	<%= f.text_area :silver  %>
+</p></div>
+<div id="gold"><p>
+	<b>Gold</b>
+	<%= f.text_area :gold  %>
+</p></div>
+<div id="plat"><p>
+	<b>Plat</b>
+	<%= f.text_area :plat  %>
+</p></div>
+<div id="diamond"><p>
+	<b>Diamond</b>
+	<%= f.text_area :diamond   %>
+</p></div>
 
-        <div id="tabs_container">
-            <div id="tabs-1">
-                <!--tab content-->		
-  <b>Unranked:</b><p>
- <%= simple_format(@player.unranked) %>
-</p>
-            </div>
-            <div id="tabs-2">
-                   <!--tab content-->  
-                   <b>Bronze:</b><p>
-  <%= simple_format(@player.bronze) %>
-</p>
-            </div>
-            <div id="tabs-3">
-                    <!--tab content-->
-                      <b>Silver:</b>	<p>
-   <%= simple_format(@player.silver) %>
-</p>
-            </div>
-                        <div id="tabs-4">
-                <!--tab content-->  
-                <b>Gold:</b>	<p>
-  <%= simple_format(@player.gold) %>
-</p>
-            </div>
-            <div id="tabs-5">
-                   <!--tab content-->  
-                   <b>Plat:</b><p>
-  <%= simple_format(@player.plat) %>
-</p>
-            </div>
-            <div id="tabs-6">
-                    <!--tab content-->
-                   <b>Diamond:</b><p>   
- <%= simple_format(@player.diamond) %>
-</p>
-
-            </div>
-            
-        </div><!--End tabs container--> 
-  </div><!--End tabs-->
-
-
-
+<% end %>
 <%= link_to 'Edit', edit_player_path(@player) %>  
 </div>
-	
 
 
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="tabulous.js"></script>
-<script type="text/javascript" src="js.js"></script>
-
-
+ 
 	
 
