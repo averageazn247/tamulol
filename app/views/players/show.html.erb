@@ -6,19 +6,20 @@
 	<h1> TAMU Player List</h1>
 	<% else %>
 	<h1>People Searching For a Team</h1>
-	<% end %> 
-<ul class="idTabs"> 
+	<% end %>
+<ul class="idTabs">
+	 
   <li><a href="#jquery">Unranked</a></li> 
   <li><a href="#official">Bronze</a></li> 
     <li><a href="#silver">Silver</a></li> 
       <li><a href="#gold">Gold</a></li> 
         <li><a href="#plat">Plat</a></li> 
           <li><a href="#diamond">Diamond</a></li> 
-          
-</ul> 
+      
+</ul>    
 <div id="jquery"><p>
 	<b>Unranked</b>
-	<%= f.text_area :unranked  %>
+	<%= f.text_area :unranked %>
 </p></div> 
 <div id="official"><p>
 	<b>Bronze</b>
@@ -42,7 +43,7 @@
 </p></div>
 
 <% end %>
-<%= link_to 'Edit', edit_player_path(@player) %>  
+ 
 </div>
 
 
