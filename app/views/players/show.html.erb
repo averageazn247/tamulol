@@ -26,7 +26,7 @@
 <div id="jquery">
 	
 	<b>Unranked</b><p>
-		<% if current_user.id %>
+		<% if current_user != nil %>
 	<%= f.text_area :unranked %>
 	<% else %>
 		 <%= simple_format best_in_place @player, :unranked %> 
@@ -35,27 +35,48 @@
 </p></div> 
 <div id="official">
 	<b>Bronze</b><p>
-	<%= f.text_area :bronze  %>
+		<% if current_user != nil %>
+	<%= f.text_area :unranked %>
+	<% else %>
+		 <%= simple_format best_in_place @player, :unranked %> 
+	<% end%>
 </p></div>
 <div id="silver">
 	<b>Silver</b><p>
-	<%= f.text_area :silver  %>
+		<% if current_user != nil %>
+	<%= f.text_area :silver %>
+	<% else %>
+		 <%= simple_format best_in_place @player, :silver %> 
+	<% end%>
 </p></div>
 <div id="gold">	<b>Gold</b><p>
 
-	<%= f.text_area :gold  %>
+		<% if current_user != nil %>
+	<%= f.text_area :gold %>
+	<% else %>
+		 <%= simple_format best_in_place @player, :gold %> 
+	<% end%>
 </p></div>
 <div id="plat">
 	<b>Plat</b><p>
-	<%= f.text_area :plat %>
+				<% if current_user != nil %>
+ 	<%= f.text_area :plat %>
+	<% else %>
+ 	 <%= simple_format best_in_place @player, :plat %> 
+	<% end%>
+
 	
-	 <%= simple_format best_in_place @player, :plat %> 
+
 	 
 </p></div>
 <div id="diamond">
 	<b>Diamond</b><p>
-	<%= f.text_area :diamond   %>
 	
+					<% if current_user != nil %>
+ <%= f.text_area :diamond   %>
+	<% else %>
+ 	 <%= simple_format best_in_place @player, :diamond %> 
+	<% end%>
 	
 </p></div>
 
