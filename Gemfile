@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem  'tabs_on_rails'
 gem 'rails', '3.2.8'
 gem 'twitter' 
 gem 'bootstrap-sass' 

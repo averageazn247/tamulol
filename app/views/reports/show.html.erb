@@ -8,24 +8,25 @@
   
  
  
-    Winner:   <%= @report.winner %><br /><br />
-       Loser:  <%= @report.teams %><br /><br />
+    Game 1:   <%= @report.winner %><br /><br />
+      Game 2:  <%= @report.teams %><br /><br />
  
 
  Date played:   <%= @report.dayof%> <br />
  
   Game  :<br />
-   <%= image_tag @report.avatar1.url(:thumb) %>
+   <%= image_tag @report.avatar1.url(:square) %>
  
   <br />
   
-     <%= image_tag @report.avatar2.url(:thumb) %>
+     <%= image_tag @report.avatar2.url(:square) %>
   <br />
-      <%= image_tag @report.avatar3.url(:thumb) %>
+      <%= image_tag @report.avatar3.url(:square) %>
 <br /> <br />
       Extra Info:   <br />
  <%= @report.desc%> 
      <br /></span>
+     <%= link_to 'edit', edit_report_path(@report) %>
   <%= link_to 'home ', root_path %>
   </div></body>
   </div> 
