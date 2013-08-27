@@ -24,8 +24,14 @@
 </div>
 <br />
 <div id="jquery">
+	
 	<b>Unranked</b><p>
+		<% if current_user.id %>
 	<%= f.text_area :unranked %>
+	<% else %>
+		 <%= simple_format best_in_place f, :unranked %> 
+	<% end%>
+	
 </p></div> 
 <div id="official">
 	<b>Bronze</b><p>
@@ -41,15 +47,27 @@
 </p></div>
 <div id="plat">
 	<b>Plat</b><p>
+	<%= f.text_area :plat %>
+	
 	 <%= simple_format best_in_place @player, :plat %> 
+	 
 </p></div>
 <div id="diamond">
 	<b>Diamond</b><p>
 	<%= f.text_area :diamond   %>
+	
+	
 </p></div>
 
 <% end %>
  
+ 
+ 
+ 
+ 	
+
+
+
 </div>
 
 
