@@ -1,39 +1,72 @@
 <div class="hero-unit">
-	<%= tabs_tag do |tab| %>
-  <%= tab.home      'Homepage', root_path %>
-  <%= tab.dashboard 'Dashboard', players_path %>
-  <%= tab.account   'Account', reports_path %>
-<% end %>
-	<% if @player.id == 1%>
+  <div id="tabs">
+    <ul>
+            <li><a href="#tabs-1" title="">Tab 1</a></li>
+            <li><a href="#tabs-2" title="">Tab 2</a></li>
+            <li><a href="#tabs-3" title="">Tab 3</a></li>
+           <li><a href="#tabs-4" title="">Tab 4</a></li>
+             <li><a href="#tabs-5" title="">Tab 5</a></li>
+               <li><a href="#tabs-6" title="">Tab 6</a></li>
+        </ul>
+        	<% if @player.id == 1%>
 	<h1> TAMU Player List</h1>
 	<% else %>
 	<h1>People Searching For a Team</h1>
 	<% end %>
 	<br />
-		<p>
-  <b>Unranked:</b>
+        <div id="tabs_container">
+            <div id="tabs-1">
+                <!--tab content-->		
+  <b>Unranked:</b><p>
  <%= simple_format(@player.unranked) %>
 </p>
-	<p>
-  <b>Bronze:</b>
+            </div>
+            <div id="tabs-2">
+                   <!--tab content-->  
+                   <b>Bronze:</b><p>
   <%= simple_format(@player.bronze) %>
 </p>
-	<p>
-  <b>Silver:</b>
+            </div>
+            <div id="tabs-3">
+                    <!--tab content-->
+                      <b>Silver:</b>	<p>
    <%= simple_format(@player.silver) %>
 </p>
-	<p>
-  <b>Gold:</b>
+            </div>
+                        <div id="tabs-4">
+                <!--tab content-->  
+                <b>Gold:</b>	<p>
   <%= simple_format(@player.gold) %>
 </p>
-	<p>
-  <b>Plat:</b>
+            </div>
+            <div id="tabs-5">
+                   <!--tab content-->  
+                   <b>Plat:</b><p>
   <%= simple_format(@player.plat) %>
 </p>
-	<p>
-  <b>Diamond:</b>
+            </div>
+            <div id="tabs-6">
+                    <!--tab content-->
+                   <b>Diamond:</b><p>   
  <%= simple_format(@player.diamond) %>
 </p>
+
+            </div>
+            
+        </div><!--End tabs container--> 
+  </div><!--End tabs-->
+
+
+</div>
+	
+
+	
+
+
+
+
+
+	
 
 
 <%= link_to 'Edit', edit_player_path(@player) %>  

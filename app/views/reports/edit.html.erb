@@ -1,7 +1,7 @@
  <div class='hero-unit'>
 	  <h3>Edit A Report</h3>
 
-  
+   <% if current_user.name == 'khoa' || current_user.id == user.id %>
 <%= form_for @report ,:html => {:multipart => true } do |f| %>
 
 
@@ -43,6 +43,7 @@
      <%= f.submit "Send Report", class: "btn btn-large btn-primary" %>
      <br />
   <%= link_to 'cancel', root_path %>
+  <% end %>
   </div>
   </div>
 <% end %>  
