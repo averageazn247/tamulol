@@ -1,5 +1,10 @@
+<link href='tabulous.css' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="tabulous.js"></script>
+
 <div class="hero-unit">
-  <div id="tabs">
+
+	<div id="tabs3">
     <ul>
             <li><a href="#tabs-1" title="">Tab 1</a></li>
             <li><a href="#tabs-2" title="">Tab 2</a></li>
@@ -8,12 +13,14 @@
              <li><a href="#tabs-5" title="">Tab 5</a></li>
                <li><a href="#tabs-6" title="">Tab 6</a></li>
         </ul>
-        	<% if @player.id == 1%>
+               	<% if @player.id == 1%>
 	<h1> TAMU Player List</h1>
 	<% else %>
 	<h1>People Searching For a Team</h1>
 	<% end %>
+	<br />   
 	<br />
+
         <div id="tabs_container">
             <div id="tabs-1">
                 <!--tab content-->		
@@ -57,18 +64,16 @@
   </div><!--End tabs-->
 
 
+
+<%= link_to 'Edit', edit_player_path(@player) %>  
 </div>
 	
 
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="tabulous.js"></script>
+<script type="text/javascript" src="js.js"></script>
+
+
 	
 
-
-
-
-
-	
-
-
-<%= link_to 'Edit', edit_player_path(@player) %>  
-
-	</div>
