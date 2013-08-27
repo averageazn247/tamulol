@@ -21,12 +21,13 @@
   
      <%= image_tag @report.avatar2.url(:square) %>
   <br />
-      <%= image_tag @report.avatar3.url(:square) %>
+    
 <br /> <br />
       Extra Info:   <br />
  <%= @report.desc%> 
      <br /></span>
-     <%= link_to 'edit', edit_report_path(@report) %>
-  <%= link_to 'home ', root_path %>
+     <%= link_to 'Edit', edit_report_path(@report) %> |
+     <%= link_to 'All', report_path(@report) %> |
+  <%= link_to 'Home ', root_path %>
   </div></body>
   </div> 
