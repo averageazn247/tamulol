@@ -64,7 +64,6 @@ match '/tulsa2013' , to: 'player#tulsa'
 match '/rules', to: 'player#rules'
 match '/streams', to: 'player#stream'
 match '/players/1', as: 'playerslist'
-match '/rankings' , to: 'player#ranking'
 
 #match '/team_steps/:id/:team_id' , to: 'team_steps#update'
 #match '/team_steps/:id/:team_id' , to: 'team_steps#update'
