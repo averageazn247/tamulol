@@ -6,6 +6,8 @@ class PlayersController < ApplicationController
 
   def show
     @player = Player.find(params[:id])
+        @player.update_attributes(params[:player])
+      respond_with @player
   end
 
   def new
@@ -23,6 +25,8 @@ class PlayersController < ApplicationController
 
   def edit
     @player = Player.find(params[:id])
+        @player.update_attributes(params[:player])
+      respond_with @player
   end
 
   def update
@@ -31,10 +35,8 @@ class PlayersController < ApplicationController
       respond_with @player
   
   end
-  def playerlist
-    @player = Player.find(1)
-    
-  end
+
+
     
   def destroy
     @player = Player.find(params[:id])
