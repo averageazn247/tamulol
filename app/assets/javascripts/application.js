@@ -10,11 +10,12 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require kalendae
+
 //= require jquery
 //= require jquery_ujs
 //= require jquery.purr
 //= require best_in_place
+//= require kalendae
 //= require bootstrap 
 //= require_tree .
 
