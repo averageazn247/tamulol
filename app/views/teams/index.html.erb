@@ -16,14 +16,15 @@
    
 
   </tr>
-
+<% counter = 0%>
 <% @teams.each do |team| %>
   <tr>
   	<td></td>
  <% if current_user.admin %>
   	 <td> <%= check_box_tag "team_ids[]", team.id %> </td>
   	 <% end %>
-    <td><%= team.name %></td>
+    <td> <%= counter.to_s +'. ' + team.name %></td>
+    <% counter += 1%>
     <td><%= team.teamcapt %></td>
     <td><%= team.player1%></td>
     <td><%= team.email1 %></td>
@@ -58,7 +59,7 @@
 
 <br />
 <% if current_user.admin %>
-<%= submit_tag "Approve Checked" %> 
+<%= submit_tag "Change to Paid" %> 
 <br />
 <% end %>
 <%= link_to 'New Team', new_team_path %>
