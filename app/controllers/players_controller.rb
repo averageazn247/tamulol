@@ -6,8 +6,7 @@ class PlayersController < ApplicationController
 
   def show
     @player = Player.find(params[:id])
-        @player.update_attributes(params[:player])
-      respond_with @player
+    
   end
 
   def new
@@ -31,10 +30,8 @@ class PlayersController < ApplicationController
 
   def update
     @player = Player.find(params[:id])
- respond_to do |format|
-   @player.update_attributes params[:player]
-   format.json {repsond_with_bip(@player)}
- end
+    @player.update_attributes(params[:player])
+      respond_with @player
   
   end
 
