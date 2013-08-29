@@ -1,7 +1,7 @@
  <div class='hero-unit'>
 	  <h3>Edit A Report</h3>
 
-   <% if current_user.name == 'khoa' || current_user.id == user.id %>
+   <% if current_user.admin|| current_user.id == user.id %>
 <%= form_for @report ,:html => {:multipart => true } do |f| %>
 
 

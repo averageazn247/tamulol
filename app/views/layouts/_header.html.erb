@@ -164,7 +164,7 @@ $(document).ready(function() {
                 
                    
                   
-                  <% if current_user.name== 'khoa'%>
+               <% if current_user.admin %>
                   <li> <%= link_to "View All Users", users_path %></li>
           <li><%= link_to "Admin", '/admin' %></li> 
            <li><%= link_to "View Messages", '/messages' %></li> 

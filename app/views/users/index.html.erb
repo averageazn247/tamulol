@@ -18,10 +18,10 @@
     <td><%= user.email %></td>
 
     <td><%= link_to '   Show  |', user %></td>
-    <% if current_user.name == 'khoa' || current_user.id == user.id %>
+    <% if current_user.admin || current_user.id == user.id %>
     <td><%= link_to 'Edit     |', edit_user_path(user) %></td>
     <% end %>
-    <% if current_user.name == 'khoa'%>
+  <% if current_user.admin %>
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   	<% end %>
   </tr>

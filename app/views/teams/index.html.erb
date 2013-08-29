@@ -3,7 +3,7 @@
 <h4>Paid Teams</h4> 
 <%= form_tag approve_teams_path, action: 'approve', method: :put do %>
 <table>
-  <tr> <% if current_user.name== 'khoa' %>
+  <tr> <% if current_user.admin %>
   	<th></th>
   	<% end %>
   	<th></th>
@@ -20,7 +20,7 @@
 <% @teams.each do |team| %>
   <tr>
   	<td></td>
-   <% if current_user.name== 'khoa' %>
+ <% if current_user.admin %>
   	 <td> <%= check_box_tag "team_ids[]", team.id %> </td>
   	 <% end %>
     <td><%= team.name %></td>
@@ -37,17 +37,17 @@
    <td>
    	 <%= team.verify ? 'yes' : 'No' %>
    </td>
-    <% if current_user.name== 'khoa' %>
+<% if current_user.admin %>
     
     	
     <% end %>
     	
     	
     <td><%= link_to 'Show  ', team %></td>
-    <% if current_user.name== 'khoa'|| team.user_id== current_user.id %>
+    <% if current_user.admin|| team.user_id== current_user.id %>
     <td><%= link_to '|   Edit  |', edit_team_path(team) %></td>
     <% end %>
-    <% if current_user.name== 'khoa'%>
+<% if current_user.admin %>
      
     <td><%= link_to 'Delete', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <%end%>
@@ -56,7 +56,7 @@
 </table>
 
 <br />
-<% if current_user.name== 'khoa'%>
+<% if current_user.admin %>
 <%= submit_tag "Approve Checked" %> 
 <br />
 <% end %>

@@ -1,7 +1,7 @@
 <div class='hero-unit'>
 <h1>Listing Send Messages</h1>
 <% if current_user !=nil %>
- <% if current_user.name == 'khoa' || current_user.admin %>
+ <% if   current_user.admin %>
  
 
 	<% @messages.each do |message| %>
