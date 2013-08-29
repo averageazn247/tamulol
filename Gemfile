@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
+
 gem  'tabs_on_rails'
 gem 'rails', '3.2.8'
 gem 'twitter' 
 gem 'bootstrap-sass' 
 gem 'bcrypt-ruby', '3.0.1'  
  gem 'wicked'
-gem 'jquery-rails'
+gem 'jquery-rails', "~> 2.3.0"
 gem 'jquery-ui-rails'
 gem 'simple_form' 
 gem 'rufus-scheduler'

@@ -25,14 +25,16 @@ class PlayersController < ApplicationController
 
   def edit
     @player = Player.find(params[:id])
-        @player.update_attributes(params[:player])
-      respond_with @player
+
+
   end
 
   def update
     @player = Player.find(params[:id])
-    @player.update_attributes(params[:player])
-      respond_with @player
+ respond_to do |format|
+   @player.update_attributes params[:player]
+   format.json {repsond_with_bip(@player)}
+ end
   
   end
 
