@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     
        user = User.from_omniauth(env["omniauth.auth"])
     session[:user_id] = user.id
-    
+    session[:group]=nil
     sign_in user
     cookies.permanent[:auth_token] = user.auth_token
     redirect_to root_url

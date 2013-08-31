@@ -1,7 +1,9 @@
 Tamulol::Application.routes.draw do
   resources :posts
 resources :lists
-
+match "/lol", :to=>"player#setlol"
+match "/fps", :to=>"player#setfps"
+match "/sc2", :to=>"player#setsc2"
   get "password_resets/new"
   resources :players
   resources :teams do
