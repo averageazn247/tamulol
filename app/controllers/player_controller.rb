@@ -15,5 +15,8 @@ def setfps
     redirect_to root_url
 end
 
+def lolrank
+  @teams=Ranks.find(1)
+end
 
 end
