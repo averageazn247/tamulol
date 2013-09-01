@@ -55,6 +55,17 @@ $(document).ready(function() {
               	<%= link_to("fps", '/fps') %>
       
                 </li>
+                 <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              	About Us
+              	<b class="caret"></b> </a>
+              	<ul class="dropdown-menu">
+          <li><%= link_to "About Us", '/player#about'%></li>
+          <li> <%= link_to "Officers", '/player#officers''%></li>
+
+    
+           </ul>
+           </li>
               
                     <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -80,12 +91,9 @@ $(document).ready(function() {
                        <li>
                   <%= link_to "Tokyo in Tulsa 2013  ",'/tulsa2013' %>
                 </li>
-                     
-           
-                        
-                
               </ul>
-              <% if session[:group]== 'lol'%>
+              </li>
+              
    <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               	TAMU LoL Season
@@ -99,11 +107,9 @@ $(document).ready(function() {
           <li><%= link_to "Official Stream", '/off_stream'%></li>
           <li><%= link_to "Streamer List", '/streams' %></li>
           
-          <!-- <li><%= link_to "Stuff", '/soon' %></li>
-          <li><%= link_to "Stuff", '/soon'%></li> -->
-          <!-- <li><%= link_to "Filler", '/soon'%></li> -->
-          
+    
            </ul>
+           </li>
   
            <% if signed_in? %>
                                 	<li id="fat-menu" class="dropdown">
@@ -121,6 +127,8 @@ $(document).ready(function() {
             <li><%= link_to "Submit A Match", '/reportnew' %></li>
                <li><%= link_to "View Match Reports", '/allreport' %></li>
            </ul>
+           </li>
+           
            <% end %>
                <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -133,7 +141,7 @@ $(document).ready(function() {
           <li><%= link_to " :*(", '/soon'%></li> 
           </ul>
           </li>  
-          <% end %>
+        
       
      
                         <li id="fat-menu" class="dropdown"> 
