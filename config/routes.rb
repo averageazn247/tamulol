@@ -67,6 +67,10 @@ match '/rules', to: 'player#rules'
 match '/streams', to: 'player#stream'
 match '/players/1', as: 'playerslist'
 match '/rankings' , to: 'player#ranking'
+match '/rank', to: 'ranks#show'
+match '/ranknew', to: 'ranks#new'
+match '/rank/edit', to: 'ranks#edit'
+
 
 #match '/team_steps/:id/:team_id' , to: 'team_steps#update'
 #match '/team_steps/:id/:team_id' , to: 'team_steps#update'
