@@ -14,6 +14,7 @@ end
   resources :teams do
   resources :build, controller: 'teams/build'
 end 
+resources :ranks
 resources :sessions, only: [:new, :create, :destroy]
 resources :password_resets
   resources :users 
