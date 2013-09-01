@@ -28,20 +28,13 @@ def show
   # POST /ranks.json
   def create
     @rank = Rank.new(params[:rank])
-    teams=@rank.teams
-    winner=@rank.winner
-    date=@rank.dayof
-
     if @rank.save
-       UserMailer.rank_match(teams,winner,date).deliver  
-      flash[:success] = "Thanks for ranking!"
-
-
-      redirect_to @rank
+      redirect_to @rank, notice: "Successfully created player."
     else
-      render 'new'
+      render :new
     end
   end
+
   # PUT /ranks/1
   # PUT /ranks/1.json
   def update
