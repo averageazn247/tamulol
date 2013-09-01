@@ -70,7 +70,7 @@ match '/players/1', as: 'playerslist'
 match '/rankings' , to: 'player#ranking'
 match '/rank', to: 'ranks#show'
 match '/ranknew', to: 'ranks#new'
-match '/rank/edit', to: 'ranks#edit'
+match '/rankedit', to: 'ranks#edit'
 
 
 #match '/team_steps/:id/:team_id' , to: 'team_steps#update'
