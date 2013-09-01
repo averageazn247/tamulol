@@ -1,6 +1,6 @@
 <div class="hero-unit">
 	
-	<% form_for @rank do |f| %>
+	<%= form_for @rank do |f| %>
 	
 	<%= f.label :team1 , '1. Team'%>
 	<%= f.text_field :team1 %>
@@ -154,7 +154,7 @@
 		
 
 		
-		
+		<%= f.submit %>
 	
 	<% end %>
 	

@@ -1,9 +1,7 @@
 class RanksController < ApplicationController
 def show
     @rank = Rank.find(params[:id])
-    
-    @teams=Team.all
-    
+  
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @rank }
