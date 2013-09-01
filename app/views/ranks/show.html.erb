@@ -16,7 +16,7 @@
 
    </ul>
 </div>
-<%= form_for @rank do |f| %>
+
 <br />
 <div id="jquery">
 	<b> Courts 1-6</b>
@@ -24,13 +24,13 @@
 	<table style="margin: auto;" border="1" >
 	<th>Court</th>	<th></th><th></th><th></th>
 <tr>
-	<td>1.</td> <td><%= f.text_field :team1 %></td><td><%= f.text_field :team2 %></td><td><%= f.text_field :team3 %></td>	
+	<td>1.</td> <td><%= @rank.team1 %></td><td><%= @rank.team2 %></td><td><%= @rank.team3 %></td>	
 </tr>
 <tr>
-	<td>2.</td> <td><%= f.text_field :team4 %></td><td><%= f.text_field :team5 %></td><td><%= f.text_field :team6 %></td>
+	<td>2.</td> <td><%= @rank.team4 %></td><td><%= @rank.team5 %></td><td><%= @rank.team6 %></td>
 </tr>
 <tr>
-	<td>3.</td> <td><%= f.text_field :team7 %></td><td><%= f.text_field :team8 %></td><td><%= f.text_field :team9 %></td>
+	<td>3.</td> <td><%= @rank.team7 %></td><td><%= @rank.team8 %></td><td><%= @rank.team9 %></td>
 	</tr>
 </table>
  
