@@ -14,9 +14,9 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require jquery-ui
-
+//= require jquery.purr
 //= require_tree .
-
+//= require best_in_place
 //= require kalendae
 
 
