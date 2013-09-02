@@ -25,7 +25,7 @@ gem 'carrierwave_direct'
 gem 'sidekiq'
 gem 'paperclip'
 gem 'aws-sdk'
-#gem 'best_in_place'
+gem 'best_in_place'
 gem 'omniauth-facebook', '1.4'
 group :development, :test do
   gem 'sqlite3', '1.3.5'
