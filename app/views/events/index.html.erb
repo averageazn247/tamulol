@@ -5,17 +5,15 @@
   <%= @date.strftime("%B %Y") %>   
   <%= link_to ">>", date: @date.next_month %>
 </h2>
-  <%= calendar do |date| %>
+  <%= calendar @date do |date| %>
     <%= date.day %>
     <% if @events_by_date[date] %>
     <ul>
       <% @events_by_date[date].each do |article| %>
         <li><%= link_to article.name, article %></li>
-        
       <% end %>
     </ul>
     <% end %>
-  <% end %> 
- 
+  <% end %>
  
 </div>
