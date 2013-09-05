@@ -1,31 +1,22 @@
 <div class="hero-unit">
-<h1>Listing Events</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Dayof</th>
-    <th>Desc</th>
-    <th>Start</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @events.each do |event| %>
-  <tr>
-    <td><%= event.name %></td>
-    <td><%= event.dayof %></td>
-    <td><%= event.desc %></td>
-    <td><%= event.start %></td>
-    <td><%= link_to 'Show', event %></td>
-    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Event', new_event_path %>
+	<div class="container">
+		<h2 id="month">
+  <%= link_to "<<", date: @date.prev_month %>
+  <%= @date.strftime("%B %Y") %>   
+  <%= link_to ">>", date: @date.next_month %>
+</h2>
+  <%= calendar do |date| %>
+    <%= date.day %>
+    <% if @events_by_date[date] %>
+    <ul>
+      <% @events_by_date[date].each do |article| %>
+        <li><%= link_to article.name, article %></li>
+        
+      <% end %>
+    </ul>
+    <% end %>
+  <% end %>
+</div>
+ 
+ 
 </div>
