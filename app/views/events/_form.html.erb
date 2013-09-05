@@ -19,6 +19,22 @@
     <%= f.label :dayof , "Date"%><br />
     <%= f.date_select :dayof %>
   </div>  
+  Division
+    <div class="field">
+ <%= f.radio_button :type, 'General', :checked => true %> 
+  <%= label :type, 'general' %>
+  <%= f.radio_button :type, 'League Of Legends' %>
+  <%= label :type, 'League of Legends' %>
+  <%= f.radio_button :type, 'FPS' %>
+  <%= label :type, 'FPS' %>
+    <%= f.radio_button :type, 'Dota 2' %>
+  <%= label :type, 'Dota 2' %>  
+    <%= f.radio_button :type, 'SCII' %>
+  <%= label :type, 'SCII' %>  
+      <%= f.radio_button :type, 'Fighting' %>
+  <%= label :type, 'Fighting' %>    
+  </div>  
+  <br />
   <div class="field">
     <%= f.label :start %><br />
     <%= f.time_select :start %>
