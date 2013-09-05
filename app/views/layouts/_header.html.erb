@@ -35,26 +35,28 @@ $(document).ready(function() {
       	 <%= link_to "TAMU Esports", root_path, id: "logo" %> 
         <ul class="nav pull-right">
         	     
-                                                   
+                                                     
                <li id="fat-menu" class="dropdown">
-             
-              		<%= link_to("LoL", '/lol' ) %>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              		
            		
           
                
-                </li>                                       <li id="fat-menu" class="dropdown">
+                                        
            
-              
-              	<%= link_to("SC2", '/sc2') %>
+         <li><%= link_to("LoL", '/lol' ) %></li>     
+              <li><%= link_to("SC2", '/sc2') %></li>	
              
          
-                </li>   
+             
                 
-                                           <li id="fat-menu" class="dropdown">
+                                     
               
-              	<%= link_to("fps", '/fps') %>
-      
-                </li>
+      <li>	<%= link_to("FPS", '/fps') %></li>        
+      <li> <%= link_to("Fighting", '/soon') %></li>
+      <li> <%= link_to("Dota2", '/soon') %></li>
+              
+                
                  <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               	About Us
@@ -66,7 +68,9 @@ $(document).ready(function() {
     
            </ul>
            </li>
+                                 <li id="fat-menu" class="dropdown">
               
+              	<%= link_to("Calendar", '/soon') %>
                     <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               	Events
@@ -132,13 +136,11 @@ $(document).ready(function() {
            <% end %>
                <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              	Sponsors
+              	Partners
               	<b class="caret"></b> </a>
               	<ul class="dropdown-menu">
-          <li><%= link_to " :*(", '/soon'%></li>
-          <li><%= link_to " :*(", '/soon' %></li>
-          <li><%= link_to " :*(", '/soon'%></li>
-          <li><%= link_to " :*(", '/soon'%></li> 
+          <li> <a href="http://tespa.org">Tespa</a></li>
+          
           </ul>
           </li>  
         
