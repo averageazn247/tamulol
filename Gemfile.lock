@@ -63,8 +63,8 @@ GEM
       carrierwave
       fog
       uuidtools
-    celluloid (0.14.1)
-      timers (>= 1.0.0)
+    celluloid (0.15.0)
+      timers (~> 1.1.0)
     childprocess (0.3.6)
       ffi (~> 1.0, >= 1.0.6)
     climate_control (0.0.3)
@@ -149,7 +149,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     method_source (0.8.2)
-    mime-types (1.24)
+    mime-types (1.25)
     mini_portile (0.5.1)
     multi_json (1.7.9)
     multipart-post (1.2.0)
@@ -241,9 +241,10 @@ GEM
       railties (>= 3.0)
       rspec (~> 2.11.0)
     ruby-hmac (0.4.0)
+    ruby-openid (2.2.3)
     rubyzip (0.9.9)
-    rufus-scheduler (2.0.23)
-      tzinfo (>= 0.3.23)
+    rufus-scheduler (2.0.24)
+      tzinfo (>= 0.3.22)
     sass (3.2.10)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -339,6 +340,7 @@ DEPENDENCIES
   rails (= 3.2.8)
   rmagick
   rspec-rails (= 2.11.0)
+  ruby-openid
   rufus-scheduler
   sass-rails (= 3.2.5)
   sidekiq
