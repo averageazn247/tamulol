@@ -32,8 +32,9 @@ $(document).ready(function() {
     <div class="container">
       
       <nav> 
+      	<li>
 <a href="http://amesports.org">  <img src="../../logo85.png" alt="http://amesports.org/" id= "logo"></a>   
-      	 <%= link_to "TAMU Esports", root_path, id: "logo" %> 
+      	 <%= link_to "TAMU Esports", root_path, id: "logo" %> </li>
         <ul class="nav pull-right">
         	     
                                                      
@@ -122,7 +123,7 @@ $(document).ready(function() {
     
                  <!-- <li><%= link_to "Registration", '/streams' %></li>  -->
   
-           <a href="https://docs.google.com/forms/d/1pcSgWKrdfObvyOpVVuaFu-19zftiyJz4G5_7XQk3ENo/viewform">Registration</a>
+          <li><a href="https://docs.google.com/forms/d/1pcSgWKrdfObvyOpVVuaFu-19zftiyJz4G5_7XQk3ENo/viewform">Registration</a></li> 
            <% if signed_in? %>
                                 	<li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
