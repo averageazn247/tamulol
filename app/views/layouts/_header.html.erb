@@ -123,7 +123,6 @@ $(document).ready(function() {
     
                  <!-- <li><%= link_to "Registration", '/streams' %></li>  -->
   
-          <li><a href="https://docs.google.com/forms/d/1pcSgWKrdfObvyOpVVuaFu-19zftiyJz4G5_7XQk3ENo/viewform">Registration</a></li> 
            <% if signed_in? %>
                                 	<li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -166,7 +165,8 @@ $(document).ready(function() {
 
 
  
-            
+             <li><a href="https://docs.google.com/forms/d/1pcSgWKrdfObvyOpVVuaFu-19zftiyJz4G5_7XQk3ENo/viewform">Registration</a></li> 
+         
            <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                  <%=   current_user.name %> <b class="caret"></b>
@@ -191,6 +191,7 @@ $(document).ready(function() {
               </ul>
             </li>
           <% else %>
+          <li><a href="https://docs.google.com/forms/d/1pcSgWKrdfObvyOpVVuaFu-19zftiyJz4G5_7XQk3ENo/viewform">Registration</a></li> 
          
                <li><%= link_to "Facebook Signin", "/auth/facebook", id: "sign_in" %></li>
          
