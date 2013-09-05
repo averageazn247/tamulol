@@ -74,7 +74,7 @@ $(document).ready(function() {
            </li>
                                  <li id="fat-menu" class="dropdown">
               
-              	<%= link_to("Calendar", '/soon') %>
+              	<%= link_to("Calendar", '/events') %>
               	</li>
               	<% if session[:group] == 'lol'%>
                     <li id="fat-menu" class="dropdown">
@@ -83,7 +83,7 @@ $(document).ready(function() {
               	<b class="caret"></b>
               </a>
               	              <ul class="dropdown-menu">
-                 <%= link_to "Current Events", events_path %> 
+                 <%= link_to "Current Events", '#'%> 
                                   
              
                  
@@ -180,7 +180,7 @@ $(document).ready(function() {
                    
                   
                <% if current_user.admin %>
-               <li><%= link_to "Add Event",  'newevent'%></li>
+               <li><%= link_to "Add Event",  '/newevent' %></li>
                   <li> <%= link_to "View All Users", users_path %></li>
           <li><%= link_to "Admin", '/admin' %></li> 
            <li><%= link_to "View Messages", '/messages' %></li> 
