@@ -6,6 +6,7 @@ resources :lists
 match "/lol", :to=>"player#setlol"
 match "/fps", :to=>"player#setfps"
 match "/sc2", :to=>"player#setsc2"
+match '/reset', :to=> 'player#reset'
   get "password_resets/new"
   resources :players
   resources :teams do

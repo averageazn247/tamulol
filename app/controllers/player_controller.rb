@@ -15,6 +15,10 @@ def setfps
     redirect_to root_url
 end
 
+def reset
+    session[:group]=nil
+    redirect_to root_url
+end
 def lolrank
   @teams=Ranks.find(1)
 end
