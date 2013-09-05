@@ -10,10 +10,36 @@
     <% if @events_by_date[date] %>
     <ul>
       <% @events_by_date[date].each do |article| %>
-        <li><%= link_to article.name, article %>-<%= link_to article.start.strftime("%H:%M"), article%></li>
+        <li><%= link_to article.name, article %>-
+        	<% if article.start.hour > 12 %>
+		 			<%= article.start.hour - 12 %>:
+			
+				<% if article.start.min == 0 %>
+				  	00 PM
+				<% else %>
+				
+					<%= article.start.min %> PM
+				<% end %>
+			
+			
+		<%else%>
+		 
+			<%= article.start.hour %>:
+				<% if article.start.min ==0 %>
+				  	00 AM
+				<% else %>
+				
+					<%= article.start.min %> AM
+				<% end %>
+					
+				
+      	<% end%>
+         
+        	</li>
       <% end %>
     </ul>
     <% end %>
   <% end %>
  
 </div>
+ 
