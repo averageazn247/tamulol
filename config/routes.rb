@@ -75,7 +75,7 @@ match '/rankings' , to: 'player#ranking'
 match '/rank', to: 'ranks#show'
 match '/ranknew', to: 'ranks#new'
 match '/rankedit', to: 'ranks#edit'
- 
+match '/newevent', to: 'events#new'
 
 #match '/team_steps/:id/:team_id' , to: 'team_steps#update'
 #match '/team_steps/:id/:team_id' , to: 'team_steps#update'
