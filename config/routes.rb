@@ -1,4 +1,6 @@
 Tamulol::Application.routes.draw do
+  resources :events
+
   resources :posts
 resources :lists
 match "/lol", :to=>"player#setlol"

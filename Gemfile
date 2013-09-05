@@ -13,6 +13,7 @@ gem 'rufus-scheduler'
 gem "rmagick"
 gem 'fog'
 gem "mail"  
+gem 'oauth'
 gem 'will_paginate' 
 gem 'bootstrap-will_paginate', '0.0.6'
 gem "combined_time_select", "~> 1.0.0"
