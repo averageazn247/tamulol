@@ -12,22 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name , 'Title'%><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :dayof %><br />
-    <%= f.text_field :dayof %>
+    <%= f.label :dayof , "Date"%><br />
+    <%= f.date_select :dayof %>
+  </div>  
+  <div class="field">
+    <%= f.label :start %><br />
+    <%= f.time_select :start %>
   </div>
   <div class="field">
     <%= f.label :desc %><br />
     <%= f.text_area :desc %>
   </div>
   
-  <div class="field">
-    <%= f.label :start %><br />
-    <%= f.time_select :start %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
