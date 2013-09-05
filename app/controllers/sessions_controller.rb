@@ -30,6 +30,7 @@ class SessionsController < ApplicationController
 
   def destroy
       session[:user_id] = nil
+      session[:group]=nil
     cookies.delete(:auth_token)
         sign_out
     redirect_to root_url

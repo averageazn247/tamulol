@@ -76,7 +76,7 @@ $(document).ready(function() {
               
               	<%= link_to("Calendar", '/soon') %>
               	</li>
-              	
+              	<% if session[:group] == 'lol'%>
                     <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               	Events
@@ -120,10 +120,11 @@ $(document).ready(function() {
     
            </ul>
            </li>
-    
+    <% end %>
                  <!-- <li><%= link_to "Registration", '/streams' %></li>  -->
   
            <% if signed_in? %>
+           <% if session[:group]=='lol'%>
                                 	<li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               	Teams
@@ -140,7 +141,7 @@ $(document).ready(function() {
                <li><%= link_to "View Match Reports", '/allreport' %></li>
            </ul>
            </li>
-           
+           <% end %>
            <% end %>
                <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
