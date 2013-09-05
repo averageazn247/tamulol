@@ -10,7 +10,7 @@
     <% if @events_by_date[date] %>
     <ul>
       <% @events_by_date[date].each do |article| %>
-        <li><%= link_to article.name, article %>-
+        <li><%= link_to article.name, article %><br />
         	<% if article.start.hour > 12 %>
 		 			<%= article.start.hour - 12 %>:
 			
