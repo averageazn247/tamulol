@@ -11,7 +11,29 @@
 </p>
 <p>
   <b>Start:</b>
-  <%= @event.start.strftime("%H:%M") %>
+    	<% if @event.start.hour > 12 %>
+		 			<%= @event.start.hour - 12 %>:
+			
+				<% if @event.start.min == 0 %>
+				  	00 PM
+				<% else %>
+				
+					<%= @event.start.min %> PM
+				<% end %>
+			
+			
+		<%else%>
+		 
+			<%= @event.start.hour %>:
+				<% if @event.start.min ==0 %>
+				  	00 AM
+				<% else %>
+				
+					<%= @event.start.min %> AM
+				<% end %>
+					
+				
+      	<% end%>
 </p>
 
 <p>
