@@ -15,7 +15,7 @@
 </p>
 
 <p>
-  <b>Dayof:</b>
+  <b>Date:</b>
   <%= @event.dayof %>
 </p>
 
@@ -24,7 +24,8 @@
   <%= @event.desc %>
 </p>
 
-
+<% if  current_user.admin %>
 <%= link_to 'Edit', edit_event_path(@event) %> |
+<% end %>
 <%= link_to 'Back', events_path %>
 </div>
