@@ -8,23 +8,23 @@
  <br />
  <br />
 <p>
-<b>Team Capt: </b> <%= @team.teamcapt %>   |<%= link_to 'Edit', team_steps_path(:id =>  'capt', :team_id => @team.id)%>
+<b>Team Capt: </b> <%= @team.teamcapt %> | <%= @team.player1 %>  | <%= @team.email1 %>  |<%= link_to 'Edit', team_steps_path(:id =>  'capt', :team_id => @team.id)%>
   
 </p>
 <p>
-	<b>Player 2: </b> <%= @team.name2 %>   |<%= link_to 'Edit', team_steps_path(:id =>  'play2', :team_id => @team.id)%>
+	<b>Player 2: </b> <%= @team.name2 %> | <%= @team.player2 %>  |<%= link_to 'Edit', team_steps_path(:id =>  'play2', :team_id => @team.id)%>
 </p>
  
 <p>
-	<b>Player 3: </b> <%= @team.name3%>   |<%= link_to 'Edit', team_steps_path(:id =>  'play3', :team_id => @team.id)%>
+	<b>Player 3: </b> <%= @team.name3%>  | <%= @team.player3 %> |<%= link_to 'Edit', team_steps_path(:id =>  'play3', :team_id => @team.id)%>
 </p>
  
  <p>
-	<b>Player 4: </b> <%= @team.name4%>   |<%= link_to 'Edit', team_steps_path(:id =>  'play4', :team_id => @team.id)%>
+	<b>Player 4: </b> <%= @team.name4%>  | <%= @team.player4 %> |<%= link_to 'Edit', team_steps_path(:id =>  'play4', :team_id => @team.id)%>
 </p>
  
  <p>
-	<b>Player 5: </b> <%= @team.name5%>   |<%= link_to 'Edit', team_steps_path(:id =>  'play5', :team_id => @team.id)%>
+	<b>Player 5: </b> <%= @team.name5%>  | <%= @team.player5 %> |<%= link_to 'Edit', team_steps_path(:id =>  'play5', :team_id => @team.id)%>
 </p>
   <p>
 	<b>Subs  :<% if @team.name6%>

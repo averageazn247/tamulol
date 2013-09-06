@@ -23,7 +23,7 @@
  <% if current_user.admin %>
   	 <td> <%= check_box_tag "team_ids[]", team.id %> </td>
   	 <% end %>
-    <td> <%= counter.to_s +'. ' + team.name %></td>
+    <td><%= team.id%>. <%=   team.name %></td>
     <% counter += 1%>
     <td><%= team.teamcapt %></td>
     <td><%= team.player1%></td>
