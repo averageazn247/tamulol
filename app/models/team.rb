@@ -17,6 +17,14 @@ validates_acceptance_of :tos, :allow_nil => false, :accept => true, :on => :crea
   def active?
   status == 'active'
 end
+  def init
+      if self.new_record? && self.type_id.nil?
+        self.email2 = ""
+         self.email3 = ""
+          self.email4 = ""
+           self.email5 = ""
+      end
+    end
 
   def self.to_csv(options = {})
     CSV.generate(options) do |csv|

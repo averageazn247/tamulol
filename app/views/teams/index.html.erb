@@ -20,13 +20,15 @@
   </tr>
 <% counter = 0%>
 <% @teams.each do |team| %>
+
   <tr>
   	<td></td>
  <% if current_user.admin != nil%>
   	 <td> <%= check_box_tag "team_ids[]", team.id %> </td>
   	 <% end %>
-    <td><%= team.id%>. <%=   team.name %>  </td>
-    <% counter += 1%>
+  	 <% counter += 1 %>
+    <td><%= counter %>. <%= team.id%>. <%=   team.name %>  </td>
+  
     <td><%= team.teamcapt %> </td>
     <td><%= team.player1%>  </td>
     <td><%= team.email1 %> </td>
