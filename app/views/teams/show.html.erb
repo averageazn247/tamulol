@@ -20,11 +20,11 @@
 </p>
  
  <p>
-	<b>Player 4: </b> <%= @team.name4 %>  | 4<%= @team.player4 %> |<%= link_to 'Edit', team_steps_path(:id =>  'play4', :team_id => @team.id)%>
+	<b>Player 4: </b> <%= @team.name4 %>  | <%= @team.player4 %> |<%= link_to 'Edit', team_steps_path(:id =>  'play4', :team_id => @team.id)%>
 </p>
  
  <p>
-	<b>Player 5: </b> <%= @team.name5 %>  | 5<%= @team.player5 %> |<%= link_to 'Edit', team_steps_path(:id =>  'play5', :team_id => @team.id)%>
+	<b>Player 5: </b> <%= @team.name5 %>  | <%= @team.player5 %> |<%= link_to 'Edit', team_steps_path(:id =>  'play5', :team_id => @team.id)%>
 </p>
   <p>
 	<b>Subs  :<% if @team.name6 %>
