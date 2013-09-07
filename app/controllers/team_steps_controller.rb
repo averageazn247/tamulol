@@ -10,7 +10,7 @@ class TeamStepsController < ApplicationController
       @team = Team.find(id) 
       else
         
-        @team= Team.find(current_user.team_id])
+        @team= Team.find(current_user.team_id)
       end
    render_wizard 
 end
