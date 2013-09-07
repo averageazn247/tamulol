@@ -10,7 +10,7 @@ class TeamStepsController < ApplicationController
       @team = Team.find(id) 
       else
         
-        @team= Team.find(current_user.team_id)
+        @team= Team.find(params[:team_id])
       end
    render_wizard 
 end
@@ -38,7 +38,7 @@ end
       @team = Team.find( session[:team_id])
     else
        @user=User.find(current_user.id)
-      @team = Team.find( current_user.id)
+      @team = Team.find_by_user_id(current_user.id)
      
     end
     params[:team][:status] = step.to_s
