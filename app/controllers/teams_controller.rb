@@ -1,6 +1,6 @@
 class TeamsController < ApplicationController
    def index
-   @teams = Team.paginate(page: params[:page])
+   @teams = Team.reorder("id").paginate(page: params[:page])
         respond_to do |format|
           format.html # index.html.erb
           format.json { render json: @teams }
