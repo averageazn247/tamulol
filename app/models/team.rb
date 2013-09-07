@@ -5,7 +5,8 @@ attr_accessible :name7, :player7, :email7 ,:user_id, :status, :verify, :tos ,:se
 attr_accessible :third_name, :third_email, :third_play, :teamelo
 validates_acceptance_of :tos, :allow_nil => false, :accept => true, :on => :create
   belongs_to :user
-  
+  #if (team.email1.include? "tamu.edu" or team.email1.include? "blinn.edu") and (team.email2.include? "tamu.edu" or team.email2.include? "blinn.edu")  and (team.email3.include? "tamu.edu" or team.email3.include? "blinn.edu" ) and (team.email4.include? "tamu.edu" or team.email4.include? "blinn.edu") & ( team.email5.include? "tamu.edu" or team.email5.include? "blinn.edu" )  %>
+
   def setteam(team,user)
     user.team_id=team.id
   end
