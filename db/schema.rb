@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130905062658) do
+ActiveRecord::Schema.define(:version => 20130907153915) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
@@ -244,6 +244,8 @@ ActiveRecord::Schema.define(:version => 20130905062658) do
     t.string   "provider"
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
+    t.boolean  "member"
+    t.string   "raid"
   end
 
   add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
