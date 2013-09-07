@@ -30,6 +30,7 @@
 	<b>Subs  :<% if @team.name6 %>
 		</b> <%= @team.name6 %> | <%= @team.player6%>  and
 		<% end %>
+		<br />
 		<%if @team.name7%>
 		  <%= @team.name7%> | <%= @team.player7 %> <%end %>|<%= link_to 'Edit', team_steps_path(:id =>  'subs', :team_id => @team.id)%>
 </p>
