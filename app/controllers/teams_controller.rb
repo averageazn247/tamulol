@@ -11,6 +11,7 @@ class TeamsController < ApplicationController
   
   def show
     @team = Team.find(params[:id])
+    session[:team_id]=@team.id
   end
   def new
     @team= Team.new
