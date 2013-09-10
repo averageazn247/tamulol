@@ -10,16 +10,16 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require bootstrap
+
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.datepicker
 //= require jquery-ui
-
+//= require bootstrap
 //= require jquery.purr
 //= require_tree .
 //= require best_in_place
-//= require kalendae
+
 
 
 $(document).ready(function() {
