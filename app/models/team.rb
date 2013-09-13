@@ -23,6 +23,12 @@ end
          self.email3 = ""
           self.email4 = ""
            self.email5 = ""
+           self.player1= ''
+           self.player2= ''
+           self.player3= ''
+           self.player4= ''
+                      self.player5= ''
+           self.player6= ''           
       end
     end
 
