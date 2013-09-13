@@ -9,8 +9,12 @@ class TeamStepsController < ApplicationController
      if id!=nil
       @team = Team.find(id) 
       else
+        if current_user.admin
+          @team= Team.find(params[:team_id])
+        else 
+          @team=Team.find(session[:team_id])
+        end 
         
-        @team= Team.find(params[:team_id])
       end
    render_wizard 
 end
