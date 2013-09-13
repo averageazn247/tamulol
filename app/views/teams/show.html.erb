@@ -46,7 +46,7 @@
 	 <%= link_to 'Edit', team_steps_path(:id =>  'backup', :team_id => @team.id)%>
 </p>
  <p>Team Bio:
- 	<%= @team.bio %>
+ 	<%= simple_format @team.bio %>
   
  	</p>
 
@@ -89,7 +89,7 @@
 	 <%= link_to 'Edit', team_steps_path(:id =>  'backup', :team_id => @team.id)%>
 </p>
  <p>Team Bio:
- 	<%= @team.bio %>
+ 	<%= simple_format @team.bio %>
   
  	</p>
  	<%end%>
