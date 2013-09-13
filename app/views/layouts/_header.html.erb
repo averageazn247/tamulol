@@ -111,7 +111,7 @@ $(document).ready(function() {
               	<ul class="dropdown-menu">
           <li><%= link_to "Season Rules", '/rules'%></li>
           <li> <%= link_to "Raid Call Rules", '/raid'%></li>
-          <li> <%= link_to 'Season Rankings', '/rankings'%></li>
+          <li> <%= link_to 'Season Rankings', '/ranks/1'%></li>
                 <li><%= link_to "Tamu Players",'/players/1'%></li>
           <li><%= link_to "Players Searching for Team" , '/players/2'%></li>
           <li><%= link_to "Official Stream", '/off_stream'%></li>
@@ -183,7 +183,8 @@ $(document).ready(function() {
                <li><%= link_to "Add Event",  '/newevent'  %></li>
                   <li> <%= link_to "View All Users", users_path %></li>
           <li><%= link_to "Admin", '/admin' %></li> 
-           <li><%= link_to "View Messages", '/messages' %></li> 
+           <li><%= link_to "View Messages", '/messages' %></li>
+             <li><%= link_to "Edit Rankings", '/ranks/1/edit' %></li>  
           <% end %>
                 <li class="divider"></li>
                 <li>
