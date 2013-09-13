@@ -7,8 +7,9 @@
   
  <br />
  <br />
+ <% if current_user.admin or current_user.id==@team.user_id%>
 <p>
-<b>Team Capt: </b> <%= @team.teamcapt %> | <%= @team.player1 %>  | <%= @team.email1 %>  |<%= link_to 'Edit', team_steps_path(:id =>  'capt', :team_id => @team.id)%>
+<b>Team Capt: </b> <%= @team.teamcapt %> | <%= @team.player1 %>  | <%= @team.email1 %>  | <%= link_to 'Edit', team_steps_path(:id =>  'capt', :team_id => @team.id)%>
   
 </p>
 <p>
@@ -49,6 +50,49 @@
   
  	</p>
  	<%= link_to 'Edit All   ', edit_team_path(@team) %>
+ 	<% else %>
+ 	<p>
+<b>Team Capt: </b> <%= @team.teamcapt %> | <%= @team.player1 %>   
+  
+</p>
+<p>
+	<b>Player 2: </b> <%= @team.name2 %> | <%= @team.player2 %>  
+</p>
+ 
+<p>
+	<b>Player 3: </b> <%= @team.name3%>  | <%= @team.player3 %>  
+</p>
+ 
+ <p>
+	<b>Player 4: </b> <%= @team.name4 %>  | <%= @team.player4 %>  
+</p>
+ 
+ <p>
+	<b>Player 5: </b> <%= @team.name5 %>  | <%= @team.player5 %>  
+</p>
+  <p>
+	<b>Subs  :<% if @team.name6 %>
+		</b> <%= @team.name6 %> | <%= @team.player6%>  and
+		<% end %>
+		<br />
+		<%if @team.name7%>
+		  <%= @team.name7%> | <%= @team.player7 %> <%end %>
+</p>
+<p><b> Elo Representive: </b><%= @team.teamelo%>  </p>
+<p>
+	Secondary Contacts:
+	<br />
+	1. <%= @team.sec_name%> 
+	<br />
+	2. <%= @team.third_name%> 
+	<br />
+	 <%= link_to 'Edit', team_steps_path(:id =>  'backup', :team_id => @team.id)%>
+</p>
+ <p>Team Bio:
+ 	<%= @team.bio %>
+  
+ 	</p>
+ 	<%end%>
  	<p>
  		<%= link_to 'Back', teams_path %>
  	</p>

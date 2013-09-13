@@ -54,7 +54,7 @@ def hasteam?(user_id)
   gotteam=false
   teams=Team.all
   teams.each do |team|
-    if user_id==    team.user_id
+    if self.id==    team.user_id
       gotteam=true
     end
   end
