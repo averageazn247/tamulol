@@ -70,7 +70,7 @@ match '/gamerep', :to => 'tourn#gamerepublik'
 match '/tulsa2013' , to: 'player#tulsa'
 match '/rules', to: 'player#rules'
 match '/streams', to: 'player#stream'
-
+match '/raid' , to: 'player#raid'
 match '/rankings' , to: 'player#ranking'
 match '/rank', to: 'ranks#show'
 match '/ranknew', to: 'ranks#new'
