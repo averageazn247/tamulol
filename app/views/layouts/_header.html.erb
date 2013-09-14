@@ -130,7 +130,7 @@ $(document).ready(function() {
               	Teams
               	<b class="caret"></b> </a>
               	<ul class="dropdown-menu">
-              		<% if current_user.hasteam?(current_user.id) %>
+              		<% if current_user.hasteam(current_user.id)==true %>
               		<li><%= link_to "View Your Team", '/listteam' %></li>
               		<% else %>
               		 <li><%= link_to "Create A Team", '/teamnew' %></li>

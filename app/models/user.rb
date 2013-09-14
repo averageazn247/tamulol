@@ -50,15 +50,16 @@ def self.from_omniauth(auth)
       user.save!
     end
   end
-def hasteam?(user_id)
-  gotteam=false
+def hasteam(user_id)
+   
   teams=Team.all
   teams.each do |team|
-    if self.id==    team.user_id
-      gotteam=true
+    if user_id ==    team.user_id
+       
+      return true
     end
   end
-  return gotteam
+  return false
 end
 def send_password_reset
   generate_token(:password_reset_token)
