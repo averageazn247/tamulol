@@ -77,6 +77,7 @@ match '/ranknew', to: 'ranks#new'
 match '/rankedit/:id', to: 'ranks#edit'
 match '/newevent', to: 'events#new'
 match '/tloviro' , to: 'player#tloviro'
+match '/octfest' , to: 'tourn#octfest'
 #match '/team_steps/:id/:team_id' , to: 'team_steps#update'
 #match '/team_steps/:id/:team_id' , to: 'team_steps#update'
   # The priority is based upon order of creation:

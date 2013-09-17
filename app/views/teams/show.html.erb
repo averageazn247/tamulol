@@ -116,6 +116,12 @@
 	 	<% if not ( @team.email5.include? "tamu.edu" or @team.email5.include? "blinn.edu" ) %>
 	 	Player 5's Email is not valid
 	 	<% end %>	
+	 	<% if not team.verify%>
+	 	Team has not paid yet
+	 	<br />
+	 	<a href="https://secure.touchnet.com/C21490_ustores/web/product_detail.jsp?PRODUCTID=4456">  Pay Now</a>
+	 	<br />
+	 	<% end %>
 	 	
 </div>
  
