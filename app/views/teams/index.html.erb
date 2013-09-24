@@ -1,4 +1,4 @@
- 
+ <% if current_user%>
 <div class='hero-unit'>
 <h4>Paid Teams</h4> 
 <%= form_tag approve_teams_path, action: 'approve', method: :put do %>
@@ -11,10 +11,10 @@
   	<th></th>
     <th>Name</th>
     <th>|Team Capt | </th>
-    <th>  Summoner</th>
+    <th>Summoner</th>
  <th>  |  Email</th>
     <th>|  Paid</th>
-    <th>|  Valid Emails</th>
+    <!-- <th>|  Valid Emails</th> -->
    
 
   </tr>
@@ -65,4 +65,57 @@
 
 <%end %>
 </div> 
+<% else%>
+<div class='hero-unit'>
+<h4>Paid Teams</h4> 
+<%= form_tag approve_teams_path, action: 'approve', method: :put do %>
+<table>
+  <tr> 
+ 
+  	<th></th> 
+  	<th></th>
+    <th>Name</th>
+    <th>|Team Capt | </th>
+    <th>Summoner</th>
+ <th>  |Email</th>
+    <th>|  Paid</th>
+    <!-- <th>|  Valid Emails</th> -->
+   
+
+  </tr>
+<% counter = 0%>
+<% @teams.each do |team| %>
+
+  <tr>
+  	<td></td>
+ 
+  	 <% counter += 1 %>
+    <td><%= counter %>.  <%=   team.name %>  </td>
+  
+    <td><%= team.teamcapt %> </td>
+    <td><%= team.player1%>  </td>
+    <td><%= team.email1 %> </td>
+    <td>
+   	 <%= team.verify ? 'yes' : 'No' %>
+   </td> 
+
+</td> 
+    	
+    <td><%= link_to 'Show  ', team %></td>
+    <% if current_user.admin|| team.user_id== current_user.id %>
+    <td><%= link_to '|   Edit  |', edit_team_path(team) %></td>
+    <% end %>
+ 
+  </tr>
+<% end %>
+</table>
+
+<br />
+ 
+
+<%end %>
+</div> 
+
+
+<% end %>
 
