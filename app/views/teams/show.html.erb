@@ -29,11 +29,12 @@
 </p>
   <p>
 	<b>Subs  :<% if @team.name6 %>
-		</b> <%= @team.name6 %> | <%= @team.player6%>  and
+		</b> <%= @team.name6 %> | <%= @team.player6%>  
 		<% end %>
 		<br />
-		<%if @team.name7%>
-		  <%= @team.name7%> | <%= @team.player7 %> <%end %>|<%= link_to 'Edit', team_steps_path(:id =>  'subs', :team_id => @team.id)%>
+		<%if @team.name7 !=nil%>and <br />
+		  <%= @team.name7%> | <%= @team.player7 %> <%end %><br />
+		  <%= link_to 'Edit', team_steps_path(:id =>  'subs', :team_id => @team.id)%>
 </p>
 <p><b> Elo Representive: </b><%= @team.teamelo%>  </p>
 <p>
