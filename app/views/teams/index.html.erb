@@ -10,10 +10,10 @@
   	<th></th>
   	<% end %>
   	<th></th>
-    <th>Name</th>
+    <th>Name</th><th>  | Tag</th>
     <th>|Team Capt | </th>
     <th>Summoner</th>
- <th>  |  Email</th>
+ 
     <th>|  Paid</th>
     <!-- <th>|  Valid Emails</th> -->
    
@@ -30,9 +30,9 @@
   	 <% counter += 1 %>
     <td><%= counter %>. <%=   team.name %>  </td>
   
+    <td>[<%= team.tag %>]</td>
     <td><%= team.teamcapt %> </td>
-    <td><%= team.player1%>  </td>
-    <td><%= team.email1 %> </td>
+    <td> <%= team.player1%>  </td>
     <td>
    	 <%= team.verify ? 'yes' : 'No' %>
    </td> 
@@ -75,10 +75,10 @@
  
   	<th></th> 
   	<th></th>
-    <th>Name</th>
+    <th>Name</th><th>  | Tag</th>
     <th>|Team Capt | </th>
     <th>Summoner</th>
- <th>  |Email</th>
+ 
     <th>|  Paid</th>
     <!-- <th>|  Valid Emails</th> -->
    
@@ -92,10 +92,10 @@
  
   	 <% counter += 1 %>
     <td><%= counter %>.  <%=   team.name %>  </td>
-  
+   <td> [<%= team.tag %>] </td>
     <td><%= team.teamcapt %> </td>
     <td><%= team.player1%>  </td>
-    <td><%= team.email1 %> </td>
+   
     <td>
    	 <%= team.verify ? 'yes' : 'No' %>
    </td> 
