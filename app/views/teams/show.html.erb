@@ -72,13 +72,12 @@
 	<b>Player 5: </b> <%= @team.name5 %>  | <%= @team.player5 %>  
 </p>
   <p>
-	<b>Subs  :<% if @team.name6 %>
-		</b> <%= @team.name6 %> | <%= @team.player6%>
+	<b>Subs  :<% if @team.name6.blank?  == false%>
+		</b> <%= @team.name6 %> | <%= @team.player6%>  
 		<% end %>
 		<br />
-		<%if @team.name7 !=nil%>
-		<br />  and
-		  <%= @team.name7%> | <%= @team.player7 %> <%end %>
+		<%if @team.name7.blank? == false %>and <br />
+		  <%= @team.name7%> | <%= @team.player7 %> <%end %><br />
 </p>
 <p><b> Elo Representive: </b><%= @team.teamelo%>  </p>
 <p>
