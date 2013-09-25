@@ -1,4 +1,4 @@
- 
+ <% if current_user!= nil%>
 <div class="dbox">
 <br />
  <h3>
@@ -127,3 +127,86 @@
 	 	
 </div>
  
+ <% else%>
+ <div class="dbox">
+ 	<br />
+ <h3>
+   Team Name:</h3>
+  <h4> <%= @team.name %>  [<%= @team.tag %>]</h4>
+ 	 	<p>
+<b>Team Capt: </b> <%= @team.teamcapt %> | <%= @team.player1 %>   
+  
+</p>
+<p>
+	<b>Player 2: </b> <%= @team.name2 %> | <%= @team.player2 %>  
+</p>
+ 
+<p>
+	<b>Player 3: </b> <%= @team.name3%>  | <%= @team.player3 %>  
+</p>
+ 
+ <p>
+	<b>Player 4: </b> <%= @team.name4 %>  | <%= @team.player4 %>  
+</p>
+ 
+ <p>
+	<b>Player 5: </b> <%= @team.name5 %>  | <%= @team.player5 %>  
+</p>
+  <p>
+	<b>Subs  :<% if @team.name6 %>
+		</b> <%= @team.name6 %> | <%= @team.player6%>
+		<% end %>
+		<br />
+		<%if @team.name7%>
+		<br />  and
+		  <%= @team.name7%> | <%= @team.player7 %> <%end %>
+</p>
+<p><b> Elo Representive: </b><%= @team.teamelo%>  </p>
+<p>
+	Secondary Contacts:
+	<br />
+	1. <%= @team.sec_name%> 
+	<br />
+	2. <%= @team.third_name%> 
+	<br />
+
+</p>
+ <p>Team Bio:
+ 	<%= simple_format @team.bio %>
+  
+ 	</p>
+ 	<%end%>
+  	<p>
+ 		<%= link_to 'Back', teams_path %>
+ 	</p>
+	 	<% if not ( @team.email1.include? "tamu.edu" or @team.email1.include? "blinn.edu" ) %>
+	 	Team Captain email is not valid
+	 	<% end %>
+ <br />
+	 	<% if not ( @team.email2.include? "tamu.edu" or @team.email2.include? "blinn.edu" ) %>
+	 	
+	 	Player 2's Email is not valid
+	 	<% end %>
+	 	<br />
+	 	<% if not ( @team.email3.include? "tamu.edu" or @team.email3.include? "blinn.edu" ) %>
+	 	Player 3's Email is not valid
+	 	<% end %>
+	 	<br />
+	 	<% if not ( @team.email4.include? "tamu.edu" or @team.email4.include? "blinn.edu" ) %>
+	 	Player 4's Email is not valid
+	 	<% end %>	
+	 	<br />
+	 	<% if not ( @team.email5.include? "tamu.edu" or @team.email5.include? "blinn.edu" ) %>
+	 	Player 5's Email is not valid
+	 	<br />
+	 	<% end %>	
+	 	<% if not @team.verify%>
+	 	Team has not paid yet
+	 	<br />
+	 	<a href="https://secure.touchnet.com/C21490_ustores/web/product_detail.jsp?PRODUCTID=4456">  Pay Now</a>
+	 	<br />
+	 	<% end %>
+ 
+ 
+ </div>
+ <% end %>
