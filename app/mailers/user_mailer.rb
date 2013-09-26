@@ -17,7 +17,7 @@ class UserMailer < ActionMailer::Base
     @loser=teams
     @winner=winner
     @date= date
-    mail(:to => "tamuleague@yahoo.com", :subject => winner+" beat " + teams)
+    mail(:to => "saari.matthew@gmail.com", :subject => "Game 1: "+ winner+ " Game 2: "+ teams)
   end
  def khoa_mess(user,message)
    
