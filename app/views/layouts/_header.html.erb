@@ -116,7 +116,7 @@ $(document).ready(function() {
           <li> <%= link_to "Raid Call Rules", '/raid'%></li>
           <li> <%= link_to 'Season Rankings', '/ranks/1'%></li>
                 <li><%= link_to "Tamu Players",'/players/1'%></li>
-          <li><%= link_to "Players Searching for Team" , '/players/2'%></li>
+          <!-- <li><%= link_to "Players Searching for Team" , '/players/2'%></li> -->
           <li><%= link_to "Official Stream", '/off_stream'%></li>
           <li><%= link_to "Streamer List", '/streams' %></li>
           
@@ -136,7 +136,7 @@ $(document).ready(function() {
               		<% if current_user.hasteam(current_user.id)==true %>
               		<li><%= link_to "View Your Team", '/listteam' %></li>
               		<% else %>
-              		 <li><%= link_to "Create A Team", '/teamnew' %></li>
+              		 <!-- <li><%= link_to "Create A Team", '/teamnew' %></li> -->
               		<% end %>
               		
           <li><%= link_to "View All Teams", teams_path %></li>
