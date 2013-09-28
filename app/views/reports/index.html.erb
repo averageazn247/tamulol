@@ -23,7 +23,7 @@
     <% if current_user.admin || current_user.id == user.id %>
     <td><%= link_to 'Edit     |', edit_report_path(user) %></td>
     <% end %>
-    <% if current_user.name == 'khoa'%>
+    <% if current_user.admin %>
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   	<% end %>
   </tr>
