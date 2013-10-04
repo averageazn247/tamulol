@@ -14,7 +14,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.datepicker
-//= require jquery-ui
+//= require jquery-ui 
 //= require bootstrap
 //= require jquery.purr
 //= require_tree .

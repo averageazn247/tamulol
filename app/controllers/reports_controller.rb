@@ -3,7 +3,7 @@ class ReportsController < ApplicationController
   # GET /reports/1
   # GET /reports/1.json
   def show
-    @report = Report.find(params[:id])
+    @report = Report.find(params[:id]) 
     
     @teams=Team.all
     
@@ -36,6 +36,7 @@ class ReportsController < ApplicationController
     teams=@report.teams
     winner=@report.winner
     date=@report.dayof
+    id= @report.creator_id
 
     if @report.save
        UserMailer.report_match(teams,winner,date).deliver  
