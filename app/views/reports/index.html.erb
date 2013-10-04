@@ -2,7 +2,9 @@
 	<div class="hero-unit">
  
 <h1>Listing Matches</h1>
+<br />
 <%= will_paginate %>
+<br />
 <table>
   <tr>
     
@@ -15,12 +17,13 @@
   </tr>
 
 <% @reports.each do |user| %>
+
   <tr><td><%= user.dayof %> |</td>
     
     
 <td><%= user.winner%> | </td>
 <td><%= user.teams %> |</td>
-<td><%= user.name%></td>>
+<td><%= user.name%></td>
     <td><%= link_to ' Show |', user %></td>
     <% if current_user.admin || current_user.id == user.id %>
     <td><%= link_to 'Edit     |', edit_report_path(user) %></td>
