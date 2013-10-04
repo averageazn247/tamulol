@@ -1,5 +1,5 @@
 Tamulol::Application.routes.draw do
-  mount Mercury::Engine => '/'
+
 
   resources :events
 
