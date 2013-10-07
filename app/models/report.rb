@@ -1,5 +1,5 @@
 class Report < ActiveRecord::Base
-  attr_accessible :creator_id, :dayof, :desc, :teams, :winner ,:avatar1 ,:avatar2, :avatar3 
+  attr_accessible :creator_id, :dayof, :desc, :teams, :winner ,:avatar1 ,:avatar2, :avatar3 , :name, :game1, :game2
    validates :dayof, presence: true 
      validates :winner, presence: true 
        validates :teams, presence: true 
