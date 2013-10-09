@@ -78,6 +78,6 @@ class ReportsController < ApplicationController
   
     def index
    
-      @reports = Report.paginate(page: params[:page])
+     @reports = Report.reorder("id").paginate(page: params[:page])
   end
 end
