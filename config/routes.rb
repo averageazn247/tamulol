@@ -1,6 +1,8 @@
 Tamulol::Application.routes.draw do
 
 
+  resources :raids
+
   resources :events
 
   resources :posts

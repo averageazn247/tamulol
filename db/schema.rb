@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131002072805) do
+ActiveRecord::Schema.define(:version => 20131021203615) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
@@ -88,6 +88,31 @@ ActiveRecord::Schema.define(:version => 20131002072805) do
     t.text     "body"
     t.integer  "creator_id"
     t.date     "created"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "raids", :force => true do |t|
+    t.string   "name1"
+    t.string   "player1"
+    t.string   "name2"
+    t.string   "player2"
+    t.string   "name3"
+    t.string   "player3"
+    t.string   "name4"
+    t.string   "player4"
+    t.string   "name5"
+    t.string   "player5"
+    t.string   "player6"
+    t.string   "name6"
+    t.string   "name7"
+    t.string   "player7"
+    t.string   "name8"
+    t.string   "player8"
+    t.string   "name9"
+    t.string   "player9"
+    t.string   "name10"
+    t.string   "player10"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
