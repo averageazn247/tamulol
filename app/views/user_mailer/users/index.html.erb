@@ -1,0 +1,34 @@
+ 
+	<div class="hero-unit">
+		<%= will_paginate %>
+<h1>Listing Users</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th> 
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+ 
+<% @users.each do |user| %>
+  <tr>
+ 
+    <td><%= user.id %>. <%= user.name %></td>
+    <td><%= user.email %></td>
+
+    <td><%= link_to '   Show  |', user %></td>
+    <% if current_user.admin || current_user.id == user.id %>
+    <td><%= link_to 'Edit     |', edit_user_path(user) %></td>
+    <% end %>
+  <% if current_user.admin %>
+    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  	<% end %>
+  </tr>
+<% end %>
+</table>
+
+<br /> 
+</div> 
+<%= will_paginate %>
