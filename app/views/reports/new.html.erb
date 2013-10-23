@@ -5,7 +5,14 @@
 <%= form_for @report ,:html => {:multipart => true } do |f| %>
 
 
- 
+   <div class="field">
+    <%= f.label :team1,"*Your Team" %><br />
+    <%= f.text_field :team1 %>
+  </div> 
+    <div class="field">
+    <%= f.label :team2,"*Other Team" %><br />
+    <%= f.text_field :team2 %>
+  </div> 
   <%= f.hidden_field :name, :value => current_user.name %>
 *Required 
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131021203615) do
+ActiveRecord::Schema.define(:version => 20131023005306) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
@@ -207,6 +207,8 @@ ActiveRecord::Schema.define(:version => 20131021203615) do
     t.integer  "avatar3_file_size"
     t.datetime "avatar3_updated_at"
     t.string   "name"
+    t.string   "team1"
+    t.string   "team2"
   end
 
   create_table "teams", :force => true do |t|
@@ -271,7 +273,6 @@ ActiveRecord::Schema.define(:version => 20131021203615) do
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
     t.boolean  "member"
-    t.string   "raid"
   end
 
   add_index "users", ["remember_token"], :name => "index_users_on_remember_token"

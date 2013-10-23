@@ -9,8 +9,8 @@
   <tr>
     
     <th>Date  |</th> 
-    <th>Game 1 |</th>
-    <th>Game 2 |</th>
+    <th>Team 1 |</th>
+    <th>Team 2 |</th>
     <th>Reported by</th>
     <th></th>
     <th></th>
@@ -21,8 +21,8 @@
   <tr><td><%= user.dayof %> |</td>
     
     
-<td><%= user.winner%> | </td>
-<td><%= user.teams %> |</td>
+<td><%= user.team1%> | </td>
+<td><%= user.team2 %> |</td>
 <td><%= user.name%></td>
     <td><%= link_to ' Show |', user %></td>
     <% if current_user.admin || current_user.id == user.id %>
