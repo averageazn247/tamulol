@@ -3,21 +3,7 @@
 Winning Team<br />
 
 <table>
-  <tr>
-    <th>Name</th>
-    <th>Player</th>
-    <th>Name</th>
-    <th>Player</th>
-    <th>Name</th>
-    <th>Player</th>
-    <th>Name</th>
-    <th>Player</th>
-    <th>Name</th>
-    <th>Player</th> 
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+
 
 <% @raids.each do |raid| %>
   <tr>
@@ -27,12 +13,17 @@ Winning Team<br />
     <td><%= raid.player4 %></td>
     <td><%= raid.player5 %></td> 
     <td><%= link_to 'Show', raid %></td>
+    <% if current_user !=nil %>
+    <% if current_user.admin%>
     <td><%= link_to 'Edit', edit_raid_path(raid) %></td>
     <td><%= link_to 'Destroy', raid, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <% end%>
+  <% end %>
   </tr>
-<% end %>
+
 </table>
 
+<% end %>
 <br />
 
 <%= link_to 'New Raid', new_raid_path %>

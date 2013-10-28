@@ -89,7 +89,7 @@ $(document).ready(function() {
                 
                 <li>  <%= link_to "Fall 2013 Tournament", '/soon'%></li>
                     <li class="divider"> </li>Dallas
-                      <li>  <%= link_to "Noctoberfest", '/octfest'%></li>
+                    
                     
                        <li class="divider"> </li>Austin
               
@@ -114,7 +114,7 @@ $(document).ready(function() {
               	<b class="caret"></b> </a>
               	<ul class="dropdown-menu">
           <li><%= link_to "Season Rules", '/rules'%></li>
-          <li> <%= link_to "Raid Call Rules", '/raid'%></li>
+          
           <li> <%= link_to 'Season Rankings', '/ranks/1'%></li>
                 <li><%= link_to "Tamu Players",'/players/1'%></li>
           <!-- <li><%= link_to "Players Searching for Team" , '/players/2'%></li> -->
@@ -123,7 +123,16 @@ $(document).ready(function() {
           
     
            </ul>
-           </li>
+           </li> 
+             <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              	Raid Call
+              	<b class="caret"></b> </a>
+              	<li> <%= link_to "Raid Call Rules", '/raid'%></li>
+              	<li><%= link_to "Report Rail Call match", '/raids/new'%></li>
+              	<li><%= link_to "View Raid Reports",'/raids' %></li>
+              	<li> <a href="https://docs.google.com/spreadsheet/ccc?key=0AhLUWB4JDngBdEYyT0tiX3djZlhVYmR6VTQzYUJBX1E&usp=sharing#gid=2" >Raid Call Standings </a></li>
+              	</li>
     <% end %>
                  <!-- <li><%= link_to "Registration", '/streams' %></li>  -->
   
