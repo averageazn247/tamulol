@@ -2,12 +2,7 @@ class RaidsController < ApplicationController
   # GET /raids
   # GET /raids.json
   def index
-    @raids = Raid.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @raids }
-    end
+  @raids = Raid.reorder("id").reverse_order.paginate(page: params[:page])
   end
 
   # GET /raids/1

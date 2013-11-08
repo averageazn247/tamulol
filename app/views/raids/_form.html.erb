@@ -70,6 +70,7 @@
     <%= f.text_field :player10 %>
   </div>
   <div class="actions">
-    <%= f.submit  %>
+   <%= f.submit "Send Report", class: "btn btn-large btn-primary" %>
   </div>
+  <%= link_to 'cancel', root_path %>
 <% end %>
