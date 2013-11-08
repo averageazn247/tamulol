@@ -1,0 +1,24 @@
+<div class="hero-unit">
+	<h2>Gallery</h2>
+	<div id="paintings">
+  <% for picture in @gallery.pictures %>
+  
+    <div class="picture">
+      <%= image_tag picture.image_url(:thumb) if picture.image? %>
+      <div class="name"><%= picture.name %></div>
+      <div class="actions">
+        <%= link_to "edit", edit_pictures_path(picture) %> |
+        <%= link_to "remove", picture, :confirm => 'Are you sure?', :method => :delete %>
+      </div>
+    </div>
+  <% end %>
+  created by: <%= @gallery.name%>
+  <div class="clear"></div>
+</div>
+
+<p>
+  <%= link_to "Add a picture",  @gallery %> |
+  <%= link_to "Remove Gallery", @gallery, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View Galleries", galleries_path %>
+</p>
+	</div>

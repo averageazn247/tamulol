@@ -1,0 +1,15 @@
+   
+<%= form_for(@gallery) do |f| %>
+
+
+ <%= f.hidden_field :name, :value => current_user.name %>
+ <br />
+ Event Name :
+ <%= f.text_field :title %>
+  <p>Create one gallery per an event and then upload as many pictures to the gallery</p>
+ 
+    <%= f.submit  "Create Gallery of Event ", :class => 'btn btn-primary'  %>
+ 
+  
+ 
+ <% end%>

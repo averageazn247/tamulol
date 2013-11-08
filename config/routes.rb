@@ -30,6 +30,8 @@ resources :password_resets
     resources :team_steps 
     resources :messages  
     resources :message
+    resources :galleries
+    resource :picturies
 match '/signup',  to: 'users#new'
 match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
