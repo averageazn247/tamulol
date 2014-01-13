@@ -87,6 +87,7 @@ match '/octfest' , to: 'tourn#octfest'
 match '/emily' , to: 'player#emily'
 match '/near1337' ,to: 'player#near1337'
 match '/worldsfinals', to: 'page#worldfinal'
+match '/players/new' , to: 'players/new'
 #match '/team_steps/:id/:team_id' , to: 'team_steps#update'
 #match '/team_steps/:id/:team_id' , to: 'team_steps#update'
   # The priority is based upon order of creation:
