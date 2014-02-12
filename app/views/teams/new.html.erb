@@ -1,5 +1,6 @@
  
 <div class="center hero-unit">
+	<% if current_user %>
 <h2>Team Sign Up</h2>
  All Teams pay the Registration fee of $25 if 5 members are A&M Esports members 
 <%= form_for @team do |f| %>
@@ -19,7 +20,11 @@
    
   <%= f.check_box :tos%> <%= link_to 'Season Rules', '/rules' %><br />
  <%= f.submit  %>
+
   <% end %> 
+<% else %>
+Log into Face Book to make a team
+<%end%>
 
 </div>
  
