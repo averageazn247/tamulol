@@ -103,7 +103,31 @@
 	 	<% end %>
 	 	<% end %>
  <br />
- 
+ <% if @team.email2 !=nil %
+	 	<% if not ( @team.email2.include? "tamu.edu" or @team.email2.include? "blinn.edu" ) %>
+	 	
+	 	Player 2's Email is not valid
+	 	<% end %>
+	 	<% end %>
+	 	<br />
+	 	<% if @team.email3 != nil %>
+	 	<% if not ( @team.email3.include? "tamu.edu" or @team.email3.include? "blinn.edu" ) %>
+	 	Player 3's Email is not valid
+	 	<% end %>
+	 	<% end%>
+	 	<br />
+	 	<% if @team.email4 !=nil%>
+	 	<% if not ( @team.email4.include? "tamu.edu" or @team.email4.include? "blinn.edu" ) %>
+	 	Player 4's Email is not valid
+	 	<% end %>	
+	 	<% end %>
+	 	<br />
+	 	<% @team.email5 != nil%>
+	 	<% if not ( @team.email5.include? "tamu.edu" or @team.email5.include? "blinn.edu" ) %>
+	 	Player 5's Email is not valid
+	 	<br />
+	 	<% end %>
+	 	<% end %>	
 	 	<% if not @team.verify%>
 	 	Team has not paid yet
 	 	<br />
