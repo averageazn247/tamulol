@@ -1,7 +1,8 @@
 class PageController < ApplicationController
   def home
- 
-       @mircoposts = Micropost.paginate(page: params[:page])
+  @users= User.all
+  
+  @posts = Post.all
   end
   def officers
     

@@ -13,6 +13,8 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @users= User.all
+    
     @post = Post.find(params[:id])
 
     respond_to do |format|
@@ -55,18 +57,25 @@ class PostsController < ApplicationController
 
   # PUT /posts/1
   # PUT /posts/1.json
-  def update
-    @post = Post.find(params[:id])
+  
+  def mercury_update
+  post = Post.find(params[:id])
+  # Update page
+  post.topic=params[:content][:page_topic][:value]
+  post.body= params[:content][:page_body][:value]
+  post.save!
+  render text: ""
+end
 
-    respond_to do |format|
-      if @post.update_attributes(params[:post])
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
-      end
-    end
+
+  def update
+   post = Post.find(params[:id])
+   @post = Post.find(params[:id])
+  # Update page
+  post.topic=params[:content][:page_topic][:value]
+  post.body= params[:content][:page_body][:value]
+  post.save! 
+   render text:  ""
   end
 
   # DELETE /posts/1

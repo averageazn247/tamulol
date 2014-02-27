@@ -1,3 +1,3 @@
 class Post < ActiveRecord::Base
-  attr_accessible :body, :created, :creator_id, :topic
+  attr_accessible :body, :created, :creator_id, :topic, :name
 end

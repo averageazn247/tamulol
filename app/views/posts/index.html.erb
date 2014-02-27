@@ -1,3 +1,5 @@
+
+<div class="hero-unit">
 <h1>Listing posts</h1>
 
 <table>
@@ -10,17 +12,19 @@
     <th></th>
     <th></th>
   </tr>
-
+</div>>
 <% @posts.each do |post| %>
+<div class='hero-unit'>
   <tr>
     <td><%= post.topic %></td>
     <td><%= post.body %></td>
-    <td><%= post.creator_id %></td>
+    <td><%= post.name %></td>
     <td><%= post.created %></td>
     <td><%= link_to 'Show', post %></td>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
     <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
+  </div>
 <% end %>
 </table>
 

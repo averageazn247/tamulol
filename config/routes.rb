@@ -1,11 +1,21 @@
 Tamulol::Application.routes.draw do
 
 
+    namespace :mercury do
+      resources :images
+    end
+
+  mount Mercury::Engine => '/'
+
   resources :raids
 
   resources :events
 
-  resources :posts
+  resources :posts do
+    member { put :mercury_update }
+    
+    
+  end
 resources :lists
 match "/lol", :to=>"player#setlol"
 match "/fps", :to=>"player#setfps"
