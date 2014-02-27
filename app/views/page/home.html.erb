@@ -3,7 +3,7 @@
 
 <div class="container">
 
-  <div class="hero-unit" style="height: 700px;">   
+  <div class="hero-unit" >   
 
 
 
@@ -76,26 +76,12 @@ Welcome back for to Spring 2014.  Join us in the basement of the MSC for LCS vie
 <% end %> 
 </p>
 </div>
+<% @posts.each do |post| %>
+<div class='hero-unit'>
+<%= post.name %>
+<%= post. topic%>
 
-<% @posts.each do |post|%>
-<div class="hero-unit">
-	<h3><%= post.topic%></h3>
-	<%= post.created%>
-	<%= raw post.body %>
-	
-	by: <%= post.name %>
-	<% if current_user != nil %>
-		<%if current_user.name== post.name%>
-		 OK 
-		 <p><%= link_to "Edit Post", "/editor" + request.path, id: "edit_link", data: {save_url: mercury_update_post_path(post)} %></p>
-
-		<% end%>
-		<% end %>
- 
-	 
-	
-</div>
 <% end %>
-
+</div>
 </div>
  

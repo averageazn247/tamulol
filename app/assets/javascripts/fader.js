@@ -33,7 +33,7 @@ TINY.fader = function() {
 		slides = p.slides = T$$("li", fader),
 		total = slides.length,
 		i = p.count = 0;
-		fader.style.overflow = "hidden";
+		fader.style.overflow = "scroll";
 		for ( i; i < total; i++ ) {
 			var slide = slides[i];
 			if ( slide.parentNode == fader ) {

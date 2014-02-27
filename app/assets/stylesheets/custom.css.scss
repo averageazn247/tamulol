@@ -86,7 +86,7 @@ footer {
   text-align: center;
 width: 600px;
 margin: 0px auto;
-overflow: hidden; 
+overflow: scroll; 
  
    background: #DFDFEA;
   //background-image:url('footer_background.jpg');
@@ -136,11 +136,10 @@ text-align: center;
   right: 0;
   bottom: 0;
   left: 0;
-  overflow: hidden;
+  overflow: scroll;
 }
  
-.viewport .frame {
-  position: absolute;
+.viewport .frame { 
   width: 200%;
   top: 0;
   bottom: 0;
@@ -161,7 +160,7 @@ text-align: center;
 menu.collapse.height {
   position: relative;
   height: 0;
-  overflow: hidden;
+  overflow: scroll;
   -webkit-transition: height 0.35s ease;
   -moz-transition: height 0.35s ease;
   -o-transition: height 0.35s ease;
@@ -171,7 +170,7 @@ menu.collapse.height {
 menu.collapse.width {
   position: relative;
   width: 0;
-  overflow: hidden;
+  overflow: scroll;
   -webkit-transition: width 0.35s ease;
   -moz-transition: width 0.35s ease;
   -o-transition: width 0.35s ease;
@@ -249,7 +248,7 @@ aside {
   background-size:100% 100%;
   background-position: 0px 50px;
     background-repeat: repeat-y;
-    overflow:auto;
+    overflow:scroll;
 }
 
    
@@ -275,7 +274,7 @@ aside {
   list-style: none;
   margin: 0;
   li {
-    overflow: auto;
+    overflow: scroll;
     padding: 10px 0;
     border-top: 1px solid $grayLighter;
     &:last-child {
@@ -472,7 +471,7 @@ top: 5px;
   font-size: 0;
 }
 .dbox{
-overflow: hidden;
+overflow: scroll;
     position:relative; 
        margin-left: 100px;
   width:100%; height:auto; 
@@ -485,7 +484,7 @@ background-color:#E0ECF8;
 //background-image:url(http://riot-web-static.s3.amazonaws.com/forum/ui/forum_title_bkgrd.png);
 font-family:   book antiqua;
 }.dbox2{
-  overflow: hidden;
+  overflow: scroll;
    margin-left: 100px;
     position:relative; 
   width:100%; height:auto; 
@@ -500,7 +499,7 @@ font-family:   book antiqua;
 }
 
 .longd{
-  overflow: hidden;
+  overflow: scroll;
    margin-left: 100px;
      position:relative; 
   width:100%; height:auto; 
@@ -560,8 +559,7 @@ aside {
 }
 .wrapper2 {
   background-image: url('tophead.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-repeat: no-repeat; 
   width: 100%;
   height: 150px;
 }
