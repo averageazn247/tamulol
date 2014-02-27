@@ -23,7 +23,6 @@ gem 'sinatra', require: false
 gem 'slim' 
 gem 'carrierwave'
 gem 'carrierwave_direct'
-gem 'sidekiq'
 gem 'paperclip'
 gem 'aws-sdk'
 gem 'best_in_place'
