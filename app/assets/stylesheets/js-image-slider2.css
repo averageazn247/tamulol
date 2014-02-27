@@ -78,7 +78,7 @@ div.navBulletsWrapper div
 {
     width:11px; height:11px;
     background:transparent url(bullet.png) no-repeat 0 0;
-    float:left;overflow:hidden;vertical-align:middle;cursor:pointer;
+    float:left;overflow:auto;vertical-align:middle;cursor:pointer;
     margin-right:11px;/* distance between each bullet*/
    	margin-top:5px;
     _position:relative;/*IE6 hack*/

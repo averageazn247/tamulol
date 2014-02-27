@@ -3,7 +3,7 @@
 	height:400px;
 	padding:10px;
 	position:relative;
-	overflow:hidden;
+	overflow:scroll;
 	background:#101010 url('loading.gif') no-repeat center center;
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
@@ -95,7 +95,7 @@
 	box-shadow:1px 1px 5px #000;
 	opacity:0.9;
     filter:progid:DXImageTransform.Microsoft.Alpha(opacity=90);
-	overflow:hidden;
+	overflow:auto;
 }
 .msg_thumb_wrapper{
 	position:absolute;

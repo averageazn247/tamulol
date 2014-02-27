@@ -35,7 +35,7 @@ div.mc-caption-bg, div.mc-caption-bg2 {
 	left:0px; /*if the caption needs to be aligned from right, specify by right instead of left. i.e. right:20px;*/
 	bottom:0px;/*if the caption needs to be aligned from top, specify by top instead of bottom. i.e. top:150px;*/
 	z-index:3;
-	overflow:hidden;
+	overflow:scroll;
 	font-size: 0;
 }
 div.mc-caption-bg {
@@ -76,7 +76,7 @@ div.navBulletsWrapper div
 {
     width:11px; height:11px;
     background:transparent url(bullet.png) no-repeat 0 0;
-    float:left;overflow:hidden;vertical-align:middle;cursor:pointer;
+    float:left; vertical-align:middle;cursor:pointer;
     margin-right:11px;/* distance between each bullet*/
     _position:relative;/*IE6 hack*/
 }
