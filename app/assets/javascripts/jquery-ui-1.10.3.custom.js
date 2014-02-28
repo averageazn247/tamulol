@@ -14019,7 +14019,7 @@ $.effects.effect.blind = function( o, done ) {
 	}
 	el.show();
 	wrapper = $.effects.createWrapper( el ).css({
-		overflow: "hidden"
+		overflow: "auto"
 	});
 
 	distance = wrapper[ ref ]();
@@ -14182,7 +14182,7 @@ $.effects.effect.clip = function( o, done ) {
 
 	// Create Wrapper
 	wrapper = $.effects.createWrapper( el ).css({
-		overflow: "hidden"
+		overflow: "auto"
 	});
 	animate = ( el[0].tagName === "IMG" ) ? wrapper : el;
 	distance = animate[ size ]();
@@ -14324,7 +14324,7 @@ $.effects.effect.explode = function( o, done ) {
 				.addClass( "ui-effects-explode" )
 				.css({
 					position: "absolute",
-					overflow: "hidden",
+					overflow: "auto",
 					width: width,
 					height: height,
 					left: left + ( show ? mx * width : 0 ),
@@ -14393,7 +14393,7 @@ $.effects.effect.fold = function( o, done ) {
 
 	// Create Wrapper
 	wrapper = $.effects.createWrapper( el ).css({
-		overflow: "hidden"
+		overflow: "auto"
 	});
 	distance = widthFirst ?
 		[ wrapper.width(), wrapper.height() ] :
@@ -14905,7 +14905,7 @@ $.effects.effect.slide = function( o, done ) {
 	distance = o.distance || el[ ref === "top" ? "outerHeight" : "outerWidth" ]( true );
 
 	$.effects.createWrapper( el ).css({
-		overflow: "hidden"
+		overflow: "auto"
 	});
 
 	if ( show ) {

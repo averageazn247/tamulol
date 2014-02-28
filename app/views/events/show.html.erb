@@ -43,7 +43,7 @@
 
 <p>
   <b>Description:</b>
-  <%= simple_format @event.desc %>
+  <%= raw simple_format @event.desc %>
 </p>
 
 <% if  current_user.admin %>

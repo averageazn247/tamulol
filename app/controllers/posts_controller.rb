@@ -64,7 +64,7 @@ class PostsController < ApplicationController
   post.topic=params[:content][:page_topic][:value]
   post.body= params[:content][:page_body][:value]
   post.save!
-  render text: ""
+  render :json => {:url => post_path(post)}
 end
 
 
@@ -75,7 +75,7 @@ end
   post.topic=params[:content][:page_topic][:value]
   post.body= params[:content][:page_body][:value]
   post.save! 
-   render text:  ""
+  render :json => {:url => post_path(post)}
   end
 
   # DELETE /posts/1
