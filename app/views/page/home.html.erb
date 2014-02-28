@@ -39,7 +39,7 @@ _____________________________________________________________
 <p><%= event.maker %></p>
 
 <% if current_user !=nil %>
-	<% if current_user.name== event.maker %>
+	<% if current_user.name== event.maker or current_user.admin %>
 		 <p><%= link_to "Edit Event", "/editor/events/" +  event.id.to_s  %></p>
 	<% end %>
 <% end %>
