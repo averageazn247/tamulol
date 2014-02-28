@@ -86,7 +86,7 @@ by <%= post.name %>
 <br />
 <% if current_user != nil%>
 	<% if current_user.name== post.name or current_user.admin%>
-	 <p><%= link_to "Edit Post", "/editor" + request.path, id: "edit_link", data: {save_url: mercury_update_post_path(post)} %></p>
+	 <p><%= link_to "Edit Post", "/editor/pages/" +  post.id  %></p>
 
 	<% end %>
 <% end %>
