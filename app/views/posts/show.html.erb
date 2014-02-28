@@ -4,7 +4,7 @@
   <h3>  
       <div class="content">
   <div id="page_topic" class="mercury-region" data-type="editable" data-method="PUT"  data-mercury='full'>
- <%=  @post.topic %>
+ <%=  raw @post.topic %>
   
   </div>
   </div> </h3>
@@ -24,11 +24,8 @@
 
 <p>
   <b>Creator:</b>
-  <% @users.each do |user|%>
-  <% if user == @post.creator_id%> 
-  	<%= user.name %>
-  		<% end %>
-  <% end %>
+ 
+<%= @post.name%>
 </p>
 
 <p>

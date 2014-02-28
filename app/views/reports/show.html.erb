@@ -14,8 +14,8 @@
 
  Date played:   <%= @report.dayof%> <br />
  Url from quickfind.kassad.in<br />
-<%= @report.game1 %> 
-<%= @report.game2 %> 
+<%= raw @report.game1 %> 
+<%= raw @report.game2 %> 
 
 
 <br />
@@ -30,7 +30,7 @@
     
 <br /> <br />
       Extra Info:   <br />
- <%= @report.desc%>
+ <%= raw @report.desc%>
  <br />
  <% if @report.name.blank? == false %>
  Report Submitter <%= @report.name %> 

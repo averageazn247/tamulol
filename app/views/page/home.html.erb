@@ -8,8 +8,43 @@
 
 
       	    <h3>Welcome to Texas A&M Esports</h3>
+<p>
+<% @events.each do |event|%>
+<br />
+_____________________________________________________________
+<h4><%=  raw event.name %></h4>
+  <b>Date:</b>
+  <%= event.dayof %>
+</p>
+  <b>At:</b>
+    	<% if event.start.hour > 12 %>
+		 			<%= event.start.hour - 12 %>: 
+				<% if event.start.min == 0 %>
+				  	00 PM
+				<% else %> 
+					<%= event.start.min %> PM
+				<% end %> 
+		<%else%> 
+			<%= event.start.hour %>:
+				<% if event.start.min ==0 %>
+				  	00 AM
+				<% else %>
+				
+					<%= event.start.min %> AM
+				<% end %>
+      	<% end%>
+</p>
 
+<p><%= raw event.desc%></p>
+<p><%= event.maker %></p>
 
+<% if current_user !=nil %>
+	<% if current_user.name== event.maker %>
+		 <p><%= link_to "Edit Event", "/editor/events/" +  event.id.to_s  %></p>
+	<% end %>
+<% end %>
+<% end %>
+</p>
 <link href="image-slider/js-image-slider.css" rel="stylesheet" type="text/css" />
 <script src="image-slider/js-image-slider.js" type="text/javascript"></script>
 

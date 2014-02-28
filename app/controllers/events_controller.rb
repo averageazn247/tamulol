@@ -1,6 +1,15 @@
 class EventsController < ApplicationController
   # GET /events
   # GET /events.json
+    def mercury_update
+  post = Event.find(params[:id])
+  # Update page
+  post.name=params[:content][:page_topic][:value]
+  post.desc= params[:content][:page_body][:value]
+  post.save!
+  render :json => {:url => post_path(post)}
+  end
+  
   def index
    @events = Event.all
   @events_by_date = @events.group_by(&:dayof)

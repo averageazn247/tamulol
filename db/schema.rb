@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140227001733) do
+ActiveRecord::Schema.define(:version => 20140228215316) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20140227001733) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "group"
+    t.string   "maker"
   end
 
   create_table "galleries", :force => true do |t|

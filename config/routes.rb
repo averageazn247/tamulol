@@ -9,8 +9,11 @@ Tamulol::Application.routes.draw do
 
   resources :raids
 
-  resources :events
-
+  resources :events do
+    member { put :mercury_update }
+    
+    
+  end
   resources :posts do
     member { put :mercury_update }
     
