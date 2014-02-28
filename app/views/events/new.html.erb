@@ -14,7 +14,7 @@
       </ul>
     </div>
   <% end %>
-
+<%= f.hidden_field :maker, :value => current_user.name %>
   <div class="field">
     <%= f.label :name , 'Title'%><br />
     <%= f.text_field :name %>
