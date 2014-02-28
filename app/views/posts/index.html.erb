@@ -16,8 +16,8 @@
 <% @posts.each do |post| %>
 <div class='hero-unit'>
   <tr>
-    <td><%= post.topic %></td>
-    <td><%= post.body %></td>
+    <td><%=  raw post.topic %></td>
+    <td><%=  raw post.body %></td>
     <td><%= post.name %></td>
     <td><%= post.created %></td>
     <td><%= link_to 'Show', post %></td>
