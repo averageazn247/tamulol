@@ -24,13 +24,13 @@
 <br />
 
   Game  :<br />
-   <%= image_tag @report.avatar1.url()%>
+   <%= image_tag @report.avatar1.url(:medium)%>
  
   <br />
    <br />
-     <%= image_tag @report.avatar2.url()%>
+     <%= image_tag @report.avatar2.url(:medium)%>
   <br />
-    <%= image_tag @report.avatar3.url()%>
+    <%= image_tag @report.avatar3.url(:medium)%>
 <br /> <br />
       Extra Info:   <br />
  <%= raw @report.desc%>

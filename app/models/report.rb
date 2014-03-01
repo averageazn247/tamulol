@@ -17,5 +17,9 @@ class Report < ActiveRecord::Base
     square: '200x200#',
     medium: '1000x1000>'
   }     
+  validates_attachment_content_type :avatar1, :content_type => /\Aimage\/.*\Z/
+    validates_attachment_content_type :avatar2, :content_type => /\Aimage\/.*\Z/
+
+  validates_attachment_content_type :avatar3, :content_type => /\Aimage\/.*\Z/
 
 end
