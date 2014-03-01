@@ -21,10 +21,8 @@
     <%= f.text_field :winner %>
   </div> 
  <br />
-   <%= f.label  :dayof, ' *Date  Played' %>
-<div class="auto-kal"></div>
-
-<%= f.text_field :dayof, :class => 'auto-kal' %>
+   <%= f.label  :dayof, ' *Date  Played' %> 
+<%= f.date_select :dayof  %>
 <br />
 Copy the url from quickfind.kassad.in
 <%= f.label :game1, "spectate url to game 1" %>
