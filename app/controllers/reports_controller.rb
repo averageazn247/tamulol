@@ -39,7 +39,7 @@ class ReportsController < ApplicationController
     id= @report.creator_id
 
     if @report.save
-       UserMailer.report_match(teams,winner,date).deliver  
+       #UserMailer.report_match(teams,winner,date).deliver  
       flash[:success] = "Thanks for reporting!"
 
 
