@@ -5,17 +5,17 @@ class Report < ActiveRecord::Base
          has_attached_file :avatar1, styles: {
     thumb: '400x400>',
     square: '800x800#',
-    medium: '800x800>'
+    medium: '1000x1000>'
   }
            has_attached_file :avatar2, styles: {
     thumb: '400x400>',
     square: '800x800#',
-    medium: '800x800>'
+    medium: '1000x1000>'
   }
            has_attached_file :avatar3, styles: {
     thumb: '200x200>',
     square: '200x200#',
-    medium: '300x300>'
+    medium: '1000x1000>'
   }     
 
 end
