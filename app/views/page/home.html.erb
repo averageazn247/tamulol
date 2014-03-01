@@ -27,7 +27,7 @@
 	<% if Time.current.to_date<= event.dayof %>
 	_____________________________________________________________
  
-	<h4><%=  raw event.name %></h4>
+	<h4><%= link_to event.name, event %></h4>
 	  <b>Date:</b>
 	  <%= event.dayof %> 
 	  <b>At:</b>
@@ -50,7 +50,7 @@
 	      	<% end%>
 	</p>
 	
-	<p><%= raw event.desc%></p>
+	
 	<p><%= event.maker %></p>
 	
 			<% if current_user !=nil %>
@@ -74,7 +74,7 @@
 	<% if Time.current.to_date> event.dayof %>
 	_____________________________________________________________
 	 
-	<h4><%=  raw event.name %></h4>
+	<h4><%= link_to event.name, event %></h4>
 	  <b>Date:</b>
 	  <%= event.dayof %> 
 	  <b>At:</b>
