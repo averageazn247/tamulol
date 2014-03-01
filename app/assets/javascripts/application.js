@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require jquery.ui.datepicker
 //= require jquery-ui 
+//= require kalendae
 //= require bootstrap
 //= require jquery.purr
 //= require_tree .

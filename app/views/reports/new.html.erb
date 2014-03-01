@@ -20,9 +20,9 @@
     <%= f.label :winner,"*Winner" %><br />
     <%= f.text_field :winner %>
   </div> 
- 
+ <br />
    <%= f.label  :dayof, ' *Date  Played' %>
-
+<div class="auto-kal"></div>
 
 <%= f.text_field :dayof, :class => 'auto-kal' %>
 <br />
@@ -33,7 +33,7 @@ Copy the url from quickfind.kassad.in
 <%= f.text_field :game2 %>
 <%= f.label :game3, "spectate url to game 3" %>
 <%= f.text_field :game3 %>
-
+<br />
 Upload Screen Shot
  <%= f.label :avatar1, "Game 1"%> 
  <%= f.file_field :avatar1 %>
