@@ -64,8 +64,8 @@ config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
     :bucket => "tamulol2013",
-    :access_key_id =>  "AKIAJCUK7Q6QB4GPYBRQ" ,
-    :secret_access_key =>"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"
+   :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
   }
 }
   # Log the query plan for queries taking more than this (works
