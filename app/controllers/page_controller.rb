@@ -1,8 +1,8 @@
 class PageController < ApplicationController
   def home
  
-  @events=Event.all
-  @posts = Post.all
+  @events=Event.reorder("dayof").all
+  @posts = Post.reorder("id").all
   end
   def officers
     
