@@ -9,6 +9,7 @@
 
       	    <h3>Welcome to Texas A&M Esports</h3>
 <p>
+	<%= Time.current%>
 <% @events.each do |event|%>
 <br />
 <% if Time.current.to_date<= event.dayof %>
