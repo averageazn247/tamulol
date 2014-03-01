@@ -17,13 +17,10 @@
 *Required 
 
   <div class="field">
-    <%= f.label :winner,"*Game 1 winner" %><br />
+    <%= f.label :winner,"*Winner" %><br />
     <%= f.text_field :winner %>
   </div> 
-  <div class="field">
-    <%= f.label :teams ,"*Game 2 winner"%><br />
-    <%= f.text_field :teams %>
-  </div>
+ 
    <%= f.label  :dayof, ' *Date  Played' %>
 
 
@@ -34,6 +31,8 @@ Copy the url from quickfind.kassad.in
 <%= f.text_field :game1 %>
 <%= f.label :game2, "spectate url to game 2" %>
 <%= f.text_field :game2 %>
+<%= f.label :game3, "spectate url to game 3" %>
+<%= f.text_field :game3 %>
 
 Upload Screen Shot
  <%= f.label :avatar1, "Game 1"%> 
@@ -45,7 +44,8 @@ Upload Screen Shot
   <%= f.file_field :avatar2 %>
      <p> 
  
-
+  <%= f.label :avatar3, "Game 3"%> 
+  <%= f.file_field :avatar3 %>
 
  
   </p>

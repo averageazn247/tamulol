@@ -8,15 +8,15 @@
   Other Team: <%= @report.team2 %> <br />
  
  
-    Game 1 Winner:   <%= @report.winner %><br /><br />
-      Game 2 Winner:  <%= @report.teams %><br /><br />
+    Game Winner:   <%= @report.winner %><br /><br />
+       
  
 
  Date played:   <%= @report.dayof%> <br />
  Url from quickfind.kassad.in<br />
 <%= raw @report.game1 %> 
 <%= raw @report.game2 %> 
-
+<%= raw @report.game3 %>
 
 <br />
 
@@ -27,7 +27,7 @@
    <br />
      <%= image_tag @report.avatar2.url%>
   <br />
-    
+    <%= image_tag @report.avatar3.url%>
 <br /> <br />
       Extra Info:   <br />
  <%= raw @report.desc%>
