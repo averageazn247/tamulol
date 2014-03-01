@@ -17,7 +17,7 @@
   <li><a href="#official">Past Events</a></li> 
      </ul>
 </div>
-<% @events.each do |event|%>
+<% @events.reverse.each do |event|%>
 <br />
 <div id="jquery">
 <% if Time.current.to_date<= event.dayof %>
