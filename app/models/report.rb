@@ -1,9 +1,6 @@
 class Report < ActiveRecord::Base
   attr_accessible :creator_id, :game3, :dayof, :desc, :teams, :winner ,:avatar1 ,:avatar2, :avatar3 , :name, :game1, :game2, :team1 , :team2
-   validates :dayof, presence: true 
-     validates :winner, presence: true 
-       validates :teams, presence: true 
-
+ 
 
          has_attached_file :avatar1, styles: {
     thumb: '400x400>',
