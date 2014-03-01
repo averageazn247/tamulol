@@ -61,6 +61,7 @@
 </p>
 <% if current_user != nil%>
 	<% if  current_user.admin or current_user.name== @event.maker %>
+	<%= link_to 'edit realz', @event, method: :edit %>
 	<%= link_to "Edit Event", "/editor" + request.path, id: "edit_link", data: {save_url: mercury_update_event_path(@event)} %>|
 	<%= link_to 'Destroy', @event, method: :delete, data: { confirm: 'Are you sure?' } %> |
 	<% end %>
