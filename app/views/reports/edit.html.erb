@@ -5,9 +5,7 @@
 <%= form_for @report ,:html => {:multipart => true } do |f| %>
 
 
- <%= f.hidden_field :name, :value => current_user.name %>
-*Required 
-  <div class="field">
+   <div class="field">
     <%= f.label :team1,"*Your Team" %><br />
     <%= f.text_field :team1 %>
   </div> 
@@ -15,25 +13,26 @@
     <%= f.label :team2,"*Other Team" %><br />
     <%= f.text_field :team2 %>
   </div> 
+  <%= f.hidden_field :name, :value => current_user.name %>
+*Required 
+
   <div class="field">
-    <%= f.label :winner,"*Game 1 winner" %><br />
+    <%= f.label :winner,"*Winner" %><br />
     <%= f.text_field :winner %>
   </div> 
-  <div class="field">
-    <%= f.label :teams ,"*Game 2 winner"%><br />
-    <%= f.text_field :teams %>
-  </div>
-   <%= f.label  :dayof, ' *Date  Played' %>
- 
-
-<%= f.text_field :dayof, :class => 'auto-kal' %>
-  <br />
+ <br />
+   <%= f.label  :dayof, ' *Date  Played' %> 
+<%= f.date_select :dayof  %>
+<br />
 Copy the url from quickfind.kassad.in
 <%= f.label :game1, "spectate url to game 1" %>
 <%= f.text_field :game1 %>
 <%= f.label :game2, "spectate url to game 2" %>
 <%= f.text_field :game2 %>
+<%= f.label :game3, "spectate url to game 3" %>
+<%= f.text_field :game3 %>
 <br />
+Upload Screen Shot
  <%= f.label :avatar1, "Game 1"%> 
  <%= f.file_field :avatar1 %>
    <p>
@@ -43,19 +42,21 @@ Copy the url from quickfind.kassad.in
   <%= f.file_field :avatar2 %>
      <p> 
  
+  <%= f.label :avatar3, "Game 3"%> 
+  <%= f.file_field :avatar3 %>
+
+ 
   </p>
-  <%= f.label :avatar3, "Game 3"%>
-  <%= f.file_field :avatar3 %> 
-     <p>
    <div class="field">
-        <%= f.label :desc, "Extra Info" %><br />
-      <%= f.text_area :desc %>
+        <%= f.label :desc, "Extra Info" %>
+
+      <%= f.text_area :desc, rows: 5 %>
       </div> 
-      
+  <br />    
      <%= f.submit "Send Report", class: "btn btn-large btn-primary" %>
      <br />
   <%= link_to 'cancel', root_path %>
-  <% end %>
   </div>
   </div>
+  
 <% end %>  
