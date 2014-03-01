@@ -1,6 +1,6 @@
 
 
-
+<script type="text/javascript" src="jquery.idTabs.min.js"></script>
 <div class="container">
 
   <div class="hero-unit" >   
@@ -11,6 +11,7 @@
 <p>
 <% @events.each do |event|%>
 <br />
+<% if Time.current.to_date<= event.dayof %>
 _____________________________________________________________
 <h4><%=  raw event.name %></h4>
   <b>Date:</b>
@@ -33,15 +34,21 @@ _____________________________________________________________
 					<%= event.start.min %> AM
 				<% end %>
       	<% end%>
+   
 </p>
 
 <p><%= raw event.desc%></p>
 <p><%= event.maker %></p>
 
-<% if current_user !=nil %>
-	<% if current_user.name== event.maker or current_user.admin %>
-		 <p><%= link_to "Edit Event", "/editor/events/" +  event.id.to_s  %></p>
-	<% end %>
+		<% if current_user !=nil %>
+			<% if current_user.name== event.maker or current_user.admin %>
+				 <p><%= link_to "Edit Event", "/editor/events/" +  event.id.to_s  %></p>
+			<% end %>
+		<% end %>
+
+<%else %>
+
+
 <% end %>
 <% end %>
 </p>
