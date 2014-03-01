@@ -9,9 +9,17 @@
 
       	    <h3>Welcome to Texas A&M Esports</h3>
 <p>
-	<%= Time.current%>
+		<div id="navcontainer">
+		
+<ul class="idTabs">
+	 
+  <li><a href="#jquery">Current Events</a></li> 
+  <li><a href="#official">Past Events</a></li> 
+     </ul>
+</div>
 <% @events.each do |event|%>
 <br />
+<div id="jquery">
 <% if Time.current.to_date<= event.dayof %>
 _____________________________________________________________
 <h4><%=  raw event.name %></h4>
@@ -47,9 +55,49 @@ _____________________________________________________________
 			<% end %>
 		<% end %>
 
+</div> 
+
 <%else %>
+<div id="official">
+<% if Time.current.to_date<= event.dayof %>
+_____________________________________________________________
+<h4><%=  raw event.name %></h4>
+  <b>Date:</b>
+  <%= event.dayof %>
+</p>
+  <b>At:</b>
+    	<% if event.start.hour > 12 %>
+		 			<%= event.start.hour - 12 %>: 
+				<% if event.start.min == 0 %>
+				  	00 PM
+				<% else %> 
+					<%= event.start.min %> PM
+				<% end %> 
+		<%else%> 
+			<%= event.start.hour %>:
+				<% if event.start.min ==0 %>
+				  	00 AM
+				<% else %>
+				
+					<%= event.start.min %> AM
+				<% end %>
+      	<% end%>
+   
+</p>
+
+<p><%= raw event.desc%></p>
+<p><%= event.maker %></p>
+
+		<% if current_user !=nil %>
+			<% if current_user.name== event.maker or current_user.admin %>
+				 <p><%= link_to "Edit Event", "/editor/events/" +  event.id.to_s  %></p>
+			<% end %>
+		<% end %>
 
 
+
+
+</div> 
 <% end %>
 <% end %>
 </p>
