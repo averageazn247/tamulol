@@ -30,8 +30,8 @@
 	<h4><%= link_to event.name, event %></h4>
 	  <b>Date:</b>
 	  <%= event.dayof %> 
-	  <b>At:</b>
-	  <p>
+	
+	  <p>  At: 
 	    	<% if event.start.hour > 12 %>
 			 			<%= event.start.hour - 12 %>: 
 					<% if event.start.min == 0 %>
@@ -77,8 +77,8 @@
 	<h4><%= link_to event.name, event %></h4>
 	  <b>Date:</b>
 	  <%= event.dayof %> 
-	  <b>At:</b>
-	  <p>
+	  
+	  <p> At: 
 	    	<% if event.start.hour > 12 %>
 			 			<%= event.start.hour - 12 %>: 
 					<% if event.start.min == 0 %>
