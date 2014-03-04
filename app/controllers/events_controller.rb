@@ -6,6 +6,9 @@ class EventsController < ApplicationController
   # Update page
   post.name=params[:content][:page_topic][:value]
   post.desc= params[:content][:page_body][:value]
+  post.start=params[:content][:page_time][:value]
+  
+  post.dayof=params[:content][:page_date][:value]
   post.save!
   render :json => {:url => post_path(post)}
   end
