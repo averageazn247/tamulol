@@ -19,9 +19,16 @@
 </p>
 <p><p>
   <b>Date:</b>
+  
+      <div class="content">
+  <div id="page_date" class="mercury-region" data-type="editable" data-method="PUT"  data-mercury='full'>
   <%= @event.dayof %>
+  </div>
+  </div>
 </p>
   <b>Start:</b>
+      <div class="content">
+  <div id="page_time" class="mercury-region" data-type="editable" data-method="PUT"  data-mercury='full'>
     	<% if @event.start.hour > 12 %>
 		 			<%= @event.start.hour - 12 %>:
 			
@@ -43,7 +50,8 @@
 					<%= @event.start.min %> AM
 				<% end %>
 					
-				
+				</div>
+				</div>
       	<% end%>
 </p>
 
@@ -61,8 +69,8 @@
 </p>
 <% if current_user != nil%>
 	<% if  current_user.admin or current_user.name== @event.maker %>
-	<%= link_to 'edit realz', edit_event_path(@event)  %>
-	<%= link_to "Edit Event", "/editor" + request.path, id: "edit_link", data: {save_url: mercury_update_event_path(@event)} %>|
+	<%= link_to 'edit date/time', edit_event_path(@event)  %> |
+	<%= link_to "Edit Event Description", "/editor" + request.path, id: "edit_link", data: {save_url: mercury_update_event_path(@event)} %>|
 	<%= link_to 'Destroy', @event, method: :delete, data: { confirm: 'Are you sure?' } %> |
 	<% end %>
 	<%= link_to 'Back', events_path %>
