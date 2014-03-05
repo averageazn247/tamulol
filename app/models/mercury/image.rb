@@ -10,8 +10,8 @@ class Mercury::Image < ActiveRecord::Base
     :bucket => "tamulol2013",
     :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
     :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'],
-                    :path => ":attachment/:id/:style/:filename",
-                    :url => ":attachment/:id/:style/:filename"}
+                    :path => ":s3_domain_url",
+                    :url => "/:class/:attachment/:id_partition/:style/:filename"}
                     
   delegate :url, :to => :image
 
