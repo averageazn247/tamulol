@@ -1,0 +1,57 @@
+
+<script>
+   jQuery(window).on('mercury:ready', function() { Mercury.saveUrl = '/officers/' + <%= @officer.id %> + "/mercury_update"; });
+</script>
+<div class='hero-unit'>
+	     <div class="content">
+  <div id="page_title" class="mercury-region" data-type="editable" data-method="PUT"  data-mercury='full'>
+
+<h4>Title: <%= raw @officer.title%></h4>	
+</div>
+</div>
+	<br />
+	     <div class="content">
+  <div id="page_name" class="mercury-region" data-type="editable" data-method="PUT"  data-mercury='full'>
+
+	<b><%= raw @officer.name %></b>
+	</div>
+	</div>
+	<br />
+	
+<p>
+	     <div class="content">
+  <div id="page_pic" class="mercury-region" data-type="editable" data-method="PUT"  data-mercury='full'>
+<%= raw @officer.pic%>
+
+</div>
+</div>
+</p>
+<br />
+<p>      <div class="content">
+  <div id="page_contact" class="mercury-region" data-type="editable" data-method="PUT"  data-mercury='full'>
+<%= raw @officer.contact%>
+
+</div>
+</div>
+</p>
+<br />
+<p>
+	<b>Description:</b>
+
+     <div class="content">
+  <div id="page_topic" class="mercury-region" data-type="editable" data-method="PUT"  data-mercury='full'>
+
+<%= raw @officer.desc %>
+
+</div>
+</div>
+</p>
+<% if current_user != nil%>
+	<% if  current_user.admin or current_user.name== @officer.div %>
+	<%= link_to 'edit date/time', edit_officer_path(@officer)  %> |
+	<%= link_to "Edit Event Description", "/editor" + request.path, id: "edit_link", data: {save_url: mercury_update_event_path(@event)} %>|
+	<%= link_to 'Destroy', @officer, method: :delete, data: { confirm: 'Are you sure?' } %> |
+	<% end %>
+	<%= link_to 'Back', officer_path %>
+<%end %>
+	</div>

@@ -1,6 +1,6 @@
  <div class='hero-unit'>
 	  <h3>Submit A Report</h3>
-
+<% if current_user != nil%>
   
 <%= form_for @report ,:html => {:multipart => true } do |f| %>
 
@@ -60,3 +60,6 @@ Upload Screen Shot
   </div>
   
 <% end %>  
+<% else%>
+Log in to report
+<% end %>

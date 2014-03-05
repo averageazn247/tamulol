@@ -11,7 +11,9 @@ Tamulol::Application.routes.draw do
 
   resources :events do
     member { put :mercury_update }
-    
+    end
+   resources :officers do
+    member { put :mercury_update }
     
   end
   resources :posts do
@@ -101,6 +103,11 @@ match '/emily' , to: 'player#emily'
 match '/near1337' ,to: 'player#near1337'
 match '/worldsfinals', to: 'page#worldfinal'
 match '/players/new' , to: 'players#new'
+
+
+match '/off/new' , to: 'officers#new'
+match '/off/list', to: 'officers#list'
+
 #match '/team_steps/:id/:team_id' , to: 'team_steps#update'
 #match '/team_steps/:id/:team_id' , to: 'team_steps#update'
   # The priority is based upon order of creation:
