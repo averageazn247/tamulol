@@ -1,0 +1,13 @@
+<% if current_user != nil%>
+<div class='hero-unit'>
+	
+	<%= form_for(@officer) do |f|%>
+	<%= f.hidden_field :div, :value => current_user.name %>
+	 <%= f.submit "add new officer", class: "btn btn-large btn-primary" %>
+	
+	
+	<% end %>
+	</div>
+<% else %>
+Log in plz
+<%end%>
