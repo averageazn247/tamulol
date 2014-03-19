@@ -1,0 +1,50 @@
+<div class="center hero-unit">
+	<h4>
+		
+<%= @online %>
+	</h4>
+<script>
+   jQuery(window).on('mercury:ready', function() { Mercury.saveUrl = '/streams/' + <%= @stream.id %> + "/mercury_update"; });
+</script>
+
+ 
+  	
+      <div class="content">
+  <div id="page_topic" class="mercury-region" data-type="editable" data-method="PUT"  data-mercury='full'>
+  <h3>  <%= raw  @stream.name%></h3>
+  
+  </div>
+  </div>
+  Twitch Account:
+  <div id="page_date" class="mercury-region" data-type="editable" data-method="PUT"  data-mercury='full'>
+   <%=  raw @stream.link%> 
+  
+  </div>
+ 
+   <p>
+          <div class="content">
+  <div id="page_tv" class="mercury-region" data-type="editable" data-method="PUT"  data-mercury='full'>
+    <%= raw @stream.time %> 
+  <br />
+  </div>
+  </div>
+  <br />
+       <div class="content">
+  <div id="page_desc" class="mercury-region" data-type="editable" data-method="PUT"  data-mercury='full'>
+    <%= raw @stream.info %> 
+  <br />
+  </div>
+  </div>
+ 
+ 
+</p>
+<br />
+<% if current_user != nil%>
+	<% if  current_user.admin or current_user.name== @stream.user %> 
+	<%= link_to "Edit Twitch Description", "/editor" + request.path, id: "edit_link", data: {save_url: mercury_update_stream_path(@stream)} %>|
+	<%= link_to 'Destroy', @stream, method: :delete, data: { confirm: 'Are you sure?' } %> |
+	<% end %>
+	<%= link_to 'Back', events_path %>
+<%end %>
+</div>
+ </div>

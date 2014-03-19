@@ -1,0 +1,24 @@
+<div class="center hero-unit">
+	<% if current_user %>
+	
+<h2>Create Stream Page</h2>
+<%= form_for @stream do |f| %>
+  <div class="field">
+    <%= f.label :link , "*Twitch Account  Name"%><br />
+    <%= f.text_field :link %>
+  </div>
+  <%= f.hidden_field :user, :value => current_user.name %>
+  
+    <div class="actions">
+    <%= f.submit %>
+  </div>
+  
+<% end%>
+
+
+
+
+<% else%>
+Sign in to make a stream page
+<%end %>
+</div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140304235546) do
+ActiveRecord::Schema.define(:version => 20140314214641) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
@@ -252,6 +252,17 @@ ActiveRecord::Schema.define(:version => 20140304235546) do
     t.string   "name"
     t.string   "team1"
     t.string   "team2"
+  end
+
+  create_table "streams", :force => true do |t|
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.text     "name"
+    t.string   "user"
+    t.text     "link"
+    t.text     "time"
+    t.text     "twitch_account"
+    t.text     "info"
   end
 
   create_table "teams", :force => true do |t|

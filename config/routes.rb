@@ -21,6 +21,12 @@ Tamulol::Application.routes.draw do
     
     
   end
+  resources :twitch do
+  member {put :mercury_update}
+end
+resources :streams do
+  member {put :mercury_update}
+end
 resources :lists
 match "/lol", :to=>"player#setlol"
 match "/fps", :to=>"player#setfps"
@@ -47,6 +53,8 @@ resources :password_resets
     resources :message
     resources :galleries
     resource :picturies
+    
+    match '/streamnew', to: 'streams#new' 
 match '/signup',  to: 'users#new'
 match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
