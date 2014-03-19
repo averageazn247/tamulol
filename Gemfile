@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#gem 'json_model', :git => 'git://github.com/pch/json_model.git'
+gem 'twitch', '= 0.0.2'
 gem  'tabs_on_rails'
 gem 'rails', '3.2.8'
 gem 'twitter' 
@@ -12,6 +14,7 @@ gem 'simple_form'
 gem 'rufus-scheduler'
 gem "rmagick"
 gem 'fog'
+gem 'json'
 gem "mail"  
 gem 'ruby-openid'
 gem 'will_paginate' 
