@@ -46,6 +46,6 @@
 	<%= link_to "Edit Twitch Description", "/editor" + request.path, id: "edit_link", data: {save_url: mercury_update_stream_path(@stream)} %>|
 	<%= link_to 'Destroy', @stream, method: :delete, data: { confirm: 'Are you sure?' } %> |
 	<% end %>
-	<%= link_to 'Back', events_path %>
+	<%= link_to 'Back', streams_path %>
 <%end %> 
  </div>
