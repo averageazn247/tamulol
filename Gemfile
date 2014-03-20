@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "1.9.3"
 #gem 'json_model', :git => 'git://github.com/pch/json_model.git'
 gem 'twitch', '= 0.0.2'
 gem  'tabs_on_rails'
