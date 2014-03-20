@@ -38,9 +38,11 @@
               
               <% s=Stream.all%>
               <% s.each do |f|%>
+              <% f != nil%>
               <% if Stream.check_online(f.link) =='online'%>
 		
 		<li>	<%= link_to f.link, f%></li>
+              <% end %>
               <% end %>
               <% end %>
               
