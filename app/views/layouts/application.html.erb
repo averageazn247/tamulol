@@ -41,9 +41,9 @@
       	<% if f%>
       
       
-      		<% if is_online(f.name) == "online" %>
+      		<% if is_online(f.link) == "online" %>
       		
-      			<%= link_to f, f.link %>
+      			<%= link_to f.link, f %>
       		
       		<% end%>
       	<% end %>

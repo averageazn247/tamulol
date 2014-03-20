@@ -11,18 +11,20 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find_by_auth_token( cookies[:auth_token]) if cookies[:auth_token]
   end
   def is_online(name)
-        temp=''
+     temp=''
 
        url ='https://api.twitch.tv/kraken/streams/'+name.to_s 
        stream = JSON.parse(open(url).read) 
        stream.each do |a|
          temp=a
-           if temp.include?(nil)
-       return "offline" 
-       end 
-   
-       return "online"
+          if temp.include? 'null'
+            return 'online'
+          end
+          
      end
+     return 'offline'
+   
+    
   end
   helper_method :all_streams
   helper :all
