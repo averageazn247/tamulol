@@ -8,10 +8,10 @@ class Stream < ActiveRecord::Base
        stream = JSON.parse(open(url).read) 
        stream.each do |a|
          temp=a
+           if temp.include?(nil)
+       return "offline" 
        end 
-     if temp.include?(nil)
-       return "offline"
-     else
+   
        return "online"
      end
      
