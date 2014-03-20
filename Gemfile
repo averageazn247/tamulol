@@ -47,7 +47,7 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'jquery-ui-rails'
+   
   gem 'kalendae_assets'
   gem 'sass-rails',   '3.2.5' 
   gem 'uglifier', '1.2.3'
