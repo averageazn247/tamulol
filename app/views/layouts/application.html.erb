@@ -36,7 +36,7 @@
             	<li><a href="off_stream">Official Stream</a></li>
               <li class="nav-header">Online Streams</li>
               
-           <% if @stream != nil %>
+           <% if @streams != nil %>
               <% @streams.each do |f|%>
             
               <% if Stream.check_online(f.link) =='online'%>

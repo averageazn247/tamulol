@@ -29,7 +29,7 @@ def create
 
     if @stream.save
        #UserMailer.report_match(teams,winner,date).deliver  
-      flash[:success] = "Thanks for adding yours stream!"
+      flash[:success] = "Thanks for adding your stream!"
 
 
       redirect_to @stream
