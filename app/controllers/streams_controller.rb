@@ -71,7 +71,9 @@ def show
 end
 def index
   @streams=Stream.all
-  
+   
+   
+   
 end
 end
 

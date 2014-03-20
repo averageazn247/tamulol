@@ -9,6 +9,7 @@
 	     </ul>
 </div>
 	<div id="jquery">
+		<% if @streams.each %>
 		<% @streams.each do |f| %>
 		<% if Stream.check_online(f.link) =='online'%>
 		
@@ -17,9 +18,11 @@
 			<% end%>
 			<br />
 		<%end %>
+		<% end%>
 		</div>
 		
 	<div id='official'>
+		<% if @streams.each %>
 			<% @streams.each do |f|  %>
 					<% if Stream.check_online(f.link) == 'offline'%>
 		
@@ -29,7 +32,7 @@
 			<br />
 			
 			<% end%>
-			
+			<% end %>
 			
 			
 		</div>

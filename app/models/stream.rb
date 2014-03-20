@@ -3,10 +3,7 @@ class Stream < ActiveRecord::Base
   require 'open-uri'
   def self.check_online(name)
    
-    twitch=Twitch.new.getUser(name)  
-    result = JSON.parse(twitch[:body].to_json )
- temp=nil
-     
+
        url ='https://api.twitch.tv/kraken/streams/'+name.to_s 
        stream = JSON.parse(open(url).read) 
        stream.each do |a|
