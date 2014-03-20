@@ -11,26 +11,31 @@
 	<div id="jquery">
 		<% if @streams.each %>
 		<% @streams.each do |f| %>
-		<% if Stream.check_online(f.link) =='online'%>
+		<% if f.link %>
+			<% if Stream.check_online(f.link) =='online'%>
 		
-			<%= link_to f.link, f%>
+				<%= link_to f.link, f%>
 		
-			<% end%>
+				<% end%>
+			<% end %>
 			<br />
 		<%end %>
 		<% end%>
 		</div>
 		
 	<div id='official'>
-			<% @streams.each do |f|  %>
-					<% if Stream.check_online(f.link) == 'offline'%>
+		<% if @streams.each %>
+		<% @streams.each do |f| %>
+		<% if f.link %>
+			<% if Stream.check_online(f.link) =='offline'%>
 		
-					<%= link_to f.link, f%>
+				<%= link_to f.link, f%>
 		
-			<% end%>
+				<% end%>
+			<% end %>
 			<br />
-			
-			<% end%>
+		<%end %>
+		<% end%>
 			
 			
 			
