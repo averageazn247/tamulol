@@ -16,9 +16,10 @@
   </div>
   </div>
   Twitch Account:
+  <div class="content">
   <div id="page_date" class="mercury-region" data-type="editable" data-method="PUT"  data-mercury='full'>
    <%=   @stream.link%> 
-  
+  </div>
   </div>
  
    <p>
@@ -45,6 +46,5 @@
 	<%= link_to 'Destroy', @stream, method: :delete, data: { confirm: 'Are you sure?' } %> |
 	<% end %>
 	<%= link_to 'Back', events_path %>
-<%end %>
-</div>
+<%end %> 
  </div>

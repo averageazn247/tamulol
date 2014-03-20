@@ -6,11 +6,23 @@ class StreamsController < ApplicationController
   post = Stream.find(params[:id])
   # Update page
   post.name=params[:content][:page_topic][:value]
-  post.info= params[:content][:page_body][:value] 
+  post.info= params[:content][:page_desc][:value] 
   post.time= params[:content][:page_tv][:value]
   post.link=params[:content][:page_date][:value]
   post.save!
   render :json => {:url => post_path(post)}
+  end
+    def update
+   post = Stream.find(params[:id])
+  # Update page
+  post.name=params[:content][:page_topic][:value]
+   post.link=params[:content][:page_date][:value]
+  post.info= params[:content][:page_desc][:value] 
+  post.time= params[:content][:page_tv][:value]
+ 
+  post.save!
+  render :json => {:url => post_path(post)}
+   
   end
 def create
     @stream = Stream.new(params[:stream]) 
