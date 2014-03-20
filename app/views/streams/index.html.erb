@@ -1,6 +1,38 @@
 <div class="hero-unit">
-	
-	
+		
+	<div id="navcontainer">
+			
+	<ul class="idTabs">
+		 
+	  <li><a href="#jquery">Online Streams</a></li> 
+	  <li><a href="#official">Offline Streams</a></li> 
+	     </ul>
+</div>
+	<div id="jquery">
+		<% @streams.each do |f| %>
+		<% if Stream.check_online(f.link) =='online'%>
+		
+			<%= link_to f.link, f%>
+		
+			<% end%>
+			<br />
+		<%end %>
+		</div>
+		
+	<div id='official'>
+			<% @streams.each do |f|  %>
+					<% if Stream.check_online(f.link) == 'offline'%>
+		
+					<%= link_to f.link, f%>
+		
+			<% end%>
+			<br />
+			
+			<% end%>
+			
+			
+			
+		</div>
 	
 	
 	</div>

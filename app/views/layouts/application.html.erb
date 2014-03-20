@@ -33,17 +33,16 @@
             	    <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=212715052108961&amp;xfbml=1"></script><fb:like href="https://www.facebook.com/TAMULeagueOfLegends" send="false" layout="button_count" width="50" show_faces="false" font=""></fb:like>
             </li>
             	<li>TAMU RaidCall:  6544408</li>
-              <li class="nav-header">Streams</li>
-              <li><a href="off_stream">Official Stream</a></li>
-              <li><a href="/nocx">Nocx</a></li>
-              <li><a href="/anariil">Anariil</a></li>
-              <li><a href="/zehtsu">Zehtsu</a></li>
-              <li><a href="/rainbow">Rainbow Revolver</a></li>
-              <li><a href="/epicshots">Epicshots</a></li>
-    			
-              <li><a href="/jay">Jay Jones</a></li>
-                 <li><a href="/talumar">Talumar</a></li>
-                <li><a href="/tloviro">Tloviro</a></li> 
+            	<li><a href="off_stream">Official Stream</a></li>
+              <li class="nav-header">Online Streams</li>
+              
+              <% s=Stream.all%>
+              <% s.each do |f|%>
+              <% if Stream.check_online(f.link) =='online'%>
+		
+		<li>	<%= link_to f.link, f%></li>
+              <% end %>
+              <% end %>
               <li class="nav-header">Events</li>
               <li><a href="/spring2013">Spring 2013 Live Event</a></li>
               <li><a href="/tulsa2013">Tokyo in Tulsa</a></li> 
