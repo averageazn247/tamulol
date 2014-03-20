@@ -6,8 +6,7 @@ class StreamsController < ApplicationController
   post = Stream.find(params[:id])
   # Update page
   post.name=params[:content][:page_topic][:value]
-  post.info= params[:content][:page_desc][:value] 
-  post.time= params[:content][:page_tv][:value]
+  post.info= params[:content][:page_desc][:value]  
   post.link=params[:content][:page_date][:value]
   post.save!
   render :json => {:url => post_path(post)}
