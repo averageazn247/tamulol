@@ -36,13 +36,13 @@
             	<li><a href="off_stream">Official Stream</a></li>
               <li class="nav-header">Online Streams</li>
  
-           <% if all_streams %>
-            
+           <% if all_streams.each %>
+            a
               <% all_streams.each do |f|%>
              
- 
+ b
               <% if Stream.check_online(f.link) =='online'%>
-		
+		c
 		<li>	<%= link_to f.link, f%></li>
              
               <% end %>
