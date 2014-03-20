@@ -1,8 +1,7 @@
 <div class="center hero-unit">
-	<h4>
+	
 		
-<%= @online %>
-	</h4>
+status: <%= @online %> 
 <script>
    jQuery(window).on('mercury:ready', function() { Mercury.saveUrl = '/streams/' + <%= @stream.id %> + "/mercury_update"; });
 </script>
