@@ -2,7 +2,7 @@ class Stream < ActiveRecord::Base
   attr_accessible :name, :info, :time, :twitch_account, :link,:user
   require 'open-uri'
   def self.check_online(name)
-   
+    temp=''
 
        url ='https://api.twitch.tv/kraken/streams/'+name.to_s 
        stream = JSON.parse(open(url).read) 
