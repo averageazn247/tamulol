@@ -36,7 +36,18 @@
             	<li><a href="off_stream">Official Stream</a></li>
               <li class="nav-header">Online Streams</li>
  
+      <% Stream.all.each do | f|%>
       
+      	<% if f%>
+      
+      
+      		<% if is_online(f.name) == "online" %>
+      		
+      			<%= link_to f, f.link %>
+      		
+      		<% end%>
+      	<% end %>
+      <% end %>
               
               <li class="nav-header">Events</li>
               <li><a href="/spring2013">Spring 2013 Live Event</a></li>
