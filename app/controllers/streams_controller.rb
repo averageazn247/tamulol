@@ -74,6 +74,7 @@ def index
    
    
    
-end
+end 
+helper_method :is_online
 end
 
