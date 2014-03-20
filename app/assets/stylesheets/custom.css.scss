@@ -212,16 +212,13 @@ input {
   }
 }
 
-.field_with_errors {
-  @extend .control-group;
-  @extend .error;
-}
+ 
 /* sidebar */
 
 aside {
   section {
     padding: 10px 0;
-    border-top: 1px solid $grayLighter;
+    border-top: 1px solid ;
     &:first-child {
       border: 0;
       padding-top: 0;
@@ -276,9 +273,9 @@ aside {
   li {
     overflow: scroll;
     padding: 10px 0;
-    border-top: 1px solid $grayLighter;
+    border-top: 1px solid  ;
     &:last-child {
-      border-bottom: 1px solid $grayLighter;
+      border-bottom: 1px solid ;
     }
   }
 }
@@ -521,9 +518,7 @@ font-family:  book antiqua;
 .content {
   display: block;
 }
-.timestamp {
-  color: $grayLight;
-}
+
 .gravatar {
   float: left;
   margin-right: 10px;
