@@ -59,6 +59,7 @@ def show
   #render json: @twitch
 end
 def index
+  @streams=Stream.all
   
 end
 end
