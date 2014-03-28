@@ -21,7 +21,7 @@
       
            <div class="container-fluid  container-height">
       <div class="row-fluid full-height">
-        <div class="span2" style ="width: 200px;">
+        <div class="span2" style ="width: 200px; ">
           <div class="well sidebar-nav">
             <ul class="nav nav-list"> 
             		 <a href="https://www.facebook.com/TAMULeagueOfLegends">  <img src="../../fb2.png" alt="http://amesports.org/"></a>   
@@ -37,12 +37,16 @@
               <li class="nav-header">Online Streams</li>
  
       <% Stream.all.each do | f|%>
-      
-      	<% if f%>
-      
-      
-       
-      	<% end %>
+      <% name=f.link %>
+      <% url ='https://api.twitch.tv/kraken/streams/'+name.to_s %>
+      <% stream = JSON.parse(open(url).read)  %>
+     <% stream.each do |a| %>
+     <% temp=a%>
+     	<%if temp.include? 'null' %>
+     		 <%= link_to f.link , f %>
+     	<% end %>
+     <%end %>
+      	 
       <% end %>
               
               <li class="nav-header">Events</li>

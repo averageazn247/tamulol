@@ -48,7 +48,7 @@ end
 # in production environments by default.
 group :assets do
    
-  gem 'kalendae_assets'
+
   gem 'sass-rails',   '3.2.5' 
   gem 'uglifier', '1.2.3'
   gem 'coffee-rails'
