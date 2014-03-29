@@ -75,6 +75,10 @@ def index
    
    
 end 
+def destory
+      @team = Stream.find(params[:id])
+    @team.destroy
+end
 helper_method :is_online
 end
 
