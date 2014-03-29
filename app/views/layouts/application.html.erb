@@ -38,14 +38,7 @@
  
       <% Stream.all.each do | f|%>
       <% name=f.link %>
-      <% url ='https://api.twitch.tv/kraken/streams/'+name.to_s %>
-      <% stream = JSON.parse(open(url).read)  %>
-     <% stream.each do |a| %>
-     <% temp=a%>
-     	<%if temp.include? 'null' %>
-     		 <%= link_to f.link , f %>
-     	<% end %>
-     <%end %>
+ 
       	 
       <% end %>
               
