@@ -38,9 +38,7 @@
  
       <% Stream.all.each do | f|%>
       <% name=f.link %>
-      <%if Stream.check_online(name) =='online'%>
-      <%= link_to f.link, f%>
-      <% end %>
+ 
       <% end %>
               
               <li class="nav-header">Events</li>
