@@ -64,6 +64,7 @@ def show
       @bio=b
     end
 
+    
   
   end
   #render json: @twitch
@@ -74,18 +75,6 @@ def index
    
    
 end 
-  def destroy
-    @report = Stream.find(params[:id])
-    @report.destroy
-
-    respond_to do |format|
-      format.html { redirect_to streams_url }
-      format.json { head :no_content }
-    end
-  end
-  
-
-
 helper_method :is_online
 end
 

@@ -243,8 +243,6 @@ GEM
     redis (3.0.7)
     redis-namespace (1.4.1)
       redis (~> 3.0.4)
-    rest-client (1.6.7)
-      mime-types (>= 1.16)
     rmagick (2.13.2)
     rspec (2.11.0)
       rspec-core (~> 2.11.0)
@@ -357,7 +355,6 @@ DEPENDENCIES
   combined_time_select (~> 1.0.0)
   delayed_job_active_record
   factory_girl_rails (= 4.1.0)
-  faraday
   fog
   guard-rspec (= 1.2.1)
   guard-spork (= 1.2.0)
@@ -371,7 +368,6 @@ DEPENDENCIES
   paperclip
   pg (= 0.12.2)
   rails (= 3.2.8)
-  rest-client
   rmagick
   rspec-rails (= 2.11.0)
   ruby-openid

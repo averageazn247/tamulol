@@ -13,10 +13,8 @@ gem 'jquery-ui-rails'
 gem 'simple_form' 
 gem 'rufus-scheduler'
 gem "rmagick"
-gem 'faraday'
 gem 'fog'
 gem 'json'
-gem 'rest-client'
 gem "mail"  
 gem 'ruby-openid'
 gem 'will_paginate' 
