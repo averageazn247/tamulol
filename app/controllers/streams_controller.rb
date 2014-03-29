@@ -47,7 +47,6 @@ def show
   name=@stream.link
   @twitch=Twitch.new.getUser(name)  
   
-    @online=Stream.check_online(name)
   twitch=@twitch 
   @all= twitch[:body] 
     result = JSON.parse(twitch[:body].to_json ) 
