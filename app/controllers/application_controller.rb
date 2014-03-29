@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery :secret => 'any_phrase',  
                        :except => :is_online
+require 'rest_client'
 
    include SessionsHelper
  
@@ -16,18 +17,15 @@ class ApplicationController < ActionController::Base
      temp=''
 
        url ='https://api.twitch.tv/kraken/streams/'+name.to_s 
-       
-       
-       stream = JSON.parse(open(url).read) 
-       stream.each do |a|
-         temp=a
-          if temp.include? 'null'
-            return 'online'
-          end
-          
-     end
-     return 'offline'
+       response=RestClient.get url
+       if response.code == 200
+       stream = JSON.parse(response) 
+       return stream['stream']
    
+     
+     else
+     return 'offline'
+   end
     
   end
   helper_method :all_streams

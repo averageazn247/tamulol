@@ -13,7 +13,7 @@ gem 'jquery-ui-rails'
 gem 'simple_form' 
 gem 'rufus-scheduler'
 gem "rmagick"
-gem 'restclient'
+gem 'rest-client'
 gem 'fog'
 gem 'json'
 gem "mail"  
