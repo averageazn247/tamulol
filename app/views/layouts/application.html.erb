@@ -38,8 +38,10 @@
  
       <% Stream.all.each do | f|%>
       <% name=f.link %>
- 
+ <% if is_online(f.link)%>
       	 
+      	 
+      	 <% end%>
       <% end %>
               
               <li class="nav-header">Events</li>

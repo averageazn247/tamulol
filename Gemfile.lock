@@ -193,6 +193,7 @@ GEM
     omniauth-oauth2 (1.0.3)
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
+    paint (0.8.7)
     paperclip (4.1.1)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -243,6 +244,8 @@ GEM
     redis (3.0.7)
     redis-namespace (1.4.1)
       redis (~> 3.0.4)
+    restclient (0.10.0)
+      paint (~> 0.8)
     rmagick (2.13.2)
     rspec (2.11.0)
       rspec-core (~> 2.11.0)
@@ -368,6 +371,7 @@ DEPENDENCIES
   paperclip
   pg (= 0.12.2)
   rails (= 3.2.8)
+  restclient
   rmagick
   rspec-rails (= 2.11.0)
   ruby-openid

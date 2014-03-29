@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery
+  protect_from_forgery :secret => 'any_phrase',  
+                       :except => :is_online
+
    include SessionsHelper
  
    def all_streams
@@ -14,6 +16,8 @@ class ApplicationController < ActionController::Base
      temp=''
 
        url ='https://api.twitch.tv/kraken/streams/'+name.to_s 
+       
+       
        stream = JSON.parse(open(url).read) 
        stream.each do |a|
          temp=a
