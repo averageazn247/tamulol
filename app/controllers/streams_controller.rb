@@ -74,14 +74,15 @@ def index
    
    
 end 
-def destory
-      @stream = Stream.find(params[:id])
-    @stream.destroy
-       respond_to do |format|
+  def destroy
+    @user = Stream.find(params[:id])
+    @user.destroy
+
+    respond_to do |format|
       format.html { redirect_to streams_url }
       format.json { head :no_content }
     end
-end
+  end
 helper_method :is_online
 end
 
