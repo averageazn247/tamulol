@@ -1,20 +1,29 @@
 class Stream < ActiveRecord::Base
+  require 'faraday'
+ require "net/http"
+  
+  
   attr_accessible :name, :info, :time, :twitch_account, :link,:user
   require 'open-uri'
   def self.check_online(name)
     temp=''
-
+      #test=Faraday.get(:url => 'https://api.twitch.tv/kraken/streams/'+name.to_s )
        url ='https://api.twitch.tv/kraken/streams/'+name.to_s 
-       stream = JSON.parse(open(url).read) 
-       stream.each do |a|
-         temp=a
-          if temp.include? 'null'
-            return 'online'
-          end
+         
+       if RestClient.get(url)
+       rest = RestClient.get(url)
+    json = JSON.parse(rest)
+
+      
           
+    streams = json["stream"]
+          
+     if streams != nil
+      return 'online'
+     
      end
      return 'offline'
-   
+   end
     
   end
   

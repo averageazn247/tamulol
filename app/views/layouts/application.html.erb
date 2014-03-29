@@ -38,9 +38,9 @@
  
       <% Stream.all.each do | f|%>
       <% name=f.link %>
-      <% url ='https://api.twitch.tv/kraken/streams/'+name.to_s %>
- 
-      	 
+      <%if check_online(name)%>
+      <%= link_to f.name, f%>
+      <% end %>
       <% end %>
               
               <li class="nav-header">Events</li>
