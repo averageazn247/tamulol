@@ -55,8 +55,11 @@ ActiveRecord::Schema.define(:version => 20140320013615) do
   end
 
   create_table "galleries", :force => true do |t|
-    t.string "title"
-    t.string "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "name"
+    t.string   "person"
+    t.string   "title"
   end
 
   create_table "members", :force => true do |t|
