@@ -24,7 +24,7 @@ require 'rest_client'
    
      
      else
-     return 'offline'
+     return nil
    end
     
   end
