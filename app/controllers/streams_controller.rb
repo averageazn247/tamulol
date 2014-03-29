@@ -75,8 +75,12 @@ def index
    
 end 
 def destory
-      @team = Stream.find(params[:id])
-    @team.destroy
+      @stream = Stream.find(params[:id])
+    @stream.destroy
+       respond_to do |format|
+      format.html { redirect_to streams_url }
+      format.json { head :no_content }
+    end
 end
 helper_method :is_online
 end

@@ -11,8 +11,8 @@
 	<div id="jquery">
 		<% if @streams.each %>
 		<% @streams.each do |f| %>
-		<% if f.link %>
-		 
+		<% if is_online(f.link) %>
+		 <%= raw link_to f.name , f%>
 			<% end %>
 			<br />
 		<%end %>
@@ -22,8 +22,8 @@
 	<div id='official'>
 		<% if @streams.each %>
 		<% @streams.each do |f| %>
-		<% if f.link %>
-	 
+		<% if is_online(f.link) == nil  %>
+	  <%= raw link_to f.name , f%>
 			<% end %>
 			<br />
 		<%end %>
