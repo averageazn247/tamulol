@@ -13,7 +13,7 @@
 		<% if @streams.each %>
 		<% @streams.each do |f| %>
 		<% if is_online(f.link) %>
-		<li><%=  link_to f.link , f%></li> 
+		<li style="float: center"><%=  link_to f.link , f%></li> 
 			<% end %>
 			<br />
 		<%end %>
@@ -26,7 +26,7 @@
 		<% if @streams.each %>
 		<% @streams.each do |f| %>
 		<% if is_online(f.link) == nil  %>
-<li>  <%=  link_to f.link , f%></li>	
+<li style="float: center">  <%=  link_to f.link , f%></li>	
 			<% end %>
 			<br />
 		
