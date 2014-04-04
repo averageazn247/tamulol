@@ -18,8 +18,7 @@ gem "rmagick"
 gem 'rest-client'
 gem 'fog'
 gem 'json'
-gem "mail"  
-gem 'ruby-openid'
+gem "mail"   
 gem 'will_paginate' 
 gem 'bootstrap-will_paginate', '0.0.6'
 gem "combined_time_select", "~> 1.0.0"
