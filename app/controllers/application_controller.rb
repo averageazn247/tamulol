@@ -2,7 +2,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery :secret => 'any_phrase',  
                        :except => :is_online
 require 'rest_client'
-
+    require 'open-uri'
+    require 'json'
    include SessionsHelper
  
    def all_streams
@@ -28,6 +29,24 @@ require 'rest_client'
    end
     
   end
+    def get_game(name)
+     temp=''
+
+       url ='https://api.twitch.tv/kraken/streams/'+name.to_s 
+       response=RestClient.get url
+       if response.code == 200
+       stream = JSON.parse(response) 
+       s =stream['stream']
+       
+       return s['game']
+   
+     
+     else
+     return nil
+   end
+    
+  end
+  helper_method :get_game
   helper_method :all_streams
   helper :all
   helper_method :current_user

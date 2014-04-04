@@ -14,6 +14,7 @@
 		<% @streams.each do |f| %>
 		<% if is_online(f.link) %>
 		<li style="text-align: center"><%=  link_to f.link , f%></li> 
+		<%=  is_online(f.link)['game']  %>
 			<% end %>
 			<br />
 		<%end %>

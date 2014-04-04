@@ -7,6 +7,8 @@ gem 'rails', '3.2.8'
 gem 'twitter' 
 gem 'bootstrap-sass' 
 gem 'bcrypt-ruby', '3.0.1'  
+gem 'figaro'
+gem 'dotenv', github: 'ecbypi/dotenv', branch: 'overload-environment-variables'
  gem 'wicked'
 gem 'jquery-rails', "~> 2.3.0"
 gem 'jquery-ui-rails'
