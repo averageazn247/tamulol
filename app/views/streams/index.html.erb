@@ -15,6 +15,7 @@
 		<% if is_online(f.link) %>
 		<li style="text-align: center"><%=  link_to f.link , f%>: <%=  is_online(f.link)['game']  %></li> 
 		 <%=  is_online(f.link)['status']  %>
+		 	 <%=  is_online(f.link)['display_name']  %>
 			<% end %>
 			<br />
 		<%end %>
