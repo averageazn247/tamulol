@@ -13,9 +13,8 @@
 		<% if @streams.each %>
 		<% @streams.each do |f| %>
 		<% if is_online(f.link) %>
-		<li style="text-align: center"><%=  link_to f.link , f%>: <%=  is_online(f.link)['status']  %></li> 
-		playing <%=  is_online(f.link)['game']
-		
+		<li style="text-align: center"><%=  link_to f.link , f%>: <%=  is_online(f.link)['game']  %></li> 
+		 <%=  is_online(f.link)['status']  %>
 			<% end %>
 			<br />
 		<%end %>
