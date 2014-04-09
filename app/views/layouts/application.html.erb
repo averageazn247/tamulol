@@ -17,8 +17,6 @@
   <%= render 'layouts/header' %>
 
     <body>
-
-      
            <div class="container-fluid  container-height">
       <div class="row-fluid full-height">
         <div class="span2" style ="width: 200px; ">
@@ -37,16 +35,13 @@
               <li class="nav-header"> Streams</li>
  
       <% Stream.all.each do | f|%>
-      <% name=f.link %>
+      
       	 
-<li> <%= link_to f.link,f %>
-</li>
+<li> <%= link_to f.link,f %></li>
        
       <% end %>
               
-              <li class="nav-header">Events</li>
-              <li><a href="/spring2013">Spring 2013 Live Event</a></li>
-              <li><a href="/tulsa2013">Tokyo in Tulsa</a></li> 
+              
                 </ul>
             
          </div><!--/.well -->     
@@ -68,8 +63,6 @@
         <div class="alert alert-<%= key %>"><%= value %></div>
        
       <% end %>
-
-
 
       <%= yield %>
       <div class="push"></div>
