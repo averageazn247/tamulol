@@ -37,7 +37,7 @@
       <% Stream.all.each do | f|%>
       
       	 
-<li> <%= link_to f.link,f %></li>
+<li> <%= link_to f.link.gsub!(/_/, ' ') ,f %></li>
        
       <% end %>
               
