@@ -35,10 +35,12 @@
               <li class="nav-header"> Streams</li>
  
       <% Stream.all.each do | f|%>
-      
+      <% if f.link.tr!('_', ' ')%>
       	 
-<li> <%= link_to f.link ,f %></li>
-       
+<li> <%= link_to f.link.tr!('_', ' ') ,f %></li>
+       <% end %>
+       <%else %>
+      <li> <%= link_to f.link,f %></li> 
       <% end %>
               
               
