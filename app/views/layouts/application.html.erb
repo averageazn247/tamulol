@@ -17,45 +17,7 @@
   <%= render 'layouts/header' %>
 
     <body>
-           <div class="container-fluid  container-height">
-      <div class="row-fluid full-height">
-        <div class="span2" style ="width: 200px; ">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list"> 
-            		 <a href="https://www.facebook.com/TAMULeagueOfLegends">  <img src="../../fb2.png" alt="http://amesports.org/"></a>   
-            		   <a href="https://twitter.com/tamuleague">  <img src="../../t.png" alt="http://amesports.org/" ></a>   
-            		 	
-            		 	
-            		 	<br />
-            		 	<br /> 
-            	    <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=212715052108961&amp;xfbml=1"></script><fb:like href="https://www.facebook.com/TAMULeagueOfLegends" send="false" layout="button_count" width="50" show_faces="false" font=""></fb:like>
-            </li>
-            	<li>TAMU RaidCall:  6544408</li>
-            	<li><a href="off_stream">Official Stream</a></li>
-              <li class="nav-header"> Streams</li>
- 
-      <% Stream.all.each do | f|%>
-      
-      	 
-<li> <%= link_to f.link ,f %></li>
-       
-      <% end %>
-              
-              
-                </ul>
-            
-         </div><!--/.well -->     
-          
-           
-      
- 
-<a class="twitter-timeline"  href="https://twitter.com/TAMULeague"  data-widget-id="370361920311660544">Tweets by @TAMULeague</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
- 
-
-        </div><!--/span-->
-
+    <%= render 'layouts/sidebar' %>
     <div class="container" style="margin-left: 220px;  ">
     	<div class="wrapper">
    

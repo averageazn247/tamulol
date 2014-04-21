@@ -4,10 +4,10 @@ Tamulol::Application.routes.draw do
     namespace :mercury do
       resources :images
     end
-
+  resources :raids
   mount Mercury::Engine => '/'
 
-  resources :raids
+
 
   resources :events do
     member { put :mercury_update }
