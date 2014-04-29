@@ -17,128 +17,179 @@ $(document).ready(function() {
 </script>
 
 
-<script type="text/javascript">
-$(document).ready(function() {
-   $('#nav').localScroll({duration:800});
-});
-</script>
-
  
+ 
+  <header class="navbar  navbar-inverse">
+  <div class="navbar-inner"  font-family:'Kozuka Gothic Pro B';>
   
-<link href="custom.css" rel="stylesheet" type="text/css" />
-	 
- 
-    	<div class="container" style="margin-left: 50%">
-    	  <a href="http://amesports.org">  <img src="../../logo85.png" alt="http://amesports.org/" id= "logo"></a>   
-      	 <%= link_to "TAMU Esports", '/reset', id: "logo" %> 
-      	</div>
+      
+      <nav> 
       	 
-       <nav>
-      	 
+<a href="http://amesports.org">  <img src="../../logo85.png" alt="http://amesports.org/" id= "logo"></a>   
+      	 <%= link_to "TAMU Esports", '/reset', id: "logo" %>  
+        <ul class="nav pull-right">
+        	     
+                                                     
+       
+              <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              	About Us
+              	<b class="caret"></b> </a>
+              	<ul class="dropdown-menu">
+          <li><%= link_to "About Us", '/about'%></li>
+          <li> <%= link_to "Officers", '/officers'%></li>
 
-	<ul>
- <li>  <a>About Us<b class="caret"></b></a> 
- 	<ul>
-		<li> <%= link_to "About Us", '/about'%></li>
-		<li><%= link_to "Officers", '/officers'%></li>
-		
-			</ul>
-			
-		</li>
-		<li>
-				<%= link_to("Calendar", '/events') %>
-			
-			
-		</li>
-		<li> <%= link_to('Online Streams','/streams')%> </li>
-			<li><a href="#">Events<b class="caret"></b></a>
-			<ul>
-				<li>Past Events</li>
-		 <li>
+    
+           </ul>
+           </li>
+                                 <li id="fat-menu" class="dropdown">
+              
+              	<%= link_to("Calendar", '/events') %>
+              	</li>
+              
+                    <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              	Events
+              	<b class="caret"></b>
+              </a>
+              	              <ul class="dropdown-menu">
+                 <%= link_to "Current Events", '#'%> 
+                                  
+             
+                
+                <li>  <%= link_to "Spring 2014 Tournament", '/soon'%></li>
+                    <li class="divider"> </li>Dallas
+                    
+                    
+                       <li class="divider"> </li>Austin
+              
+            <li class="divider">
+              
+                
+                      </li> Past Events 
+                      <li><%= link_to 'World Finals Viewing Party', '/worldsfinals'%></li>
+                <li>
                   <%= link_to "Spring 2013 Tournament",'/spring2013' %>
                 </li>
                        <li>
                   <%= link_to "Tokyo in Tulsa 2013  ",'/tulsa2013' %>
                 </li>
                   <li> <%= link_to "Game Republik", '/gamerep' %></li>
-
-			</ul>
-		</li>
-		<li><a href="#">LoL Season<b class="caret"></b></a>
-			<ul>
-				<li><%= link_to "Season Rules", '/rules'%></li>
-				<li> <%= link_to 'Season Rankings', '/ranks/1'%></li>
-                <li><%= link_to "Tamu Players",'/players/1'%></li> 
+              </ul>
+              </li>
+              
+   <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              	LoL Season
+              	<b class="caret"></b> </a>
+              	<ul class="dropdown-menu">
+          <li><%= link_to "Season Rules", '/rules'%></li>
+          
+          <li> <%= link_to 'Season Rankings', '/ranks/1'%></li>
+                <li><%= link_to "Tamu Players",'/players/1'%></li>
+          <!-- <li><%= link_to "Players Searching for Team" , '/players/2'%></li> -->
           <li><%= link_to "Official Stream", '/off_stream'%></li>
           <li><%= link_to "Streamer List", '/streams' %></li>
-
-			</ul>
-		</li>
-		<li><a href="#">Raid Call<b class="caret"></b></a>
-			<ul>
-				 <li> <%= link_to "Raid Call Rules", '/raid'%></li>
+          
+    
+           </ul>
+           </li> 
+             <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              	Raid Call
+              	<b class="caret"></b> </a><ul class="dropdown-menu">
+              	<li> <%= link_to "Raid Call Rules", '/raid'%></li>
               	<li><%= link_to "Report Rail Call match", '/raids/new'%></li>
               	<li><%= link_to "View Raid Reports",'/raids' %></li>
               	<li> <a href="https://docs.google.com/spreadsheet/ccc?key=0AhLUWB4JDngBdEYyT0tiX3djZlhVYmR6VTQzYUJBX1E&usp=sharing#gid=2" >Raid Call Standings </a></li>
-				
-				
-				
-				
-				</ul>
-		</li>
-		<% if signed_in? %>
-		
-		<li>
-		
-		<a>Teams <b class="caret"></b></a>
-		<ul>
-			<% if current_user.hasteam(current_user.id)==true %>
-				<li><%= link_to "View Your Team", '/listteam' %></li>
-             <% else %>
+              	</li>
+              	</ul>
+              	</li>
+                 <!-- <li><%= link_to "Registration", '/streams' %></li>  -->
+  
+           <% if signed_in? %>
+        
+                                	<li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              	Teams
+              	<b class="caret"></b> </a>
+              	<ul class="dropdown-menu">
+              		<% if current_user.hasteam(current_user.id)==true %>
+              		<li><%= link_to "View Your Team", '/listteam' %></li>
+              		<% else %>
               		 <li><%= link_to "Create A Team", '/teamnew' %></li>
-			<% end %>
-			<li><%= link_to "View All Teams", teams_path %></li>
+              		<% end %>
+              		
+          <li><%= link_to "View All Teams", teams_path %></li>
           
             <li><%= link_to "Submit A Match", '/reportnew' %></li>
-               <li><%= link_to "View Match Reports", '/allreport' %></li>		
-			</ul>
-		
-		</li>
-		<li><a>Store	<b class="caret"></b></a>
-			<ul>
-				 <li><%= link_to "Shirt", '/shirt' %></li>
-          <a>Tournaments  </a>
+               <li><%= link_to "View Match Reports", '/allreport' %></li>
+           </ul>
+           </li>
+           <% end %>
+               <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              	Partners
+              	<b class="caret"></b> </a>
+              	<ul class="dropdown-menu">
+          <li> <a href="http://tespa.org">Tespa</a></li>
+          
+          </ul>
+          </li>  
+        
+      
+     
+                        <li id="fat-menu" class="dropdown"> 
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              	Store
+              	<b class="caret"></b> </a>
+              	<ul class="dropdown-menu">
+          <li><%= link_to "Shirt", '/shirt' %></li>
+          <li class="divider"> </li>Tournaments 
           <br />
         <li> <a href="https://secure.touchnet.com/C21490_ustores/web/product_detail.jsp?PRODUCTID=4456"> Pay for Team</a></li> 
-          <li> <a href="https://secure.touchnet.com/C21490_ustores/web/product_detail.jsp?PRODUCTID=4457"> Pay for Raid Call</a></li>
-		</ul>
-		</li>
-		 
-		<li>
-			<a>
-				  <%=   current_user.name %> <b class="caret"></b>
-			</a>
-			<ul>
-				<li><%= link_to "Profile", current_user %></li>
+          <li>
+           <a href="https://secure.touchnet.com/C21490_ustores/web/product_detail.jsp?PRODUCTID=4457"> Pay for Raid Call</a>
+</li>
+ </ul>
+          <% if signed_in? %>
+
+
+ 
+             <!-- <li><a href="https://docs.google.com/forms/d/1pcSgWKrdfObvyOpVVuaFu-19zftiyJz4G5_7XQk3ENo/viewform">Registration</a></li>--> 
+         
+           <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                 <%=   current_user.name %> <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Profile", current_user %></li>
                 <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-              <li> <%= link_to "Add Stream", '/stream/new'%></li>
+                        <li><%= link_to "Add Stream",  '/streams/new'%></li>
+                
+                   
+                  
                <% if current_user.admin %>
-               		<li><%= link_to "Add Event",  '/newevent'  %></li>
-                  	<li> <%= link_to "View All Users", users_path %></li>
-         			 <li><%= link_to "Admin", '/admin' %></li> 
-          			 <li><%= link_to "View Messages", '/messages' %></li>
-           			  <li><%= link_to "Edit Rankings", '/ranks/1/edit' %></li>  
-        		  <% end %>
-				<li>
+               <li><%= link_to "Add Event",  '/newevent'  %></li>
+                  <li> <%= link_to "View All Users", users_path %></li>
+          <li><%= link_to "Admin", '/admin' %></li> 
+           <li><%= link_to "View Messages", '/messages' %></li>
+             <li><%= link_to "Edit Rankings", '/ranks/1/edit' %></li>  
+          <% end %>
+                <li class="divider"></li>
+                <li>
                   <%= link_to "Sign out", signout_path, method: "delete" %>
                 </li>
-			</ul>
-		 </li>	
-		 
-		 <% else %>		
-		  <li><%= link_to "Facebook Signin", "/auth/facebook", id: "sign_in" %></li> 
-<% end%>
-	</ul>
-</nav> 
- 
+                
+              </ul>
+            </li>
+          <% else %>
+        
+               <li><%= link_to "Facebook Signin", "/auth/facebook", id: "sign_in" %></li>
+         
+          <% end %>
+        </ul>
+      </nav>
+    
+  </div>
 </header>

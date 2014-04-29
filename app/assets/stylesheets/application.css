@@ -15,109 +15,22 @@
  *= require_tree .
  */
 
-
- 
-
 html, body {
-  /*background-color: #4B7399;*/
-  font-family: Verdana, Helvetica;
-  font-size: 12px;
-	overflow: auto;
-height: 100%;
-}
-
-a img {
-  border: none;
-}
-
-* {
-	margin: 0;
-}
-
-.wrapper {
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
-}
-.footer, .push {
-	height: 180px; /* .push must be the same height as .footer */
-}
-
-
-.clear {
-  clear: both;
-  height: 0;
-}
-
-#container {
-  width: 75%;
-  margin: 0 auto;
-  background-color: #FFF;
-  padding: 20px 40px;
-  border: solid 1px black;
-  margin-top: 20px;
-}
-
-#flash_notice, #flash_error, #flash_alert {
-  padding: 5px 8px;
-  margin: 10px 0;
-}
-
-#flash_notice {
-  background-color: #CFC;
-  border: solid 1px #6C6;
-}
-
-#flash_error, #flash_alert {
-  background-color: #FCC;
-  border: solid 1px #C66;
-}
-
-.field_with_errors {
-  display: inline;
-}
-
-.error_messages {
-  width: 400px;
-  border: 2px solid #CF0000;
-  padding: 0px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-  font-size: 12px;
-}
-
-.error_messages h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 10px;
-  font-size: 12px;
+  -webkit-transition: -webkit-transform 3s;
   margin: 0;
-  background-color: #c00;
-  color: #fff;
-}
-
-.error_messages p {
-  margin: 8px 10px;
-}
-
-.error_messages ul {
-  margin-bottom: 0;
-}
-
-form .field, form .actions {
-  margin: 12px 0;
-}
-
-form h2 {
-  margin-top: 30px;
-  font-size: 18px;
+  padding: 0;
+  overflow: auto;
 }
 .hero-unit{
-	-webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
+	margin-top: 50px;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
   border:5px solid gray;
   background-color: #eee;
+  overflow: auto;
+ 
+  li {
+  	margin-left: 20px
+  }
 }
