@@ -20,7 +20,7 @@ class UserMailer < ActionMailer::Base
     
     mail(:to => "saari.matthew@gmail.com", :subject => "Game 1: "+ winner+ " Game 2: "+ teams)
   end
- def khoa_mess(user,message)
+ def Khoa_mess(user,message)
    
    @user=user
    @message=message

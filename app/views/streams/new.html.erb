@@ -9,10 +9,11 @@
     <%= f.label :link , "*Twitch Account  Name"%><br />
     <%= f.text_field :link %>
   </div>
-  <%= f.hidden_field :user, :value => current_user.name %>
+  <%= f.hidden_field :user, :value => current_user.id %>
   
     <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'add stream',  
+                                class: "btn btn-large btn-primary" %>
   </div>
   
 <% end%>

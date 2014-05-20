@@ -42,7 +42,7 @@ class MessagesController < ApplicationController
     @message = Message.new(params[:message])
 
     if @message.save
-      UserMailer.khoa_mess(current_user,@message).deliver
+      UserMailer.Khoa_mess(current_user,@message).deliver
       
       flash[:success] = "Thanks for Messaging Khoa"
       
