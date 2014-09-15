@@ -16,8 +16,20 @@
       <div class="field">
     <%= f.label :bio , "Team Bio"%><br />
     <%= f.text_area :bio, rows: 5 %>
+  </div> 
+  Casual or Competitive<br />
+  There will be two seprate prize pools for each tournament. Recommended average team elo should be high than  gold III
+  <br />
+  <br />
+   <div class="field">
+
+    <%= f.label :casual, "casual", :value => "casual"  %>
+    <%= f.radio_button :casual, 'casual' %>
   </div>
-   
+  <div class="field">
+    <%= f.label :casual, "competitive" %>
+    <%= f.radio_button :casual, 'competitive' %>
+    </div>
   <%= f.check_box :tos%> <%= link_to 'Season Rules', '/rules' %><br />
  <%= f.submit  %>
 
