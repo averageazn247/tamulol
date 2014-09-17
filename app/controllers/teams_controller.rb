@@ -8,6 +8,15 @@ class TeamsController < ApplicationController
           format.xls
     end
   end
+  def casuals
+   @teams = Team.reorder("id").paginate(page: params[:page])
+        respond_to do |format|
+          format.html # index.html.erb
+          format.json { render json: @teams }
+          format.csv { send_data @teams.to_csv }
+          format.xls
+    end    
+  end
   
   def show
     @team = Team.find(params[:id])

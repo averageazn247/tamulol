@@ -62,7 +62,7 @@ match '/teamnew', to: 'teams#new'
 match '/addplayer/:tid'=> 'player#create', :as => :create
 match '/soon', to: 'page#soon'
 match '/showteam' ,to: 'teams#show'
-
+match '/casuals' ,to: 'teams#casuals'
 match '/listteam', to: 'users#viewteam'
 match '/admin' , to: 'admin#main'
 match '/off_stream' , to: 'page#stream'

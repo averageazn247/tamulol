@@ -1,7 +1,7 @@
  <%= will_paginate %>
  <% if current_user%>
 <div class='hero-unit'>
-<h4>Competitive Paid Teams</h4> 
+<h4>Casual Paid Teams</h4> 
 <%= form_tag approve_teams_path, action: 'approve', method: :put do %>
 <table>
   <tr> 
@@ -23,7 +23,7 @@
 <% @teams.each do |team| %>
 
   <tr>
-  	<td></td> <% if team.casual == 'competitive'%>
+  	<td></td> <% if team.casual == 'casual'%>
  <% if current_user.admin != nil%>
   	 <td> <%= check_box_tag "team_ids[]", team.id %> </td>
   	 <% end %>
@@ -45,7 +45,7 @@
     		</td>
     <% end %>
     	
-    	<% if team.casual == 'competitive'%>
+    	<% if team.casual == 'casual'%>
     <td><%= link_to 'Show  ', team %></td>
     <% if current_user.admin|| team.user_id== current_user.id %>
     <td><%= link_to '|   Edit  |', edit_team_path(team) %></td>
@@ -70,7 +70,7 @@
 </div> 
 <% else%>
 <div class='hero-unit'>
-<h4>Competitive Paid Teams</h4> 
+<h4>Casual Paid Teams</h4> 
 <%= form_tag approve_teams_path, action: 'approve', method: :put do %>
 <table>
   <tr> 
@@ -91,7 +91,7 @@
 
   <tr>
   	<td></td>
- <% if team.casual == 'competitive'%>
+ <% if team.casual == 'casual'%>
   	 <% counter += 1 %>
     <td><%= counter %>.  <%=   team.name %>  </td>
    <td> [<%= team.tag %>] </td>
