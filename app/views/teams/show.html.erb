@@ -3,8 +3,8 @@
 <br />
  <h3>
    Team Name:</h3>
-  <h4> <%= @team.name %>  [<%= @team.tag %>]</h4>
-  <h5> <%= @team.casual %></h5>
+  <h4> <%= @team.name %>  [<%= @team.tag %>] (   <%= @team.casual %> )</h4>
+
  <br />
  <br />
  <% if current_user.admin or current_user.id==@team.user_id%>
