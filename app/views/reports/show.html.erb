@@ -14,23 +14,14 @@
 
  Date played:   <%= @report.dayof%> <br />
  Url from quickfind.kassad.in<br />
- <p>
-<%= raw @report.game1 %> </p>
+ <p> <a href="<%= @report.game1 %>">
+ game 1 </a> </p>
 <p>
-<%= raw @report.game2 %> </p>
-<p>
-<%= raw @report.game3 %></p>
+<a href="<%= @report.game2 %>">  game 2</a></p> 
 
 <br />
 
-  Game  :<br />
-   <%= image_tag @report.avatar1.url()%>
- 
-  <br />
-   <br />
-     <%= image_tag @report.avatar2.url()%>
-  <br />
-    <%= image_tag @report.avatar3.url()%>
+
 <br /> <br />
       Extra Info:   <br />
  <%= raw @report.desc%>
