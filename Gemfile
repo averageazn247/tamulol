@@ -11,7 +11,6 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'gmaps4rails' 
 gem 'figaro'
 gem 'kaminari'
-gem 'dotenv', github: 'ecbypi/dotenv', branch: 'overload-environment-variables'
  gem 'wicked'
 gem 'jquery-rails', "~> 2.3.0"
 gem 'jquery-ui-rails'

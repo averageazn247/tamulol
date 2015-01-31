@@ -1,5 +1,6 @@
  
 <div class="dbox">
+    <a href="https://www.facebook.com/groups/TAMULeagueCaptains/">Don't forget to join the FB group to contact other captians'</a>
 <br />
  <h3>
    Team Name:</h3>
@@ -38,11 +39,6 @@
 </p>
 <p><b> Elo Representive: </b><%= @team.teamelo%>  </p>
 <p>
-	Secondary Contacts:
-	<br />
-	1. <%= @team.sec_name%> 
-	<br />
-	2. <%= @team.third_name%> 
 	<br />
 	 <%= link_to 'Edit', team_steps_path(:id =>  'backup', :team_id => @team.id)%>
 </p>
