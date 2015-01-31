@@ -134,6 +134,8 @@ GEM
       fog-core
       fog-json
     formatador (0.2.5)
+    geocoder (1.2.5)
+    gmaps4rails (2.1.2)
     guard (2.6.1)
       formatador (>= 0.2.4)
       listen (~> 2.7)
@@ -375,6 +377,8 @@ DEPENDENCIES
   factory_girl_rails (= 4.1.0)
   figaro
   fog
+  geocoder
+  gmaps4rails
   guard-rspec (= 1.2.1)
   guard-spork (= 1.2.0)
   jquery-fileupload-rails

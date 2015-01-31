@@ -35,7 +35,7 @@
       <div class="field">
             <%= f.label :phone, " Phone Number  " %><br />
       <%= f.text_field :phone, :size => 20%>
-      </div>
+      </div>     <%= f.check_box :admin %>
       
        <%= f.submit "Submit", class: "btn btn-large btn-primary" %>
      <br /><%= link_to 'cancel', root_path %>

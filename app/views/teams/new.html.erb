@@ -2,7 +2,7 @@
 <div class="center hero-unit">
 	<% if current_user %>
 <h2>Team Sign Up</h2>
- All Teams pay the Registration fee of $25 if 5 members are A&M Esports members 
+ All Teams pay the Registration fee of $50
 <%= form_for @team do |f| %>
  <%= f.hidden_field :user_id, :value => current_user.id %>
   <div class="field">

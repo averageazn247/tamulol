@@ -1,6 +1,6 @@
 class TeamStepsController < ApplicationController
       include Wicked::Wizard
-    steps   :capt, :play2, :play3, :play4 , :play5 , :subs, :backup
+    steps   :capt, :play2, :play3, :play4 , :play5 , :subs
   
  
 
